@@ -1,0 +1,22 @@
+/* Introduction CSS */
+.introduction {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  /* Intro Content Column */
+  .introductionCol {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+  /* Intro statistics column */
+  .infogrid{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+  }
+  
+  .infocard{
+    padding: 1.5rem;
+  }

@@ -10,7 +10,7 @@ import styles from "../styles/Accordion.module.css";
 
 export default function AccordionComponent() {
   return (
-    <Accordion className={styles.accordion}>
+    <Accordion allowMultipleExpanded allowZeroExpanded className={styles.accordion}>
       <AccordionItem className={styles.accordionItem}>
         <AccordionItemHeading className={styles.accordionItemHeading}>
           <AccordionItemButton className={styles.accordionItemButton}>

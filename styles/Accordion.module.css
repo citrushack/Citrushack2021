@@ -11,8 +11,7 @@
   text-align: left;
   color: inherit;
   text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
+  border-bottom: 1px solid #eaeaea;
   transition: color 0.15s ease, border-color 0.15s ease;
   min-width: 100%;
 
@@ -25,14 +24,21 @@
 }
 
 .accordionItemButton {
-  padding: 1.5rem;
+  padding: 1.5rem 0;
   min-width: 100%;
+  border: none;
+  box-shadow: transparent;
 }
 
 .accordionItemPanel {
   padding: 0 1.5rem 1.5rem 1.5rem;
   line-height: 1.5;
   font-size: 1.2rem;
+  -webkit-animation: fadein 0.5s ease initial; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0.5s ease; /* Firefox < 16 */
+        -ms-animation: fadein 0.5s ease; /* Internet Explorer */
+         -o-animation: fadein 0.5s ease; /* Opera < 12.1 */
+            animation: fadein 0.5s ease;
 }
 
 .accordionItem:hover,
@@ -40,4 +46,31 @@
 .accordionItem:active {
   color: #0070f3;
   border-color: #0070f3;
+}
+
+@keyframes fadein {
+  from {transform:translateY(-20px); opacity: 0;}
+  to {transform:translateY(0); opacity: 1;}
+}
+@keyframes fadein {
+  from {transform:translateY(-20px); opacity: 0;}
+  to {transform:translateY(0); opacity: 1;}
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {transform:translateY(-20px); opacity: 0;}
+  to {transform:translateY(0); opacity: 1;}
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {transform:translateY(-20px); opacity: 0;}
+  to {transform:translateY(0); opacity: 1;}
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {transform:translateY(-20px); opacity: 0;}
+  to {transform:translateY(0); opacity: 1;}
 }
