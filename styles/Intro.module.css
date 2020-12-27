@@ -3,11 +3,12 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
   }
   /* Intro Content Column */
   .introductionCol {
     display: flex;
-    flex: 1;
+    flex: 0 1 50%;
     flex-direction: column;
   }
   /* Intro statistics column */

@@ -9,7 +9,7 @@
 .main {
   min-height: 100vh;
   margin: 0rem 5rem;
-  max-width: 60rem;
+  max-width: 90vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
