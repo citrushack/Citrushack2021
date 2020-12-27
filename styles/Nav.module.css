@@ -1,11 +1,8 @@
-.navigation {
-    display: flex;
-    align-items: flex-end;
-}
 .navlistcontainer {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  justify-content: flex-end;
+
 }
 .navlistlink {
   list-style: none;

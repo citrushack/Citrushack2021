@@ -11,14 +11,9 @@ import Volunteer from "./Volunteer";
 import { Nav } from "../components/Nav";
 import Footer from "../components/Footer";
 
-import * as Scroll from "react-scroll";
 import {
-  Link,
   Element,
-  Events,
   animateScroll as scroll,
-  scrollSpy,
-  scroller,
 } from "react-scroll";
 
 export default function Home() {
@@ -39,8 +34,12 @@ export default function Home() {
         <Element name="Questions">
           <Faq />
         </Element>
-        <Element name="Help"><Volunteer/></Element>
-        <Element name="Sponsors"><Sponsors /></Element>
+        <Element name="Help">
+          <Volunteer />
+        </Element>
+        <Element name="Sponsors">
+          <Sponsors />
+        </Element>
       </div>
       <Footer />
     </Container>

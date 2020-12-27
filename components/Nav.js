@@ -1,30 +1,24 @@
-import ActiveLink from "./ActiveLink";
 import Navstyles from "../styles/Nav.module.css";
-import * as Scroll from "react-scroll";
 import {
   Link,
-  Element,
-  Events,
   animateScroll as scroll,
-  scrollSpy,
-  scroller,
 } from "react-scroll";
 import styled from "@emotion/styled";
 
 const StickyNav = styled.nav`
-  position: sticky;
+  position: fixed;
   z-index: 5;
   top: 0;
-  width: 100%;
-  margin: 0;
-  padding: 2rem 1rem;
-  background-color: #fff;
+  right: 0;
+  margin:0;
+  padding: 1.4rem 1rem;
+  min-width: 100%;
+  background-color:#fff;
 `;
 
 export function Nav() {
   return (
     <StickyNav>
-      <div className={Navstyles.navigation}>
         <ul className={Navstyles.navlistcontainer}>
           <li className={Navstyles.navlistlink}>
             <Link
@@ -87,7 +81,6 @@ export function Nav() {
             </Link>
           </li>
         </ul>
-      </div>
     </StickyNav>
   );
 }
