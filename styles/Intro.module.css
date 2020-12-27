@@ -21,3 +21,18 @@
   .infocard{
     padding: 1.5rem;
   }
+
+  @media (max-width: 1068px) {
+    .introduction{
+      flex-direction: column;
+      align-items: unset;
+    }
+    .grid {
+      min-width: 100%;
+      flex-direction: column;
+    }
+    .infogrid
+    {
+      margin-left: 0;
+    }
+  }

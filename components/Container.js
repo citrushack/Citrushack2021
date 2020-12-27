@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-// import { Nav } from "./Nav";
+import { Nav } from "./Nav";
 
 export const siteTitle = "Citrushack"
 
@@ -9,6 +9,7 @@ export default function Container({ children, main }) {
 
   return (
     <>
+    <Nav/>
       {children}
     </>
   );
