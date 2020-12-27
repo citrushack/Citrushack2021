@@ -23,7 +23,7 @@ export default function Home() {
         <title>{siteTitle}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Nav />
+     
       <div className={styles.container}>
         <Element name="Home">
           <Hero />
