@@ -19,6 +19,8 @@ a {
 [data-whatinput="touch"] :focus {
   outline: none;
 }
+
+/*react-scroll classes applied to navbar*/
 .active {
   border-bottom: 3px solid black !important;
 }
