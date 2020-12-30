@@ -6,7 +6,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 Install yarn : https://classic.yarnpkg.com/en/docs/install/#debian-stable
 
 Clone project
-- `git clone https://github.com/BioHack-UCR/Biohack2021.git`
+- `git clone https://github.com/CitrusHack/Citrushack2021.git`
 - `cd BioHack2021`
 - `yarn install`
 - `yarn dev`
