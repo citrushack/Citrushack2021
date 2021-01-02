@@ -18,16 +18,16 @@ export default function Intro() {
           </p>
         </div>
         <div className={Introstyles.infogrid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>$1000 in prizes &rarr;</h3>
-          </a>
+          <div className={`${Introstyles.infocard} ${Introstyles.one}`}>
+            <h3>$1000 IN PRIZES</h3>
+          </div>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>36 Hours &rarr;</h3>
-          </a>
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>500 Hackers &rarr;</h3>
-          </a>
+          <div className={`${Introstyles.infocard} ${Introstyles.two}`}>
+            <h3>36 HOURS</h3>
+          </div>
+          <div className={`${Introstyles.infocard} ${Introstyles.three}`}>
+            <h3>500 HACKERS</h3>
+          </div>
         </div>
       </section>
     </main>

@@ -1,3 +1,8 @@
+@font-face{
+  font-family: "Ghost";
+  src: url(../fonts/Tsushima.otf)
+}
+
 html,
 body {
   padding: 0;
@@ -22,17 +27,24 @@ a {
 
 /*react-scroll classes applied to navbar*/
 .active {
-  border-bottom: 3px solid black !important;
+  color: #fff;
+  background-image: url("../public/brushstrokebanner.png");
+  background-repeat: no-repeat;
+  background-size:100% 100%;
+  background-position: center;
 }
 
-.link{
+.link {
   margin-right: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 3px solid white;
-  transition: border-bottom 0.5s ease;
+  padding: 1rem 2rem;
 }
+
 .link:hover,
 .link:focus,
-.link:active{
-  border-bottom: 3px solid black;
+.link:active {
+  color: #fff;
+  background-image: url("../public/brushstrokebanner.png");
+  background-repeat: no-repeat;
+  background-size:100% 100%;
+  background-position: center;
 }

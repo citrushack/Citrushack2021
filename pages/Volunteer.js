@@ -15,11 +15,11 @@ export default function Volunteer() {
       </p>
       <div className={styles.grid}>
         <a href="https://nextjs.org/docs" className={styles.card}>
-          <h3>Sign Up! &rarr;</h3>
+          <h3>Mentors &rarr;</h3>
         </a>
 
         <a href="https://nextjs.org/docs" className={styles.card}>
-          <h3>Sign Up! &rarr;</h3>
+          <h3>Volunteers &rarr;</h3>
         </a>
 
         <a href="https://nextjs.org/learn" className={styles.card}>

@@ -1,38 +1,63 @@
 /* Introduction CSS */
 .introduction {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-  /* Intro Content Column */
-  .introductionCol {
-    display: flex;
-    flex: 0 1 50%;
-    flex-direction: column;
-  }
-  /* Intro statistics column */
-  .infogrid{
-    display: flex;
-    flex-direction: column;
-    margin-left: 2rem;
-  }
-  
-  .infocard{
-    padding: 1.5rem;
-  }
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+/* Intro Content Column */
+.introductionCol {
+  display: flex;
+  flex: 0 1 50%;
+  flex-direction: column;
+}
+/* Intro statistics column */
+.infogrid {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+}
 
-  @media (max-width: 1068px) {
-    .introduction{
-      flex-direction: column;
-      align-items: unset;
-    }
-    .grid {
-      min-width: 100%;
-      flex-direction: column;
-    }
-    .infogrid
-    {
-      margin-left: 0;
-    }
+.infocard {
+  padding: 3rem 5rem;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-family: Ghost;
+}
+
+.one{
+  background-image: url("../public/brushstroke1.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.two{
+  background-image: url("../public/brushstroke3.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.three{
+  background-image: url("../public/brushstroke4.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+@media (max-width: 1068px) {
+  .introduction {
+    flex-direction: column;
+    align-items: unset;
   }
+  .grid {
+    min-width: 100%;
+    flex-direction: column;
+  }
+  .infogrid {
+    margin-left: 0;
+  }
+}
