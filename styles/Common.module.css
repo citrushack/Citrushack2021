@@ -52,7 +52,10 @@
   line-height: 1.15;
   font-size: 4rem;
   font-family: Ghost;
+  color: #1b1b1b; 
 }
+
+
 
 .title,
 .description {
@@ -62,6 +65,7 @@
 .description {
   line-height: 1.5;
   font-size: 1.5rem;
+  color: #1b1b1b; 
 }
 
 .code {
@@ -108,6 +112,7 @@
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.5;
+  color: #1b1b1b; 
 }
 
 .logo {

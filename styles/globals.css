@@ -25,6 +25,10 @@ a {
   outline: none;
 }
 
+p, h1 {
+  color: #1b1b1b; 
+}
+
 /*react-scroll classes applied to navbar*/
 .active {
   color: #fff;
@@ -47,4 +51,15 @@ a {
   background-repeat: no-repeat;
   background-size:100% 100%;
   background-position: center;
+}
+
+/* cursor trails transparent canvas */
+canvas {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:10;
+  pointer-events:none;
 }
