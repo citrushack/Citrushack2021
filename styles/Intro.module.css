@@ -19,30 +19,12 @@
 }
 
 .infocard {
-  padding: 3rem 5rem;
-  font-size: 1.5rem;
+  padding: 1rem 5rem;
+  font-size: 2rem;
   text-align: center;
   color: #fff;
-  margin-bottom: 0.5rem;
-  font-family: Ghost;
-}
-
-.one{
-  background-image: url("../public/brushstroke1.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position: center;
-}
-
-.two{
-  background-image: url("../public/brushstroke3.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position: center;
-}
-
-.three{
-  background-image: url("../public/brushstroke4.png");
+  margin-bottom: 1rem;
+  background-image: url("../public/brushstrokebanneraltered.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;

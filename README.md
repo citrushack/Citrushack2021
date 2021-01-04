@@ -1,34 +1,82 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Citrushack 2021
+
+> Author: Rajbir Johar and Ajeet Kokatay
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+#### Windows
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Install [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab). This is how you will be navigating to your project/repo and getting it up and running.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+#### Mac
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Open Terminal or install any other Command Line Interface software such as iTerm2, kitty, etc. This is how you will be navigating to your project/repo and getting it up and running.
 
-## Learn More
+If on Mac, install [Homebrew](https://brew.sh) as well. This is an incredibly useful package manager for Mac. If you're on the new M1 Chip, find the Terminal Application in Finder, right click it, and click start as Rosetta before installing Homebrew. You can copy and paste this line in your terminal.
+- `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
-To learn more about Next.js, take a look at the following resources:
+### Linux
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Install yarn: https://classic.yarnpkg.com/en/docs/install/#debian-stable
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Clone project
+- `git clone https://github.com/BioHack-UCR/Biohack2021.git`
+- `cd BioHack2021`
+- `yarn install`
+- `yarn dev`
+- visit http://localhost:3001
 
-## Deploy on Vercel
+#### All OSes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Familiarize yourself with the basic but essential Command Line operations [here](https://www.codecademy.com/learn/learn-the-command-line/modules/learn-the-command-line-navigation/cheatsheet).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Install [Git Command Line Tools](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and follow the instructions based on your Operating System.
+
+Install [Node.JS](https://nodejs.org/en/).
+
+Install [Yarn](https://classic.yarnpkg.com/en/docs/getting-started) (We use Yarn for our web package manager).
+
+Install your code editor of choice. Popular ones include VS Code, Atom, Sublime, etc.
+
+Install atleast two to three popular browsers (Safari, Firefox, Chrome, Edge, etc). You will be testing on each browser for cross compatibility.
+
+### Setting Up Your Local Environment
+
+1. Open up your terminal and make a new folder called Projects using the command `mkdir Projects` (Or don't. This just helps keep all the repos in one place).
+2. Change into the new directory using `cd Projects`.
+3. Clone this repo by clicking the green button at the top labeled "Code" and copy the link you see.
+4. Type `git clone "link"` and paste the link where "link" is without the quotation marks.
+5. `ls` to list all contents of Projects. You should see a new directory with the same name as the repo.
+6. `cd` into the new directory.
+7. Type `yarn` to install all necessary packages. You will encounter errors but they won't affect anything.
+8. Open the repo in your preferred code editor. This is where you can examine or edit code. **(Do not change or commit anything to the master branch. More on this later.)**
+9. To start the project locally, run `yarn run dev` in your terminal while still inside your repo directory.
+10. Open up a browser and type `http://localhost:3000` into the address bar. If everything is done correctly, you should now be able to view the project as if it were online. To quit the project, simply use the shortcut Ctrl+C in your terminal to stop the instance. 
+
+*Steps 1-7 only need to be done once. Step 8-10 are how you will be editing and viewing the project.*
+
+### Committing Changes
+
+**Before you go wild on contributing:**
+1. Make your own branch with `git branch name-of-branch`.
+2. Change branch with `git checkout name-of-branch`.
+3. View all branches and what branch you are currently on with `git branch`.
+
+Once you've done that:
+1. To check what files have been edited, use `git status`.
+2. To add files to be committed, use `git add file-name` or `git add -A` to add all files.
+3. To commit files, use `git commit -m "Write a useful message here to show what changes you have made"`. Include the quotation marks. Ensure to commit frequently so as to record what changes you've made.
+4. To upload your commits onto Github, use `git push`. If it's your first time pushing commits from a new branch, use `git push -u origin name-of-branch` to push your entire local branch to Github.
+5. Go to the repo on Github and click on "Pull Requests" at the top. Start a new pull request and compare your branch to master and on the righthand side, assign the webdev leads to review your code. Then finally, click Open Pull Request. **Under no circumstances should you click Merge.**
+
+### Tech Stack
+- [NextJS](https://nextjs.org) - The frontend framework used for this project. Highly recommend reading through the docs and going through the tutorial to familiarize yourself with the structure of the project.
+- Strapi - Used for the backend
+
+### 3rd Party Packages
+- what-input - removes default border when elements are selected such as buttons.
+- react-scroll - used to scroll to different sections via navbar
+- react-accessible-accordion - used for accordion component

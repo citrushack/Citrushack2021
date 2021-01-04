@@ -11,6 +11,7 @@
     "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
     "next": "10.0.4",
+    "ogl": "^0.0.60",
     "prop-types": "^15.7.2",
     "react": "17.0.1",
     "react-accessible-accordion": "^3.3.3",
