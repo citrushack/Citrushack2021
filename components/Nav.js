@@ -80,6 +80,18 @@ export function Nav() {
               Sponsors
             </Link>
           </li>
+          <li className={Navstyles.navlistlink}>
+            <Link
+              to=""
+              spy={true}
+              smooth={true}
+              duration={500}
+              activeClass=""
+              className="signup"
+            >
+              Sign Up
+            </Link>
+          </li>
         </ul>
     </StickyNav>
   );

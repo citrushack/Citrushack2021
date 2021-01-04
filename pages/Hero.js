@@ -18,7 +18,7 @@ export default function Hero() {
         </a>
 
         <a href="https://nextjs.org/learn" className={styles.card}>
-          <h3>Learn More &rarr;</h3>
+          <h3>Log In &rarr;</h3>
         </a>
       </div>
     </main>

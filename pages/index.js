@@ -8,9 +8,8 @@ import Intro from "./Intro";
 import Faq from "./Faq";
 import Sponsors from "./Sponsors";
 import Volunteer from "./Volunteer";
-
-import { Nav } from "../components/Nav";
 import Footer from "../components/Footer";
+
 import {
   Polyline,
   Renderer,
@@ -82,7 +81,7 @@ export default function Home() {
     window.addEventListener("resize", resize, false);
 
     // Create an array of Vec3s (eg [[0, 0, 0], ...])
-    const count = 20;
+    const count = 10;
     const points = [];
     for (let i = 0; i < count; i++) points.push(new Vec3());
 
@@ -91,7 +90,7 @@ export default function Home() {
       vertex,
       uniforms: {
         uColor: { value: new Color("#1b1b1b") },
-        uThickness: { value: 40 }
+        uThickness: { value: 30 }
       }
     });
 
@@ -137,10 +136,10 @@ export default function Home() {
       for (let i = points.length - 1; i >= 0; i--) {
         if (!i) {
           // Ease the first point to the mouse
-          points[i].lerp(mouse, 0.8);
+          points[i].lerp(mouse, 0.5);
         } else {
           // Ease to the previous point
-          points[i].lerp(points[i - 1], 0.7);
+          points[i].lerp(points[i - 1], 0.5);
         }
       }
       polyline.updateGeometry();
