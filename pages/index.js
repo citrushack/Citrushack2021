@@ -89,7 +89,7 @@ export default function Home() {
       points,
       vertex,
       uniforms: {
-        uColor: { value: new Color("#1b1b1b") },
+        uColor: { value: new Color("#ed2424") },
         uThickness: { value: 30 }
       }
     });
