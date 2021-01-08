@@ -65,7 +65,7 @@ void main() {
 export default function Home() {
   
   useEffect(() => {
-    const renderer = new Renderer({ dpr: 2, alpha: true,transparent: true });
+    const renderer = new Renderer({ dpr: 1, alpha: true,transparent: true });
     const gl = renderer.gl;
     document.body.appendChild(gl.canvas);
     gl.clearColor(0, 0, 0, 0);
@@ -81,7 +81,7 @@ export default function Home() {
     window.addEventListener("resize", resize, false);
 
     // Create an array of Vec3s (eg [[0, 0, 0], ...])
-    const count = 10;
+    const count = 8;
     const points = [];
     for (let i = 0; i < count; i++) points.push(new Vec3());
 
@@ -90,7 +90,7 @@ export default function Home() {
       vertex,
       uniforms: {
         uColor: { value: new Color("#ed2424") },
-        uThickness: { value: 30 }
+        uThickness: { value: 20 }
       }
     });
 
@@ -139,7 +139,7 @@ export default function Home() {
           points[i].lerp(mouse, 0.5);
         } else {
           // Ease to the previous point
-          points[i].lerp(points[i - 1], 0.5);
+          points[i].lerp(points[i - 1], 0.5);          
         }
       }
       polyline.updateGeometry();

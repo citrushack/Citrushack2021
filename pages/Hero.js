@@ -17,7 +17,7 @@ export default function Hero() {
               value: "",
             },
           },
-          fpsLimit: 60,
+          fpsLimit: 30,
           backgroundMode:{
             enable: true,
             zIndex: -100,
@@ -26,21 +26,6 @@ export default function Hero() {
             detectsOn: "window",
             events: {
               resize: true,
-            },
-            modes: {
-              bubble: {
-                distance: 400,
-                duration: 2,
-                opacity: 0.8,
-                size: 40,
-              },
-              push: {
-                quantity: 4,
-              },
-              repulse: {
-                distance: 100,
-                duration: 0.4,
-              },
             },
           },
           particles: {
@@ -63,7 +48,7 @@ export default function Hero() {
               outMode: "out",
               random: true,
               speed: 2,
-              straight: false,
+              straight: true,
             },
             number: {
               density: {
