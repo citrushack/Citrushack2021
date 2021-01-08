@@ -67,6 +67,7 @@ p, h1 {
   border: 3px solid #000;
   display: block;
   transition: all 0.15s ease;
+  text-transform: uppercase;
 }
 .signup:hover,
 .signup:focus,

@@ -21,7 +21,7 @@ export function Nav() {
       <ul className={Navstyles.navlistcontainer}>
         <div className={Navstyles.logos}>
         <Image
-        src="/logo.png"
+        src="/logoRevised.png"
         width="100"
         height="100"
         alt="Citrushack 2021 Logo"
@@ -29,11 +29,11 @@ export function Nav() {
         <a
           id="mlh-trust-badge"
           className="MLH"
-          href="https://mlh.io/seasons/2021/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2021-season&utm_content=white"
+          href="https://mlh.io/seasons/2021/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2021-season&utm_content=red"
           target="_blank"
         >
           <img
-            src="https://s3.amazonaws.com/logged-assets/trust-badge/2021/mlh-trust-badge-2021-white.svg"
+            src="https://s3.amazonaws.com/logged-assets/trust-badge/2021/mlh-trust-badge-2021-red.svg"
             alt="Major League Hacking 2021 Hackathon Season"
           />
         </a>
