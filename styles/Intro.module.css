@@ -28,8 +28,11 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
+  transition: all 0.15s ease;
 }
-
+.infocard:hover{
+  background-image: url("../public/brushstrokebanner.png");
+}
 @media (max-width: 1068px) {
   .introduction {
     flex-direction: column;
