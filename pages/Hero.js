@@ -13,6 +13,9 @@ export default function Hero() {
             color: {
               value: "",
             },
+            position: {
+              value: "",
+            },
           },
           fpsLimit: 60,
           backgroundMode:{
@@ -22,14 +25,6 @@ export default function Hero() {
           interactivity: {
             detectsOn: "window",
             events: {
-              onClick: {
-                enable: false,
-                mode: "push",
-              },
-              onHover: {
-                enable: false,
-                mode: "repulse",
-              },
               resize: true,
             },
             modes: {
@@ -67,7 +62,7 @@ export default function Hero() {
               enable: true,
               outMode: "out",
               random: true,
-              speed: 3,
+              speed: 2,
               straight: false,
             },
             number: {
