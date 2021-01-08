@@ -1,1 +1,17 @@
 /*CSS for Hero section*/
+.title{
+    font-size: 7rem;
+    margin: 0;
+}
+.description{
+    font-size: 3rem;
+}
+
+@media (max-width: 1068px) {
+    .title{
+        font-size: 5rem;
+    }
+    .description{
+        font-size: 2rem;
+    }
+}

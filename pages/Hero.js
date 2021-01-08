@@ -1,19 +1,102 @@
 import styles from "../styles/Common.module.css";
+import Herostyles from "../styles/Hero.module.css";
+
+import Particles from "react-tsparticles";
 
 export default function Hero() {
   return (
     <main className={styles.main}>
-      <h1 className={styles.title}>Citrushack 2021</h1>
-      <p className={styles.description}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec egestas
-        sapien sit amet metus efficitur semper. Integer id luctus enim.
-        Curabitur a arcu et arcu tincidunt lobortis eget sed risus. Suspendisse
-        vitae libero magna. Pellentesque sodales at urna nec rutrum. Nulla lorem
-        nisl, congue id aliquet vitae, malesuada sed lacus. Phasellus dapibus
-        euismod leo, ut scelerisque tellus rhoncus sed.
+      <Particles
+        id="tsparticles"
+        options={{
+          background: {
+            color: {
+              value: "",
+            },
+          },
+          fpsLimit: 60,
+          backgroundMode:{
+            enable: true,
+            zIndex: -100,
+          },
+          interactivity: {
+            detectsOn: "window",
+            events: {
+              onClick: {
+                enable: false,
+                mode: "push",
+              },
+              onHover: {
+                enable: false,
+                mode: "repulse",
+              },
+              resize: true,
+            },
+            modes: {
+              bubble: {
+                distance: 400,
+                duration: 2,
+                opacity: 0.8,
+                size: 40,
+              },
+              push: {
+                quantity: 4,
+              },
+              repulse: {
+                distance: 100,
+                duration: 0.4,
+              },
+            },
+          },
+          particles: {
+            color: {
+              value: ["#ffc0cb", "#fc9aab", "#f78195"],
+            },
+            links: {
+              color: "#ffffff",
+              distance: 150,
+              enable: false,
+              opacity: 0.5,
+              width: 1,
+            },
+            collisions: {
+              enable: false,
+            },
+            move: {
+              direction: "bottom-right",
+              enable: true,
+              outMode: "out",
+              random: true,
+              speed: 3,
+              straight: false,
+            },
+            number: {
+              density: {
+                enable: true,
+                value_area: 1600,
+              },
+              value: 80,
+            },
+            opacity: {
+              value: 1,
+            },
+            shape: {
+              type: "circle",
+            },
+            size: {
+              random: true,
+              value: 7,
+            },
+          },
+          detectRetina: true,
+        }}
+      />
+      <h1 className={Herostyles.title}>Citrushack 2021</h1>
+      <p className={Herostyles.description}>
+        Be zen.
       </p>
       <div className={styles.grid}>
-        <a href="https://nextjs.org/docs" className={styles.card}>
+        <a href="https://nextjs.org/docs" className={styles.action}>
           <h3>Sign Up! &rarr;</h3>
         </a>
 
