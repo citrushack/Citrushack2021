@@ -68,9 +68,9 @@ export default function Hero() {
             number: {
               density: {
                 enable: true,
-                value_area: 1600,
+                value_area: 2000,
               },
-              value: 80,
+              value: 16,
             },
             opacity: {
               value: 1,
