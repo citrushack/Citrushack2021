@@ -80,3 +80,5 @@ Once you've done that:
 - what-input - removes default border when elements are selected such as buttons.
 - react-scroll - used to scroll to different sections via navbar
 - react-accessible-accordion - used for accordion component
+- ogl - used for the custom mouse trails
+- tsparticles - used for the particles
