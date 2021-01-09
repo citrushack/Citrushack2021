@@ -23,11 +23,11 @@ If on Mac, install [Homebrew](https://brew.sh) as well. This is an incredibly us
 Install yarn: https://classic.yarnpkg.com/en/docs/install/#debian-stable
 
 Clone project
-- `git clone https://github.com/BioHack-UCR/Biohack2021.git`
-- `cd BioHack2021`
+- `git clone https://github.com/citrushack/Citrushack2021.git`
+- `cd CitrusHack2021`
 - `yarn install`
 - `yarn dev`
-- visit http://localhost:3001
+- visit http://localhost:3000
 
 #### All OSes
 
