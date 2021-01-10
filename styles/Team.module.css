@@ -1,0 +1,21 @@
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.profile h3{
+    transition: all 0.2s ease;
+}
+
+.profile h3:hover{
+    background-color: #000;
+    color:#fff;
+}
