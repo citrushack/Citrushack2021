@@ -14,13 +14,6 @@ export default function Container({ children, main }) {
     <>
     <Nav/>
       {children}
-      {!main && (
-        <div className={styles.card}>
-          <Link href="/">
-          <a>Back to Home</a>
-          </Link>
-        </div>
-      )}
     </>
 
   );
