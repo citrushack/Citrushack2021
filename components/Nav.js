@@ -1,8 +1,8 @@
 import Navstyles from "../styles/Nav.module.css";
 import { Link, animateScroll as scroll } from "react-scroll";
 import styled from "@emotion/styled";
-
-import Image from "next/image";
+import { useIsAuthenticated, useSignOut } from "react-auth-kit";
+import logo from "../public/logoRevised.png";
 
 const StickyNav = styled.nav`
   position: fixed;
@@ -32,17 +32,14 @@ const NavigationLinks = ({ title, href }) => (
   </>
 );
 
-export function Nav() {
+export default function Nav() {
+  const isAuthenticated = useIsAuthenticated();
+  const signOut = useSignOut();
   return (
     <StickyNav>
       <ul className={Navstyles.navlistcontainer}>
         <div className={Navstyles.logos}>
-          <Image
-            src="/logoRevised.png"
-            width="100"
-            height="100"
-            alt="Citrushack 2021 Logo"
-          />
+          <img src={logo} width="100" height="100" alt="Citrushack 2021 Logo" />
           <a
             id="mlh-trust-badge"
             className="MLH"
@@ -62,18 +59,30 @@ export function Nav() {
           <NavigationLinks title="Help" href="Help" />
           <NavigationLinks title="Sponsors" href="Sponsors" />
           {/* Only reason why this isn't part of a class is of the CSS classes being different. DO NOT CHANGE */}
-          <li className={Navstyles.navlistlink}>
-            <Link
-              to=""
-              spy={true}
-              smooth={true}
-              duration={800}
-              activeClass=""
-              className="signup"
-            >
-              Sign Up
-            </Link>
-          </li>
+          {!isAuthenticated() && (
+            <li className={Navstyles.navlistlink}>
+              <a
+                href={`http://localhost:1337/connect/google`}
+                className="signup"
+              >
+                Sign Up
+              </a>
+            </li>
+          )}
+          {isAuthenticated() && (
+            <li className={Navstyles.navlistlink}>
+              <a
+                href="/"
+                onClick={(e) => {
+                  e.preventDefault;
+                  signOut();
+                }}
+                className="signup"
+              >
+                Sign Out
+              </a>
+            </li>
+          )}
         </div>
       </ul>
     </StickyNav>

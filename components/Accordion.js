@@ -10,7 +10,11 @@ import styles from "../styles/Accordion.module.css";
 
 export default function AccordionComponent() {
   return (
-    <Accordion allowMultipleExpanded allowZeroExpanded className={styles.accordion}>
+    <Accordion
+      allowMultipleExpanded
+      allowZeroExpanded
+      className={styles.accordion}
+    >
       <AccordionItem className={styles.accordionItem}>
         <AccordionItemHeading className={styles.accordionItemHeading}>
           <AccordionItemButton className={styles.accordionItemButton}>
@@ -26,7 +30,7 @@ export default function AccordionComponent() {
         </AccordionItemPanel>
       </AccordionItem>
       <AccordionItem className={styles.accordionItem}>
-      <AccordionItemHeading className={styles.accordionItemHeading}>
+        <AccordionItemHeading className={styles.accordionItemHeading}>
           <AccordionItemButton className={styles.accordionItemButton}>
             Is free will real or just an illusion?
           </AccordionItemButton>

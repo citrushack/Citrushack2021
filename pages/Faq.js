@@ -1,5 +1,5 @@
-import styles from "../styles/Common.module.css"
-import Faqstyles from "../styles/Faq.module.css"
+import styles from "../styles/Common.module.css";
+import Faqstyles from "../styles/Faq.module.css";
 import AccordionComponent from "../components/Accordion";
 
 export default function Faq() {
