@@ -19,12 +19,9 @@ import {
   Mesh,
   Vec3,
   Vec2,
-  Color
+  Color,
 } from "ogl";
-import {
-  Element,
-  animateScroll as scroll,
-} from "react-scroll";
+import { Element, animateScroll as scroll } from "react-scroll";
 const vertex = `
 attribute vec3 position;
 attribute vec3 next;
@@ -63,88 +60,89 @@ void main() {
 }
 `;
 export default function Home() {
-  
   useEffect(() => {
-    const renderer = new Renderer({ dpr: 1, alpha: true,transparent: true });
-    const gl = renderer.gl;
-    document.body.appendChild(gl.canvas);
-    gl.clearColor(0, 0, 0, 0);
+    if (document.getElementsByTagName("canvas").length < 2) {
+      const renderer = new Renderer({ dpr: 1, alpha: true, transparent: true });
+      const gl = renderer.gl;
+      document.body.appendChild(gl.canvas);
+      gl.clearColor(0, 0, 0, 0);
 
-    const scene = new Transform();
+      const scene = new Transform();
 
-    let polyline;
+      let polyline;
 
-    function resize() {
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      if (polyline) polyline.resize();
-    }
-    window.addEventListener("resize", resize, false);
-
-    // Create an array of Vec3s (eg [[0, 0, 0], ...])
-    const count = 8;
-    const points = [];
-    for (let i = 0; i < count; i++) points.push(new Vec3());
-
-    polyline = new Polyline(gl, {
-      points,
-      vertex,
-      uniforms: {
-        uColor: { value: new Color("#ed2424") },
-        uThickness: { value: 20 }
+      function resize() {
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        if (polyline) polyline.resize();
       }
-    });
+      window.addEventListener("resize", resize, false);
 
-    polyline.mesh.setParent(scene);
+      // Create an array of Vec3s (eg [[0, 0, 0], ...])
+      const count = 8;
+      const points = [];
+      for (let i = 0; i < count; i++) points.push(new Vec3());
 
-    // Call initial resize after creating the polylines
-    resize();
+      polyline = new Polyline(gl, {
+        points,
+        vertex,
+        uniforms: {
+          uColor: { value: new Color("#ed2424") },
+          uThickness: { value: 20 },
+        },
+      });
 
-    // Add handlers to get mouse position
-    const mouse = new Vec3();
-    if ("ontouchstart" in window) {
-      window.addEventListener("touchstart", updateMouse, false);
-      window.addEventListener("touchmove", updateMouse, false);
-    } else {
-      window.addEventListener("mousemove", updateMouse, false);
-    }
+      polyline.mesh.setParent(scene);
 
-    function updateMouse(e) {
-      if (e.changedTouches && e.changedTouches.length) {
-        e.x = e.changedTouches[0].pageX;
-        e.y = e.changedTouches[0].pageY;
-      }
-      if (e.x === undefined) {
-        e.x = e.pageX;
-        e.y = e.pageY;
+      // Call initial resize after creating the polylines
+      resize();
+
+      // Add handlers to get mouse position
+      const mouse = new Vec3();
+      if ("ontouchstart" in window) {
+        window.addEventListener("touchstart", updateMouse, false);
+        window.addEventListener("touchmove", updateMouse, false);
+      } else {
+        window.addEventListener("mousemove", updateMouse, false);
       }
 
-      // Get mouse value in -1 to 1 range, with y flipped
-      mouse.set(
-        (e.x / gl.renderer.width) * 2 - 1,
-        (e.y / gl.renderer.height) * -2 + 1,
-        0
-      );
-    }
-
-    const tmp = new Vec3();
-
-    requestAnimationFrame(update);
-    function update(t) {
-      requestAnimationFrame(update);
-
-      // Update polyline input points
-      for (let i = points.length - 1; i >= 0; i--) {
-        if (!i) {
-          // Ease the first point to the mouse
-          points[i].lerp(mouse, 0.5);
-        } else {
-          // Ease to the previous point
-          points[i].lerp(points[i - 1], 0.5);          
+      function updateMouse(e) {
+        if (e.changedTouches && e.changedTouches.length) {
+          e.x = e.changedTouches[0].pageX;
+          e.y = e.changedTouches[0].pageY;
         }
-      }
-      polyline.updateGeometry();
+        if (e.x === undefined) {
+          e.x = e.pageX;
+          e.y = e.pageY;
+        }
 
-      renderer.render({ scene });
+        // Get mouse value in -1 to 1 range, with y flipped
+        mouse.set(
+          (e.x / gl.renderer.width) * 2 - 1,
+          (e.y / gl.renderer.height) * -2 + 1,
+          0
+        );
+      }
+
+      const tmp = new Vec3();
+
+      requestAnimationFrame(update);
+      function update(t) {
+        requestAnimationFrame(update);
+
+        // Update polyline input points
+        for (let i = points.length - 1; i >= 0; i--) {
+          if (!i) {
+            // Ease the first point to the mouse
+            points[i].lerp(mouse, 0.5);
+          } else {
+            // Ease to the previous point
+            points[i].lerp(points[i - 1], 0.5);
+          }
+        }
+        polyline.updateGeometry();
+
+        renderer.render({ scene });
+      }
     }
   }, []);
 

@@ -23,11 +23,11 @@ If on Mac, install [Homebrew](https://brew.sh) as well. This is an incredibly us
 Install yarn: https://classic.yarnpkg.com/en/docs/install/#debian-stable
 
 Clone project
-- `git clone https://github.com/BioHack-UCR/Biohack2021.git`
-- `cd BioHack2021`
+- `git clone https://github.com/citrushack/Citrushack2021.git`
+- `cd CitrusHack2021`
 - `yarn install`
 - `yarn dev`
-- visit http://localhost:3001
+- visit http://localhost:3000
 
 #### All OSes
 
@@ -80,3 +80,5 @@ Once you've done that:
 - what-input - removes default border when elements are selected such as buttons.
 - react-scroll - used to scroll to different sections via navbar
 - react-accessible-accordion - used for accordion component
+- ogl - used for the custom mouse trails
+- tsparticles - used for the particles

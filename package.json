@@ -10,14 +10,34 @@
   "dependencies": {
     "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.57",
+    "final-form": "^4.20.1",
+    "framer-motion": "^3.2.0",
+    "material-ui": "^0.20.2",
+    "mui-rff": "^3.0.3",
     "next": "10.0.4",
+    "next-images": "^1.6.2",
     "ogl": "^0.0.60",
     "prop-types": "^15.7.2",
     "react": "17.0.1",
     "react-accessible-accordion": "^3.3.3",
+    "react-auth-kit": "^1.4.3",
     "react-dom": "17.0.1",
+    "react-dropzone": "^11.2.4",
+    "react-final-form": "^6.5.2",
     "react-scroll": "^1.8.1",
     "react-tsparticles": "^1.18.11",
-    "what-input": "^5.2.10"
+    "what-input": "^5.2.10",
+    "whatwg-fetch": "^3.5.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.12.0",
+    "@typescript-eslint/parser": "^4.12.0",
+    "eslint": "^7.17.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "prettier": "^2.2.1"
   }
 }
