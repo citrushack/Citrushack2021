@@ -154,6 +154,12 @@
 .logo {
   height: 1em;
 }
+
+/* Pointer Styles */
+.clickable {
+  cursor: pointer;
+}
+
 /* Mobile stuff */
 @media (max-width: 1068px) {
   .main{
