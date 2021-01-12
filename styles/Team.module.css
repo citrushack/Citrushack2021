@@ -9,8 +9,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 2rem 0 6rem;
 }
-
+.title{
+    font-size: 7rem;
+    text-align: center;
+}
 .teams{
     display: flex;
     flex-wrap: wrap;
@@ -49,12 +53,22 @@
 .picture > div{
     border-radius: 50%;
     border: 3px solid lightseagreen;
-    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
     transition: all 0.2s ease;
 }
 
 .picture > div:hover{
     border: 3px solid white;
-    box-shadow: 0px 3px 20px rgba(0,0,0,0.4);
+    box-shadow: 0px 3px 20px rgba(0,0,0,0.2);
     transform: translateY(-5px);
 }
+@media (max-width: 1068px) {
+    .main{
+        max-width: 100%;
+        padding: 0 30px;
+        margin: 2rem 0;
+      }
+      .title{
+          font-size: 5rem;
+      }
+}
+

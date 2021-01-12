@@ -38,7 +38,7 @@ export default function Team() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={Teamstyles.main}>
-        <h1 className={styles.title}>Here's the team.</h1>
+        <h1 className={Teamstyles.title}>Here's the team.</h1>
         <div className={Teamstyles.grid}>
           <Profile
             image="/TeamPictures/Danial.JPG"
