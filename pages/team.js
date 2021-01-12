@@ -86,7 +86,7 @@ export default function Team() {
             image="/TeamPictures/Rahul.JPG"
             link="https://www.linkedin.com/in/rahul-sohi-511505163/"
             title="Rahul Sohi"
-            position="Lead"
+            position="Volunteer Lead"
           />
         </div>
         <Link href="/">
