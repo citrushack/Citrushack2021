@@ -1,21 +1,74 @@
+.main{
+    margin: 6rem auto 3rem;
+    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .grid{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 2rem 0 6rem;
+}
+.title{
+    font-size: 7rem;
+    text-align: center;
+}
+.teams{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .profile{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    margin: 1rem;
 }
 
-.profile h3{
+.picture{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+.picture h3{
+    line-height: 1.2;
+    margin: 1rem 0;
+    transition: all 0.2s ease;
+    padding: 0.5rem 0.7rem;
+}
+
+.picture p{
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.picture > div{
+    border-radius: 50%;
+    border: 3px solid lightseagreen;
     transition: all 0.2s ease;
 }
 
-.profile h3:hover{
-    background-color: #000;
-    color:#fff;
+.picture > div:hover{
+    border: 3px solid white;
+    box-shadow: 0px 3px 20px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
 }
+@media (max-width: 1068px) {
+    .main{
+        max-width: 100%;
+        padding: 0 30px;
+        margin: 2rem 0;
+      }
+      .title{
+          font-size: 5rem;
+      }
+}
+

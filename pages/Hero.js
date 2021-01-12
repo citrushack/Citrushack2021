@@ -90,7 +90,7 @@ export default function Hero() {
           href={`${
             authHookValue ? "/apply" : "http://localhost:1337/connect/google"
           }`}
-          className={styles.action}
+          className={Herostyles.action}
         >
           <h3>Apply now! &rarr;</h3>
         </a>
