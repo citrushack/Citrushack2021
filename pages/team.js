@@ -6,6 +6,7 @@ import styles from "../styles/Common.module.css";
 import Teamstyles from "../styles/Team.module.css";
 import logo from "../public/logoRevised.png";
 import { DeviceSignalWifi1BarLock } from "material-ui/svg-icons";
+import Particles from "react-tsparticles";
 
 const Profile = ({ image, link, title, position }) => {
   return (
@@ -37,6 +38,71 @@ export default function Team() {
         <title>{siteTitle}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Particles
+        id="tsparticles"
+        options={{
+          background: {
+            color: {
+              value: "",
+            },
+            position: {
+              value: "",
+            },
+          },
+          fpsLimit: 30,
+          backgroundMode: {
+            enable: true,
+            zIndex: -100,
+          },
+          interactivity: {
+            detectsOn: "window",
+            events: {
+              resize: true,
+            },
+          },
+          particles: {
+            color: {
+              value: ["#cf6f2b", "#fa9c5a", "#ffa500"],
+            },
+            links: {
+              color: "#ffffff",
+              distance: 150,
+              enable: false,
+              opacity: 0.5,
+              width: 1,
+            },
+            collisions: {
+              enable: false,
+            },
+            move: {
+              direction: "top",
+              enable: true,
+              outMode: "out",
+              random: true,
+              speed: 2,
+              straight: true,
+            },
+            number: {
+              density: {
+                enable: true,
+                value_area: 2000,
+              },
+              value: 16,
+            },
+            opacity: {
+              value: 1,
+            },
+            shape: {
+              type: "circle",
+            },
+            size: {
+              random: true,
+              value: 7,
+            },
+          },
+          detectRetina: true,
+        }}
+      />
       <main className={Teamstyles.main}>
         <h1 className={Teamstyles.title}>Here's the team.</h1>
         <div className={Teamstyles.grid}>
@@ -66,7 +132,7 @@ export default function Team() {
           />
           <Profile
             image="/TeamPictures/Rajbir.jpg"
-            link="https://rajbirjohar.com"
+            link="https://www.linkedin.com/in/rajbirjohar/"
             title="Rajbir Johar"
             position="Web Dev Lead"
           />
@@ -88,6 +154,74 @@ export default function Team() {
             title="Rahul Sohi"
             position="Volunteer Lead"
           />
+        </div>
+        <div className={Teamstyles.credits}>
+        <div className={Teamstyles.col}>
+        <h3>Committee</h3>
+        <ul>
+          <li>Ross Geller</li>
+          <li>Rachel Green</li>
+          <li>Chandler Bing</li>
+          <li>Monica Geller</li>
+          <li>Joey Tribbiani</li>
+          <li>Phoebe Buffay</li>
+        </ul>
+        </div>
+        <div className={Teamstyles.col}>
+        <h3>Committee</h3>
+        <ul>
+          <li>Ross Geller</li>
+          <li>Rachel Green</li>
+          <li>Chandler Bing</li>
+          <li>Monica Geller</li>
+          <li>Joey Tribbiani</li>
+          <li>Phoebe Buffay</li>
+        </ul>
+        </div>
+        <div className={Teamstyles.col}>
+        <h3>Committee</h3>
+        <ul>
+          <li>Ross Geller</li>
+          <li>Rachel Green</li>
+          <li>Chandler Bing</li>
+          <li>Monica Geller</li>
+          <li>Joey Tribbiani</li>
+          <li>Phoebe Buffay</li>
+        </ul>
+        </div>
+        <div className={Teamstyles.col}>
+        <h3>Committee</h3>
+        <ul>
+          <li>Ross Geller</li>
+          <li>Rachel Green</li>
+          <li>Chandler Bing</li>
+          <li>Monica Geller</li>
+          <li>Joey Tribbiani</li>
+          <li>Phoebe Buffay</li>
+        </ul>
+        </div>
+        <div className={Teamstyles.col}>
+        <h3>Committee</h3>
+        <ul>
+          <li>Ross Geller</li>
+          <li>Rachel Green</li>
+          <li>Chandler Bing</li>
+          <li>Monica Geller</li>
+          <li>Joey Tribbiani</li>
+          <li>Phoebe Buffay</li>
+        </ul>
+        </div>
+        <div className={Teamstyles.col}>
+        <h3>Committee</h3>
+        <ul>
+          <li>Ross Geller</li>
+          <li>Rachel Green</li>
+          <li>Chandler Bing</li>
+          <li>Monica Geller</li>
+          <li>Joey Tribbiani</li>
+          <li>Phoebe Buffay</li>
+        </ul>
+        </div>
         </div>
         <Link href="/">
           <a className={styles.card}>

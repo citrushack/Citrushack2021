@@ -52,7 +52,7 @@
 
 .picture > div{
     border-radius: 50%;
-    border: 3px solid lightseagreen;
+    border: 3px solid #ffa500;
     transition: all 0.2s ease;
 }
 
@@ -60,6 +60,21 @@
     border: 3px solid white;
     box-shadow: 0px 3px 20px rgba(0,0,0,0.2);
     transform: translateY(-5px);
+}
+
+.credits{
+    display: flex;
+    flex-wrap: wrap;
+}
+.col{
+    display: flex;
+    flex-direction: column;
+    margin:0 20px;
+}
+.credits ul, .credits ul li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 @media (max-width: 1068px) {
     .main{
