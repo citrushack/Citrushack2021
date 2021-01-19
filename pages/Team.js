@@ -11,7 +11,7 @@ import Particles from "react-tsparticles";
 const Profile = ({ image, link, title, position }) => {
   return (
     <div>
-      <Link href={link}>
+      <Link href={link} target="_blank" rel="noreferrer noopener">
         <a className={Teamstyles.link}>
           <div className={Teamstyles.profile}>
             <div className={Teamstyles.picture}>
@@ -153,6 +153,12 @@ export default function Team() {
             link="https://www.linkedin.com/in/rahul-sohi-511505163/"
             title="Rahul Sohi"
             position="Volunteer Lead"
+          />
+          <Profile
+            image="/TeamPictures/Saul.jpg"
+            link="https://github.com/SaulGonzalez81"
+            title="Saul Gonzalez"
+            position="Operations Lead"
           />
         </div>
         <div className={Teamstyles.credits}>
