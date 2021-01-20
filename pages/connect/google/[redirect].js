@@ -42,7 +42,7 @@ export default function Redirect() {
         ) {
           setText("Wait just a moment...");
           if (res.user.appComplete) {
-            setTimeout(() => router.push("/"), 1000);
+            setTimeout(() => router.push("/account"), 1000);
           } else {
             setTimeout(() => router.push("/apply"), 1000);
           }
