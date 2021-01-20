@@ -1,4 +1,7 @@
 /*CSS for Sponsors*/
 .sponsorsContainer{
-    min-height: 500px!important;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
 }
