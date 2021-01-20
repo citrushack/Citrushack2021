@@ -16,7 +16,7 @@ const StickyNav = styled.nav(
   padding: 0rem 1rem;
   min-width: 100%;
   background-color: rgb(255 197 113);
-  border-bottom:  1px solid rgb(255 197 113);
+  border-bottom: 4px solid rgb(224 133 0);
   opacity: 0.9;
 `
 );
