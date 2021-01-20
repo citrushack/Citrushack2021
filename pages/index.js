@@ -3,11 +3,11 @@ import Container, { siteTitle } from "../components/Container";
 import styles from "../styles/Common.module.css";
 import { useEffect, useState } from "react";
 
-import Hero from "./Hero";
-import Intro from "./Intro";
-import Faq from "./Faq";
-import Sponsors from "./Sponsors";
-import Volunteer from "./Volunteer";
+import Hero from "./hero";
+import Intro from "./intro";
+import Faq from "./faq";
+import Sponsors from "./sponsors";
+import Volunteer from "./volunteer";
 import Footer from "../components/Footer";
 
 import {
