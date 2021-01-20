@@ -4622,6 +4622,11 @@ react-scroll@^1.8.1:
     lodash.throttle "^4.1.1"
     prop-types "^15.7.2"
 
+react-sticky-nav@^4.0.6:
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/react-sticky-nav/-/react-sticky-nav-4.0.6.tgz#3d0613388e4f9a00a783e308f3d0f17fa08a3cde"
+  integrity sha512-1HWHPUQR5/dSqPSF/4aIzirqU2tEtXtMY1DM1IL0UbqwZY2883Qon2s0/tYiAzU7gbAlI+Acbp5hRbp5KgJNkg==
+
 react-transition-group@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-1.2.1.tgz#e11f72b257f921b213229a774df46612346c7ca6"

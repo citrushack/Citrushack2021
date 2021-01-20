@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import { siteTitle } from "../components/Container";
+import Container, { siteTitle } from "../components/Container";
 import styles from "../styles/Common.module.css";
 import Teamstyles from "../styles/Team.module.css";
 import logo from "../public/logoRevised.png";
@@ -33,7 +33,7 @@ const Profile = ({ image, link, title, position }) => {
 
 export default function Team() {
   return (
-    <>
+    <Container main>
       <Head>
         <title>{siteTitle}</title>
         <link rel="icon" href="/favicon.ico" />
@@ -79,7 +79,7 @@ export default function Team() {
               enable: true,
               outMode: "out",
               random: true,
-              speed: 2,
+              speed: .75,
               straight: true,
             },
             number: {
@@ -235,6 +235,6 @@ export default function Team() {
           </a>
         </Link>
       </main>
-    </>
+    </Container>
   );
 }

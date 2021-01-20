@@ -4,6 +4,8 @@ import Container, { siteTitle } from "../components/Container";
 import CopyToClipboard from '../components/CopyToClipboard.tsx';
 
 import styles from "../styles/Common.module.css";
+import accountStyles from "../styles/Account.module.css";
+
 import { Form, Field } from "react-final-form";
 
 import { Typography, Grid, Button, CssBaseline, Box } from '@material-ui/core';
@@ -28,7 +30,7 @@ function getStatus(appstatus) {
   if (appstatus === false)
     return <span style={{ color: 'rgb(255, 143, 143)' }}>Denied </span>;
   if (appstatus === true)
-    return <span style={{ color: 'rgb(178, 255, 9)' }}>Accepted </span>;
+    return <span style={{ color: 'rgb(150 , 255, 150)', textShadow: '-1px -1px 0 #000, 1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000' }}>Accepted </span>;
 }
 const validate = values => {
   const errors = {};
@@ -46,13 +48,26 @@ export default function Account() {
   const isFetching = useSelector(selectisFetching);
   const statusPayload = useSelector(selectStatusInfo);
   const groupExists = !!groupInfo.payload;
+  const router = useRouter();
+  const user = authU();
 
   useEffect(() => {
     dispatch(refreshGroup());
     dispatch(refreshStatus());
   }, []);
 
-  if (!authU()) {
+  useEffect(()=>{
+    if(user){
+      if(!user.appComplete){
+        router.push('/apply');
+      } 
+    } else{
+      router.push('http://localhost:1337/connect/google');
+    }  
+  }, [user])
+
+
+  if (!user) {
     return <Container main><h1>Loading...</h1></Container>;
   }
 
@@ -63,15 +78,15 @@ export default function Account() {
   return (
     <Container main>
       <CssBaseline />
-      <main className={styles.main}>
+      <main className={`${styles.main} ${accountStyles.container}`} id="accountContainer">
       <motion.div
         initial="initial"
         animate="in"
         exit="out"
-        style={{ marginBottom: '2em', backgroundColor: 'lightcyan' }}
+        style={{ marginBottom: '2em', backgroundColor: '#d8edbb', backgroundImage : 'url("https://www.transparenttextures.com/patterns/wavecut.png");' }}
         variants={pageVariants}
         transition={{
-          duration: 0.5,
+          duration: 4,
           ease: [0.43, 0.13, 0.23, 0.96],
           staggerChildren: 0.5,
         }}
@@ -82,7 +97,7 @@ export default function Account() {
               x: 5,
             }
           }
-          transition={{ duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96] }}
+          transition={{ duration: 4, ease: [0.43, 0.13, 0.23, 0.96] }}
           className="scaleDiv"
         >
           <h1 style={{textAlign: 'center'}}>
@@ -108,7 +123,7 @@ export default function Account() {
           animate="in"
           exit="out"
           variants={pageVariants}
-          transition={{ duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96] }}
+          transition={{ duration: 4, ease: [0.43, 0.13, 0.23, 0.96] }}
           className="mainCard accTable"
         >
           <CssBaseline />
@@ -124,7 +139,7 @@ export default function Account() {
               variant="h5"
               component="h1"
             >
-              You're all set, {authU().firstname}!<br></br>
+              You're all set, {user.firstname}!<br></br>
               <br></br>
               Check back another time to see your status, or create a group
               below if you're hacking with a friend.
@@ -151,7 +166,7 @@ export default function Account() {
               x: 4,
             }
           }
-          transition={{ duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96] }}
+          transition={{ duration: 4, ease: [0.43, 0.13, 0.23, 0.96] }}
           className="groupCard"
           style={{padding: '2em', backgroundColor: 'lightgrey'}}
 
@@ -174,6 +189,11 @@ export default function Account() {
                   <Button
                     variant="contained"
                     color="primary"
+                    style={{                   background: 'rgb(76, 211, 252, .65)',
+                    color: 'black',
+                    // boxShadow: '3px 3px 0px -1px rgba(0, 0, 0, 0.45)',
+                    border: '1px solid black',
+  }}
                     onClick={() => copy(groupInfo?.payload?.uid)}
                   >
                     Copy
@@ -184,8 +204,8 @@ export default function Account() {
               <Button
                 variant="contained"
                 style={{
-                  background: 'url("/images/asfalt-dark-light.png"), #ADDE8E',
-                  color: 'black',
+                  background: 'rgba(16, 27, 30, 0.83)',
+                  color: 'white',
                   // boxShadow: '3px 3px 0px -1px rgba(0, 0, 0, 0.45)',
                   border: '1px solid black',
                 }}
@@ -227,7 +247,7 @@ export default function Account() {
                       exit="out"
                       variants={pageVariants}
                       transition={{
-                        duration: 0.5,
+                        duration: 1.85,
                         ease: [0.43, 0.13, 0.23, 0.96],
                       }}
                       className="joinGroup"
@@ -266,7 +286,7 @@ export default function Account() {
                             variant="contained"
                             color="primary"
                             type="submit"
-                            style={{ width: '100%' }}
+                            style={{ width: '100%' ,     background: 'rgba(16, 27, 30, 0.83)',                          }}
                             disabled={isFetching}
                           >
                             Join
@@ -286,14 +306,14 @@ export default function Account() {
             animate="in"
             exit="out"
             variants={pageVariants}
-            transition={{ duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96] }}
+            transition={{ duration: 1.5, ease: [0.43, 0.13, 0.23, 0.96] }}
             className="joinGroup"
             whileHover={
               {
                 x: 2,
               } 
             }
-            style={{padding: '2em', backgroundColor: 'lightcyan'}}
+            style={{padding: '2em', backgroundColor: '#d8edbb',}}
           >
             <Grid  container alignItems="center" justify="center" spacing={2}>
               <Typography variant="h5" component="h1" gutterBottom>
@@ -340,6 +360,7 @@ export default function Account() {
                   <Button
                     variant="contained"
                     color="primary"
+                    style={{background: 'rgba(0, 0, 0, .69)'}}
                     onClick={e => {
                       e.preventDefault();
                       dispatch(joinGroup({groupCode: 'none'}));

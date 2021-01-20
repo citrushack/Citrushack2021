@@ -31,6 +31,7 @@
     "react-final-form": "^6.5.2",
     "react-redux": "^7.2.2",
     "react-scroll": "^1.8.1",
+    "react-sticky-nav": "^4.0.6",
     "react-tsparticles": "^1.18.11",
     "what-input": "^5.2.10",
     "whatwg-fetch": "^3.5.0"

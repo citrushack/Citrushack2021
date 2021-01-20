@@ -7,14 +7,14 @@ import { useRouter } from "next/router";
 
 const StickyNav = styled.nav(
   (props) => `
-  position: ${props.isHome ? "fixed" : "static"};
+  position: ${props.isHome ? "absolute" : "static"};
   z-index: 5;
   top: 0;
   right: 0;
   margin: 0;
   padding: 0rem 1rem;
   min-width: 100%;
-  background-color: #fff;
+  background-color: #00000014;
 `
 );
 
@@ -39,7 +39,7 @@ export default function Nav() {
   const isAuthenticated = useIsAuthenticated();
   const signOut = useSignOut();
   const router = useRouter();
-  const isHome = router.pathname == "/";
+  const isHome = router.pathname == "/" || router.pathname == '';
   return (
     <StickyNav isHome>
       <ul className={Navstyles.navlistcontainer}>
