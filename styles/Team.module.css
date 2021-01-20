@@ -65,6 +65,7 @@
 .credits{
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 4em;
 }
 .col{
     display: flex;

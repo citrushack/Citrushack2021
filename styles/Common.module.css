@@ -105,18 +105,21 @@
   width: 400px;
   text-align: center;
   text-decoration: none;
-  border: 3px solid #ff6060;
+  border: 3px solid rgba(0,0,0,0.9);;
   border-radius: 15px;
   transition: all 0.15s ease;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.882);;
 }
 .card:hover,
 .card:focus,
 .card:active {
-  border-color: #000;
+  border-color:#ff6060;
   box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+  background-color: rgba(255, 235, 235, 1);;
   transform: translateY(-3px);
 }
+
+
 
 .card h3 {
   text-transform: uppercase;

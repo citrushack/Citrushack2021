@@ -27,17 +27,6 @@
   line-height: 1;
 }
 
-.card{
-  border: 3px solid rgba(0,0,0,0.9);;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  border: 3px solid #ff6060;
-  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
-  transform: translateY(-3px);
-}
 
 .action{
     margin: 0 1rem 1rem 0;
@@ -45,17 +34,18 @@
     width: 400px;
     text-align: center;
     text-decoration: none;
-    border: 3px solid #ff6060;
+    border: 3px solid #1b1b1b;
     border-radius: 15px;
     transition: all 0.15s ease;
-    background-color: #ff6060;
-    color: #fff;
+    background-color: #ff6666;
+    color: #1b1b1b;
   }
   
   .action:hover,
   .action:focus,
   .action:active {
-    border-color: #000;
+    border-color: #f53737;
+    background-color: #ff6060;
     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
     transform: translateY(-3px);
   }

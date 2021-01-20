@@ -100,7 +100,7 @@ export default function Hero() {
           smooth={true}
           duration={800}
           activeClass="active"
-          className={`${styles.card} ${styles.clickable} ${Herostyles.card}`}
+          className={`${styles.card} ${styles.clickable}`}
         >
           <h3 className={Herostyles.h3}>Learn more <span className={`${Herostyles.bigArrow} ${Herostyles.nudge}`}>&darr;</span></h3>
         </Link>
