@@ -67,7 +67,7 @@ export default function Hero() {
                 enable: true,
                 value_area: 2000,
               },
-              value: 16,
+              value: 20,
             },
             opacity: {
               value: 1,
