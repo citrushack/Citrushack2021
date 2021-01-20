@@ -39,9 +39,9 @@ export default function Nav() {
   const isAuthenticated = useIsAuthenticated();
   const signOut = useSignOut();
   const router = useRouter();
-  const isHome = router.pathname == "/" || router.pathname == '';
+
   return (
-    <StickyNav isHome>
+    <StickyNav isHome={router.pathname == "/" }>
       <ul className={Navstyles.navlistcontainer}>
         <div className={Navstyles.logos}>
           <a href="/"><img src={logo} width="100" height="100" alt="Citrushack 2021 Logo" /></a>
@@ -51,7 +51,7 @@ export default function Nav() {
             href="https://mlh.io/seasons/2021/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2021-season&utm_content=white"
             target="_blank"
           >
-            {isHome && (
+            {router.pathname == "/" && (
               <img
                 src="https://s3.amazonaws.com/logged-assets/trust-badge/2021/mlh-trust-badge-2021-white.svg"
                 alt="Major League Hacking 2021 Hackathon Season"

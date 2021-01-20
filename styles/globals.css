@@ -13,7 +13,9 @@ body {
   width:100%;
 }
 
-
+body{
+  background-color: transparent!important;
+}
 a {
   color: inherit;
   text-decoration: none;
