@@ -51,23 +51,24 @@ p, h1 {
 
 /*react-scroll classes applied to navbar*/
 .active {
-  border-bottom: 3px solid #fff !important;
+  border-bottom: 3px solid #ff6060 !important;
 }
 
 .link {
-  color:#fff;
+  color:#1b1b1b;
   margin-right: 1rem;
   padding: 1rem 0.75rem;
   transition: all 0.2s ease;
   text-transform: uppercase;
-  border-bottom: 3px solid #00000073 !important;
+  border-bottom: 3px solid #1b1b1b;
 
 }
 
 .link:hover,
 .link:focus,
 .link:active {
-  border-bottom: 3px solid #fff !important;
+  border-bottom: 3px solid #ff6060;
+  color:#ff6060;
 }
 
 .signup{
