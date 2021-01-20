@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 
 const StickyNav = styled.nav(
   (props) => `
-  position: ${props.isHome ? "static" : "fixed"};
+  position: ${props.isHome ? "fixed" : "static"};
   z-index: 5;
   top: 0;
   right: 0;
@@ -44,7 +44,7 @@ export default function Nav() {
     <StickyNav isHome>
       <ul className={Navstyles.navlistcontainer}>
         <div className={Navstyles.logos}>
-          <img src={logo} width="100" height="100" alt="Citrushack 2021 Logo" />
+          <a href="/"><img src={logo} width="100" height="100" alt="Citrushack 2021 Logo" /></a>
           <a
             id="mlh-trust-badge"
             className="MLH"
