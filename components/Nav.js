@@ -7,14 +7,15 @@ import { useRouter } from "next/router";
 
 const StickyNav = styled.nav(
   (props) => `
-  position: ${props.isHome ? "absolute" : "static"};
+  // position: ${props.isHome ? "absolute" : "static"};
+  position: sticky;
   z-index: 5;
   top: 0;
   right: 0;
   margin: 0;
   padding: 0rem 1rem;
   min-width: 100%;
-  background-color: #00000014;
+  background-color: rgba(0,0,0,0.4);
 `
 );
 
