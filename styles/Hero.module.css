@@ -14,10 +14,10 @@
   line-height: 1;
 }
 .nudge{
-  transform: translate(250%, -25%);
+  transform: translate(100%, -25%);
 }
 .nudgeMore{
-  transform: translate(100%, -35%);
+  transform: translate(100%, -25%);
 }
 .buttonGrid{
   justify-content: flex-start;
