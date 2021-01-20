@@ -33,7 +33,7 @@ const Profile = ({ image, link, title, position }) => {
 
 export default function Team() {
   return (
-    <Container main>
+    <>
       <Head>
         <title>{siteTitle}</title>
         <link rel="icon" href="/favicon.ico" />
@@ -235,6 +235,6 @@ export default function Team() {
           </a>
         </Link>
       </main>
-    </Container>
+    </>
   );
 }
