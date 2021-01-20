@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import { siteTitle } from "../components/Container";
+import Container, { siteTitle } from "../components/Container";
 import styles from "../styles/Common.module.css";
 import Teamstyles from "../styles/Team.module.css";
 import logo from "../public/logoRevised.png";
@@ -11,7 +11,7 @@ import Particles from "react-tsparticles";
 const Profile = ({ image, link, title, position }) => {
   return (
     <div>
-      <Link href={link}>
+      <Link href={link} target="_blank" rel="noreferrer noopener">
         <a className={Teamstyles.link}>
           <div className={Teamstyles.profile}>
             <div className={Teamstyles.picture}>
@@ -33,7 +33,7 @@ const Profile = ({ image, link, title, position }) => {
 
 export default function Team() {
   return (
-    <>
+    <Container main>
       <Head>
         <title>{siteTitle}</title>
         <link rel="icon" href="/favicon.ico" />
@@ -79,7 +79,7 @@ export default function Team() {
               enable: true,
               outMode: "out",
               random: true,
-              speed: 2,
+              speed: .75,
               straight: true,
             },
             number: {
@@ -153,6 +153,12 @@ export default function Team() {
             link="https://www.linkedin.com/in/rahul-sohi-511505163/"
             title="Rahul Sohi"
             position="Volunteer Lead"
+          />
+          <Profile
+            image="/TeamPictures/Saul.jpg"
+            link="https://github.com/SaulGonzalez81"
+            title="Saul Gonzalez"
+            position="Operations Lead"
           />
         </div>
         <div className={Teamstyles.credits}>
@@ -229,6 +235,6 @@ export default function Team() {
           </a>
         </Link>
       </main>
-    </>
+    </Container>
   );
 }

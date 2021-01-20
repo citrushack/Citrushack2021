@@ -3,9 +3,9 @@ import Volunteerstyles from "../styles/Volunteer.module.css";
 
 export default function Volunteer() {
   return (
-    <main className={styles.main}>
+    <main className={`${styles.main} ${styles.paragraphPadding}`}>
       <h1 className={styles.title}>Get Involved</h1>
-      <p className={styles.description}>
+      <p className={`${styles.description}`}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec egestas
         sapien sit amet metus efficitur semper. Integer id luctus enim.
         Curabitur a arcu et arcu tincidunt lobortis eget sed risus. Suspendisse

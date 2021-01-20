@@ -3,11 +3,11 @@ import Container, { siteTitle } from "../components/Container";
 import styles from "../styles/Common.module.css";
 import { useEffect, useState } from "react";
 
-import Hero from "./Hero";
-import Intro from "./Intro";
-import Faq from "./Faq";
-import Sponsors from "./Sponsors";
-import Volunteer from "./Volunteer";
+import Hero from "./hero";
+import Intro from "./intro";
+import Faq from "./faq";
+import Sponsors from "./sponsors";
+import Volunteer from "./volunteer";
 import Footer from "../components/Footer";
 
 import {
@@ -61,7 +61,8 @@ void main() {
 `;
 export default function Home() {
   useEffect(() => {
-    if (document.getElementsByTagName("canvas").length < 2) {
+    if (
+      document.getElementsByTagName("canvas").length < 2) {
       const renderer = new Renderer({ dpr: 1, alpha: true, transparent: true });
       const gl = renderer.gl;
       document.body.appendChild(gl.canvas);

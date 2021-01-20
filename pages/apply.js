@@ -1,5 +1,5 @@
-import React from "react";
-
+import React, {useEffect} from "react";
+import Cookies from "js-cookie";
 import Container, { siteTitle } from "../components/Container";
 import styles from "../styles/Common.module.css";
 import { Form, Field } from "react-final-form";
@@ -17,6 +17,10 @@ import { TextField, Autocomplete } from "mui-rff";
 import { countries, genders } from "../data/data";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Dropzone from "../components/Dropzone";
+import { useDispatch, useSelector } from "react-redux";
+import { submitAsync, selectError } from "../lib/slices/applySlice";
+import { useRouter } from "next/router";
+import { useSignIn, useAuthUser } from "react-auth-kit";
 
 const checkIn = [
   {
@@ -286,7 +290,7 @@ const validate = (values) => {
   if (!values.firstname) errors.firstname = "Required";
   if (!values.lastname) errors.lastname = "Required";
   if (!values.school) errors.school = "Required";
-  // if (!!!values.major) errors.major = 'Required';
+  if (!values.major) errors.major = "Required";
   if (!values.gender) errors.gender = "Required";
   return errors;
 };
@@ -303,15 +307,42 @@ function validateYear(year) {
   return re.test(year);
 }
 
-//todo: send data to server
-const onSubmit = (values) => {
-  console.log(values);
-};
-
 const initialValues = {};
 
 export default function Apply() {
   const matches = useMediaQuery("(min-width:600px)");
+  const dispatch = useDispatch();
+  const signIn = useSignIn();
+  const authU = useAuthUser();
+  const router = useRouter();
+  const errormsg = useSelector(selectError);
+  const user = authU();
+  console.log(errormsg);
+
+  //Redirect non authenticated or already finished users
+  useEffect(()=>{
+    if(user){
+      if(user.appComplete){
+        router.push('/account');
+      } 
+    } else{
+      router.push('http://localhost:1337/connect/google');
+    }  
+  }, [user])
+
+  const onSubmit = (values) => {
+    console.log(values);
+    dispatch(
+      submitAsync({
+        ...values,
+        history: router.push,
+        signIn: signIn,
+        authToken: Cookies.get("_auth_token"),
+        authState: JSON.parse(Cookies.get("_auth_state") || "{}"),
+      })
+    );
+  };
+
   return (
     <Container main>
       <CssBaseline />
@@ -395,6 +426,11 @@ export default function Apply() {
                       marginTop: 16,
                     }}
                   >
+                    {errormsg && (
+                      <Alert severity="error">
+                        <AlertTitle>Error: {errormsg}</AlertTitle>
+                      </Alert>
+                    )}
                     <Button
                       variant="contained"
                       color="primary"
@@ -405,6 +441,7 @@ export default function Apply() {
                         width: "100%",
                         background: "#9be36d",
                         color: "black",
+                        marginTop: "24px",
                       }}
                     >
                       Submit

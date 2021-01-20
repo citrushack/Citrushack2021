@@ -59,7 +59,7 @@ export default function Hero() {
               enable: true,
               outMode: "out",
               random: true,
-              speed: 2,
+              speed: 0.75,
               straight: true,
             },
             number: {
@@ -67,7 +67,7 @@ export default function Hero() {
                 enable: true,
                 value_area: 2000,
               },
-              value: 16,
+              value: 20,
             },
             opacity: {
               value: 1,
@@ -83,16 +83,16 @@ export default function Hero() {
           detectRetina: true,
         }}
       />
-      <h1 className={Herostyles.title}>Citrushack 2021</h1>
-      <p className={Herostyles.description}>Be zen.</p>
-      <div className={styles.grid}>
+      <h1 className={Herostyles.title}>Citrus Hack 2021</h1>
+      <p className={Herostyles.description}>Zen out.<br/> 禅になる.</p>
+      <div className={`${styles.grid} ${Herostyles.buttonGrid}`}>
         <a
           href={`${
             authHookValue ? "/apply" : "http://localhost:1337/connect/google"
           }`}
           className={Herostyles.action}
         >
-          <h3>Apply now! &rarr;</h3>
+          <h3 className={Herostyles.h3}>Apply now! <span className={`${Herostyles.bigArrow} ${Herostyles.nudgeMore}`}>&rarr;</span></h3>
         </a>
         <Link
           to="About"
@@ -102,7 +102,7 @@ export default function Hero() {
           activeClass="active"
           className={`${styles.card} ${styles.clickable}`}
         >
-          <h3>Learn more &rarr;</h3>
+          <h3 className={Herostyles.h3}>Learn more <span className={`${Herostyles.bigArrow} ${Herostyles.nudge}`}>&darr;</span></h3>
         </Link>
       </div>
     </main>

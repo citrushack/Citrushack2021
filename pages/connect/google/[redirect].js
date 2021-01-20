@@ -12,30 +12,26 @@ export default function Redirect() {
   const router = useRouter();
   const [text, setText] = useState("Loading...");
   const signIn = useSignIn();
-  //console.log(router.query);
+
   useEffect(() => {
-    // Successfully logged with the provider
+    // Successfully logged with google
     // Now logging with strapi by using the access_token (given by the provider) in props.location.search
-    fetch(
-      `${backendUrl}/auth/google/callback?${new URLSearchParams(
-        router.query
-      ).toString()}`
-    )
+    const queryString = new URLSearchParams(router.query).toString();
+    if (!queryString.length) return;
+    fetch(`${backendUrl}/auth/google/callback?${queryString}`)
       .then((res) => {
         if (res.status !== 200) {
           console.log(res);
           throw new Error(`Couldn't login to Strapi. Status: ${res.status}`);
         }
-        //console.log(res.status);
-        //console.log(res.statusCode);
+
         return res;
       })
       .then((res) => res.json())
       .then((res) => {
         // Successfully logged with Strapi
         // Now saving the jwt to use it for future authenticated requests to Strapi
-        // auth.setToken(res.jwt, true);
-        // auth.setUserInfo(res.user, true);
+
         if (
           signIn({
             token: res.jwt,
@@ -46,7 +42,7 @@ export default function Redirect() {
         ) {
           setText("Wait just a moment...");
           if (res.user.appComplete) {
-            setTimeout(() => router.push("/"), 1000);
+            setTimeout(() => router.push("/account"), 1000);
           } else {
             setTimeout(() => router.push("/apply"), 1000);
           }

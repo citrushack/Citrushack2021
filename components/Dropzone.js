@@ -27,7 +27,7 @@ function Dropzone(props) {
       if (props.onChange) {
         const data = new FormData();
         data.append("files", files[0]);
-        console.log(files[0]);
+        // console.log(files[0]);
         props.onChange(data);
       }
     },
