@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 html{
-  overflow-x: hidden;
-  background-color:#ffa93952!important;
+  overflow-x: hidden !important;
+  background-color:#f3c78d52!important;
 }
 
 html,
