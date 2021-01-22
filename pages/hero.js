@@ -5,6 +5,7 @@ import Particles from "react-tsparticles";
 import dynamic from "next/dynamic";
 import React, { useState, useEffect } from "react";
 import { useIsAuthenticated } from "react-auth-kit";
+import {FaChevronRight, FaChevronDown} from "react-icons/fa"
 
 export default function Hero() {
   const isAuthenticated = useIsAuthenticated();
@@ -84,7 +85,10 @@ export default function Hero() {
         }}
       />
       <h1 className={Herostyles.title}>Citrus Hack 2021</h1>
-      <p className={Herostyles.description}>Zen out.<br/> 禅になる.</p>
+      <p className={Herostyles.description}>
+        Zen out.
+        <br /> 禅になる.
+      </p>
       <div className={`${styles.grid} ${Herostyles.buttonGrid}`}>
         <a
           href={`${
@@ -92,7 +96,10 @@ export default function Hero() {
           }`}
           className={Herostyles.action}
         >
-          <h3 className={Herostyles.h3}>Apply now! <span className={`${Herostyles.bigArrow} ${Herostyles.nudgeMore}`}>&rarr;</span></h3>
+          <h3 className={Herostyles.h3}>
+            Apply now!{" "}
+            <FaChevronRight />
+          </h3>
         </a>
         <Link
           to="About"
@@ -102,7 +109,10 @@ export default function Hero() {
           activeClass="active"
           className={`${styles.card} ${styles.clickable}`}
         >
-          <h3 className={Herostyles.h3}>Learn more <span className={`${Herostyles.bigArrow} ${Herostyles.nudge}`}>&darr;</span></h3>
+          <h3 className={Herostyles.h3}>
+            Learn more{" "}
+            <FaChevronDown />
+          </h3>
         </Link>
       </div>
     </main>
