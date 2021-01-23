@@ -1,88 +1,88 @@
 /*CSS for Hero section*/
-.main{
-    min-height: 100vh;
-    min-width: 100vw;
-    margin:auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url(../public/Cherry\ Blossom\ Asset.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: left -500px bottom;
+.main {
+  min-height: 100vh;
+  min-width: 100vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../public/Cherry\ Blossom\ Asset.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left -500px center;
 }
 
-.title{
-    font-size: 5rem;
-    margin: 0;
-    color: #fff;
-}
-.description{
-    font-size: 3rem;
-    color: #fff;
+.title {
+  font-size: 5rem;
+  margin: 0;
+  color: #fff;
+  text-align: center;
 }
 
-.bigArrow{
+.description {
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+}
+
+.bigArrow {
   font-size: 2.5rem;
-  display:inline-block;
-  position:absolute;
+  display: inline-block;
+  position: absolute;
   line-height: 1;
 }
-.nudge{
+.nudge {
   transform: translate(100%, -25%);
 }
-.nudgeMore{
+.nudgeMore {
   transform: translate(100%, -25%);
 }
-.buttonGrid{
+.buttonGrid {
   justify-content: flex-start;
 }
 
-.h3{
+.h3 {
   line-height: 1;
 }
 
+.action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem 1rem 0;
+  padding: 0.5rem;
+  width: 400px;
+  text-align: center;
+  text-decoration: none;
+  border: 3px solid #1b1b1b;
+  transition: all 0.15s ease;
+  background-color: #1b1b1b;
+  color: #fff;
+}
 
-.action{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 1rem 1rem 0;
-    padding: 0.5rem;
-    width: 400px;
-    text-align: center;
-    text-decoration: none;
-    border: 3px solid #1b1b1b;
-    border-radius: 15px;
-    transition: all 0.15s ease;
-    background-color: #ff6666;
-    color: #1b1b1b;
-  }
-  
-  .action:hover,
-  .action:focus,
-  .action:active {
-    border-color: #f53737;
-    background-color: #ff6060;
-    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
-    transform: translateY(-3px);
-  }
-  
-  .action h3{
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    font-weight: 500;
-  }
+.action:hover,
+.action:focus,
+.action:active {
+  background-color: #ff6060;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+.action h3 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
 
 @media (max-width: 1068px) {
-    .title{
-        font-size: 5rem;
-    }
-    .description{
-        font-size: 2rem;
-    }
-    .action{
-      width: 100%
-    }
+  .title {
+    font-size: 5rem;
+  }
+  .description {
+    font-size: 2rem;
+  }
+  .action {
+    width: 100%;
+  }
 }

@@ -13,7 +13,7 @@ export default function Volunteer() {
         nisl, congue id aliquet vitae, malesuada sed lacus. Phasellus dapibus
         euismod leo, ut scelerisque tellus rhoncus sed.
       </p>
-      <div className={styles.grid}>
+      <div className={Volunteerstyles.grid}>
         <a href="https://nextjs.org/docs" className={styles.card}>
           <h3>Mentors &rarr;</h3>
         </a>
