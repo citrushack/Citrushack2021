@@ -26,8 +26,7 @@ const FaqSection = ({ question, answer }) => {
 export default function AccordionComponent() {
   return (
     <Accordion
-      allowMultipleExpanded
-      allowZeroExpanded
+allowZeroExpanded
       className={styles.accordion}
     >
       <FaqSection

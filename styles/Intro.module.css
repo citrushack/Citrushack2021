@@ -3,17 +3,18 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  margin-top: 10rem;
+  justify-content: space-around;
+  max-width: 90vw;
+  margin: 10rem auto 0 auto;
 }
 /* Intro Content Column */
-.introductionCol {
+.text {
   display: flex;
   flex: 0 1 50%;
   flex-direction: column;
 }
 /* Intro statistics column */
-.infogrid {
+.stats {
   display: flex;
   flex-direction: column;
   margin-left: 2rem;
@@ -39,11 +40,7 @@
     flex-direction: column;
     align-items: unset;
   }
-  .grid {
-    min-width: 100%;
-    flex-direction: column;
-  }
-  .infogrid {
+  .stats {
     margin-left: 0;
   }
 }

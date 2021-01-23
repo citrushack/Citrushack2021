@@ -1,0 +1,72 @@
+.tracks{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 90vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.trackwrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.trackselection {
+margin: 2rem;
+flex: 33%;
+}
+
+.link {
+  list-style: none;
+  margin: 1rem;
+  padding: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+}
+.link:hover, .link:active{
+ border-bottom: 3px solid #000;
+}
+
+.track {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 2rem 3rem;
+}
+
+.text{
+flex: 20%;
+}
+.image{
+flex: 50%;
+}
+
+@media (max-width: 1068px) {
+    .tracks{
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .track{
+        flex-direction: column-reverse;
+        margin: 0;
+        flex: 1;
+    }
+    .trackwrapper{
+        flex-direction: column-reverse;
+    }
+    .trackselection{
+        margin: 0;
+        align-self: flex-start;
+        flex: 1;
+    }
+    .link{
+        margin: 1rem 0;
+    }
+}

@@ -3,7 +3,8 @@ import Volunteerstyles from "../styles/Volunteer.module.css";
 
 export default function Volunteer() {
   return (
-    <main className={`${styles.main} ${styles.paragraphPadding}`}>
+    <main className={styles.main}>
+      <div className={Volunteerstyles.wrapper}>
       <h1 className={styles.title}>Get Involved</h1>
       <p className={`${styles.description}`}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec egestas
@@ -13,7 +14,7 @@ export default function Volunteer() {
         nisl, congue id aliquet vitae, malesuada sed lacus. Phasellus dapibus
         euismod leo, ut scelerisque tellus rhoncus sed.
       </p>
-      <div className={Volunteerstyles.grid}>
+      <div className={styles.grid}>
         <a href="https://nextjs.org/docs" className={styles.card}>
           <h3>Mentors &rarr;</h3>
         </a>
@@ -25,6 +26,7 @@ export default function Volunteer() {
         <a href="https://nextjs.org/learn" className={styles.card}>
           <h3>Learn More &rarr;</h3>
         </a>
+      </div>
       </div>
     </main>
   );

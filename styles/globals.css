@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-
+* {
+  box-sizing: border-box;
+}
 html {
   overflow-x: hidden !important;
   background: rgb(251, 157, 157);
@@ -16,20 +18,27 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Poppins", sans-serif;
-  width: 100%;
+  color: #1b1b1b;
 }
 
 body {
   background-color: transparent !important;
 }
+
+h1{
+  line-height: 1.2;
+}
+
+p{
+  line-height: 1.5;
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
-}
+
 
 /* From package what-input to remove default focus border because its ugly */
 [data-whatinput="mouse"] :focus,

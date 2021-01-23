@@ -18,7 +18,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <main className={Herostyles.main}>
+    <main className={`${styles.main} ${Herostyles.content}`}>
       <Particles
         id="tsparticles"
         options={{
@@ -84,8 +84,8 @@ export default function Hero() {
           detectRetina: true,
         }}
       />
-      <h1 className={Herostyles.title}>CITRUS HACK 2021</h1>
-      <p className={Herostyles.description}>
+      <h1 className={Herostyles.title}>Citrus hack 2021</h1>
+      <p className={Herostyles.caption}>
         Zen out.
         <br /> 禅になる.
       </p>
@@ -94,11 +94,11 @@ export default function Hero() {
           href={`${
             authHookValue ? "/apply" : "http://localhost:1337/connect/google"
           }`}
-          className={Herostyles.action}
+          className={`${styles.card} ${Herostyles.action}`}
         >
           <h3 className={Herostyles.h3}>
             SIGN UP{" "}
-            <FaChevronRight />
+            <FaChevronRight className={Herostyles.icon}/>
           </h3>
         </a>
         <Link
@@ -111,7 +111,7 @@ export default function Hero() {
         >
           <h3 className={Herostyles.h3}>
             LEARN MORE{" "}
-            <FaChevronDown />
+            <FaChevronDown className={Herostyles.icon}/>
           </h3>
         </Link>
       </div>

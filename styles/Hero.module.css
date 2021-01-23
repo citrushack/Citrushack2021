@@ -1,11 +1,5 @@
 /*CSS for Hero section*/
-.main {
-  min-height: 100vh;
-  min-width: 100vw;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.content {
   align-items: center;
   background-image: url(../public/Cherry\ Blossom\ Asset.svg);
   background-size: cover;
@@ -13,48 +7,21 @@
   background-position: left -500px center;
 }
 
+.title,.caption{
+  color: #fff;
+}
+
 .title {
-  font-size: 5rem;
+  font-size: 6rem;
   margin: 0;
-  color: #fff;
-  text-align: center;
+  text-transform: uppercase;
 }
 
-.description {
+.caption {
   font-size: 3rem;
-  color: #fff;
-  text-align: center;
-}
-
-.bigArrow {
-  font-size: 2.5rem;
-  display: inline-block;
-  position: absolute;
-  line-height: 1;
-}
-.nudge {
-  transform: translate(100%, -25%);
-}
-.nudgeMore {
-  transform: translate(100%, -25%);
-}
-.buttonGrid {
-  justify-content: flex-start;
-}
-
-.h3 {
-  line-height: 1;
 }
 
 .action {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 1rem 1rem 0;
-  padding: 0.5rem;
-  width: 400px;
-  text-align: center;
-  text-decoration: none;
   border: 3px solid #1b1b1b;
   transition: all 0.15s ease;
   background-color: #1b1b1b;
@@ -68,21 +35,15 @@
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   transform: translateY(-3px);
 }
-
-.action h3 {
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  font-weight: 500;
+.icon{
+  transform: translateX(4px) translateY(4px);
 }
-
 @media (max-width: 1068px) {
-  .title {
-    font-size: 5rem;
+  .title{
+    text-align: center;
+    font-size: 4rem;
   }
-  .description {
+  .caption{
     font-size: 2rem;
-  }
-  .action {
-    width: 100%;
   }
 }
