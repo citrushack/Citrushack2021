@@ -22,22 +22,17 @@
 }
 
 .action {
-  border: 3px solid #1b1b1b;
-  transition: all 0.15s ease;
-  background-color: #1b1b1b;
+  border: 3px solid #1b1b1b !important;
+  background-color: #1b1b1b !important;
   color: #fff;
 }
 
 .action:hover,
 .action:focus,
 .action:active {
-  background-color: #ff6060;
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-  transform: translateY(-3px);
+  background-color: #ff6060 !important;
 }
-.icon{
-  transform: translateX(4px) translateY(4px);
-}
+
 @media (max-width: 1068px) {
   .title{
     text-align: center;

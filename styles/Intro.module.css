@@ -4,7 +4,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  max-width: 90vw;
+  width: min(90vw,1500px);
   margin: 10rem auto 0 auto;
 }
 /* Intro Content Column */
@@ -31,9 +31,6 @@
   background-size: 100% 100%;
   background-position: center;
   transition: all 0.2s ease;
-}
-.infocard:hover{
-  background-image: url("../public/brushstrokebanner.png");
 }
 @media (max-width: 1068px) {
   .introduction {

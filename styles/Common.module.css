@@ -122,6 +122,10 @@
   cursor: pointer;
 }
 
+.icon{
+  transform: translate(4px,4px);
+}
+
 /* Mobile stuff */
 @media (max-width: 1068px) {
   .main{
