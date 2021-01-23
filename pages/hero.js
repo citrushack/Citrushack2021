@@ -68,7 +68,7 @@ export default function Hero() {
                 enable: true,
                 value_area: 2000,
               },
-              value: 20,
+              value: 40,
             },
             opacity: {
               value: 1,
@@ -78,13 +78,13 @@ export default function Hero() {
             },
             size: {
               random: true,
-              value: 7,
+              value: 10,
             },
           },
           detectRetina: true,
         }}
       />
-      <h1 className={Herostyles.title}>Citrus Hack 2021</h1>
+      <h1 className={Herostyles.title}>CITRUS HACK 2021</h1>
       <p className={Herostyles.description}>
         Zen out.
         <br /> 禅になる.
@@ -97,7 +97,7 @@ export default function Hero() {
           className={Herostyles.action}
         >
           <h3 className={Herostyles.h3}>
-            Apply now!{" "}
+            SIGN UP{" "}
             <FaChevronRight />
           </h3>
         </a>
@@ -110,7 +110,7 @@ export default function Hero() {
           className={`${styles.card} ${styles.clickable}`}
         >
           <h3 className={Herostyles.h3}>
-            Learn more{" "}
+            LEARN MORE{" "}
             <FaChevronDown />
           </h3>
         </Link>
