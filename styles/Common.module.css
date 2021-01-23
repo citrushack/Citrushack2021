@@ -7,21 +7,14 @@
 }
 /* Container for each section */
 .main {
-  min-height: min(100vw, 1000px);
-  max-width: min(90vw, 1200px);
+  min-height: 100vh;
+  min-width: 100vw;
   margin:auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
 }
-.topAlign {
-  justify-content: flex-start;
-}
-.paragraphPadding {
-  max-width: 850px;
-  margin: auto;
-}
+
 /* Footer CSS */
 .footer {
   width: 100%;
@@ -64,12 +57,10 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 600;
   color: #1b1b1b; 
 }
-
-
 
 .title,
 .description {
@@ -77,7 +68,6 @@
 }
 /* Description Styles */
 .description {
-  line-height: 1.5;
   font-size: 1.5rem;
   color: #1b1b1b; 
 }
@@ -116,8 +106,6 @@
   background-color: rgba(255, 255, 255, 1);
   transform: translateY(-3px);
 }
-
-
 
 .card h3 {
   text-transform: uppercase;

@@ -8,6 +8,7 @@ import Intro from "./intro";
 import Faq from "./faq";
 import Sponsors from "./sponsors";
 import Volunteer from "./volunteer";
+import Tracks from "./tracks";
 import Footer from "../components/Footer";
 
 import {
@@ -159,6 +160,9 @@ export default function Home() {
         </Element>
         <Element name="About">
           <Intro />
+        </Element>
+        <Element name="Tracks">
+          <Tracks />
         </Element>
         <Element name="Questions">
           <Faq />

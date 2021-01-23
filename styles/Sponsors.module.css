@@ -1,7 +1,6 @@
 /*CSS for Sponsors*/
-.sponsorsContainer{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 100vh;
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
