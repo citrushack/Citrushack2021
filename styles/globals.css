@@ -10,6 +10,7 @@ html {
     rgba(251, 157, 157, 1) 0%,
     rgba(255, 205, 205, 1) 100%
   );
+  background-repeat: no-repeat;
   /* background-color:#facb7552!important; */
 }
 

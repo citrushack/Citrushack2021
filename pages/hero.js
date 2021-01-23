@@ -98,7 +98,7 @@ export default function Hero() {
         >
           <h3 className={Herostyles.h3}>
             SIGN UP{" "}
-            <FaChevronRight className={Herostyles.icon}/>
+            <FaChevronRight className={styles.icon}/>
           </h3>
         </a>
         <Link
@@ -111,7 +111,7 @@ export default function Hero() {
         >
           <h3 className={Herostyles.h3}>
             LEARN MORE{" "}
-            <FaChevronDown className={Herostyles.icon}/>
+            <FaChevronDown className={styles.icon}/>
           </h3>
         </Link>
       </div>

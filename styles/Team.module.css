@@ -1,6 +1,6 @@
 .main{
     margin: 6rem auto 3rem;
-    max-width: 90vw;
+    width: min(90vw,1500px);
     display: flex;
     flex-direction: column;
     align-items: center;
