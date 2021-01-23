@@ -2,11 +2,11 @@
 
 html {
   overflow-x: hidden !important;
-  background: rgb(253, 29, 29);
+  background: rgb(251, 157, 157);
   background: linear-gradient(
     170deg,
-    rgba(253, 29, 29, 0.7763480392156863) 0%,
-    rgba(255, 255, 255, 1) 100%
+    rgba(251, 157, 157, 1) 0%,
+    rgba(255, 205, 205, 1) 100%
   );
   /* background-color:#facb7552!important; */
 }
