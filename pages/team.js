@@ -7,6 +7,7 @@ import Teamstyles from "../styles/Team.module.css";
 import logo from "../public/logoRevised.png";
 import { DeviceSignalWifi1BarLock } from "material-ui/svg-icons";
 import Particles from "react-tsparticles";
+import { FaChevronRight } from "react-icons/fa";
 
 const Profile = ({ image, link, title, position }) => {
   return (
@@ -231,7 +232,7 @@ export default function Team() {
         </div>
         <Link href="/">
           <a className={styles.card}>
-            <h3>Back to Home&rarr;</h3>
+            <h3>Back to Home <FaChevronRight className={styles.icon} /></h3>
           </a>
         </Link>
       </main>
