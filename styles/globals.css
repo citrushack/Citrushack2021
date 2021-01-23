@@ -2,7 +2,7 @@
 
 html{
   overflow-x: hidden !important;
-  background-color:#f3c78d52!important;
+  background-color:#c0e3f352!important;
 }
 
 html,
@@ -39,7 +39,7 @@ p, h1 {
   display:block;
   max-width: 100px;
   min-width: 60px;
-  position: absolute;
+  position: fixed;
   left: 200px;
   top: 0px;
   width: 10%;
@@ -56,11 +56,11 @@ p, h1 {
 
 .link {
   color:#1b1b1b;
-  margin-right: 1rem;
-  padding: 1rem 0.75rem;
+  margin-right: 2rem;
+  padding: 0.5rem 0;
   transition: all 0.2s ease;
   text-transform: uppercase;
-  border-bottom: 3px solid #1b1b1b;
+  border-bottom: 3px solid transparent;
 
 }
 
@@ -74,8 +74,7 @@ p, h1 {
 .signup{
   color:#fff;
   background-color: #000;
-  padding: 1rem 1.25rem;
-  border-radius: 5px;
+  padding: 0.5rem;
   border: 3px solid #000;
   display: block;
   transition: all 0.15s ease;
@@ -85,7 +84,6 @@ p, h1 {
 .signup:focus,
 .signup:active{
   background-color: #ff6060;
-  border: 3px solid #000;
   transform: translateY(-3px);
   box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
 }
