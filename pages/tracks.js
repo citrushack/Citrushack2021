@@ -96,7 +96,7 @@ export default function Tracks() {
             Sustainability
           </li>
           <li className={Trackstyles.link} onClick={() => setCurrent(2)}>
-            Other
+            Wellness
           </li>
         </ul>
       </div>

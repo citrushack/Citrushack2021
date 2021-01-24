@@ -84,7 +84,7 @@ export default function Hero() {
           detectRetina: true,
         }}
       />
-      <h1 className={Herostyles.title}>Citrus hack 2021</h1>
+      <h1 className={Herostyles.title}>citrushack 2021</h1>
       <p className={Herostyles.caption}>
         Find your inner peace.
         <br /> 禅で君の心を鍛練して。
