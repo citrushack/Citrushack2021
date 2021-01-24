@@ -8,10 +8,18 @@
 }
 
 .title,.caption{
-  color: #fff;
+  color: #ffb862;
+  text-shadow: 0px 0px 40px white;
+  -webkit-text-fill-color: #ffb862; /* Will override color (regardless of order) */
+  -webkit-text-stroke-color: black;
+}
+.caption{
+  -webkit-text-stroke-width: 1.4px;
+  font-weight: bold;
 }
 
 .title {
+  -webkit-text-stroke-width: 2px;
   font-size: 6rem;
   margin: 0;
   text-transform: uppercase;
