@@ -87,7 +87,7 @@ export default function Hero() {
       <h1 className={Herostyles.title}>Citrus Hack 2021</h1>
       <p className={Herostyles.description}>
         Zen out.
-        <br /> 禅になる.
+        <br /> 禅で君の心を鍛練して。
       </p>
       <div className={`${styles.grid} ${Herostyles.buttonGrid}`}>
         <a
