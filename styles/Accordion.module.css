@@ -2,7 +2,7 @@
   margin: 1rem 0;
   display: flex;
   flex-direction: column;
-  min-width: 100%;
+  width: min(90vw,1000px);
   transition: all 0.2s ease;
 }
 
@@ -32,9 +32,11 @@
 }
 
 .accordionItemPanel {
-  padding: 0 1.5rem 1.5rem 1.5rem;
+  padding: 1.5rem;
   line-height: 1.5;
   font-size: 1.2rem;
+  background-image: url("../public/arches.png");
+  background-color: rgba(255,255,255,0.1);
   -webkit-animation: fadein 0.5s ease initial; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 0.5s ease; /* Firefox < 16 */
         -ms-animation: fadein 0.5s ease; /* Internet Explorer */

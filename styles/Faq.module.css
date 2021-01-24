@@ -1,9 +1,10 @@
 /*CSS for Faq section*/
 .faq {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: min(90vw,1000px);
+  margin: 10rem auto 0 auto;
   }
 

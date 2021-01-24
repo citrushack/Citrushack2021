@@ -18,7 +18,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <main className={Herostyles.main}>
+    <main className={`${styles.main} ${Herostyles.content}`}>
       <Particles
         id="tsparticles"
         options={{
@@ -68,7 +68,7 @@ export default function Hero() {
                 enable: true,
                 value_area: 2000,
               },
-              value: 20,
+              value: 40,
             },
             opacity: {
               value: 1,
@@ -78,14 +78,14 @@ export default function Hero() {
             },
             size: {
               random: true,
-              value: 7,
+              value: 10,
             },
           },
           detectRetina: true,
         }}
       />
-      <h1 className={Herostyles.title}>Citrus Hack 2021</h1>
-      <p className={Herostyles.description}>
+      <h1 className={Herostyles.title}>Citrus hack 2021</h1>
+      <p className={Herostyles.caption}>
         Zen out.
         <br /> 禅で君の心を鍛練して。
       </p>
@@ -94,11 +94,11 @@ export default function Hero() {
           href={`${
             authHookValue ? "/apply" : "http://localhost:1337/connect/google"
           }`}
-          className={Herostyles.action}
+          className={`${styles.card} ${Herostyles.action}`}
         >
           <h3 className={Herostyles.h3}>
-            Apply now!{" "}
-            <FaChevronRight />
+            SIGN UP{" "}
+            <FaChevronRight className={styles.icon}/>
           </h3>
         </a>
         <Link
@@ -110,8 +110,8 @@ export default function Hero() {
           className={`${styles.card} ${styles.clickable}`}
         >
           <h3 className={Herostyles.h3}>
-            Learn more{" "}
-            <FaChevronDown />
+            LEARN MORE{" "}
+            <FaChevronDown className={styles.icon}/>
           </h3>
         </Link>
       </div>

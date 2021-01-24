@@ -5,7 +5,7 @@ export default function Intro() {
   return (
     <main className={styles.main}>
       <section className={Introstyles.introduction}>
-        <div className={Introstyles.introductionCol}>
+        <div className={Introstyles.text}>
           <h1 className={styles.title}>Largest hackathon UCR offers</h1>
           <p className={styles.description}>
             Citrus Hack is where hundreds of students from all over Southern
@@ -19,7 +19,7 @@ export default function Intro() {
             and high school students all around the world!
           </p>
         </div>
-        <div className={Introstyles.infogrid}>
+        <div className={Introstyles.stats}>
           <div className={`${Introstyles.infocard} ${Introstyles.one}`}>
             <h3>500+ HACKERS</h3>
           </div>
