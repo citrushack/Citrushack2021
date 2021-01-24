@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Image from "next/image";
 
 import styles from "../styles/Common.module.css";
 import Trackstyles from "../styles/Tracks.module.css";
@@ -16,7 +15,7 @@ const Security = () => {
         </p>
       </div>
       <div className={Trackstyles.image}>
-        <Image src="/logoRevised.png" alt="track logo" width={800} height={800} />
+        <img src="/logoRevised.png" alt="track logo" width={800} height={800} />
       </div>
     </div>
   );
@@ -34,7 +33,7 @@ const Sustainability = () => {
         </p>
       </div>
       <div className={Trackstyles.image}>
-        <Image src="/logo.png" alt="track logo" width={800} height={800} />
+        <img src="/logo.png" alt="track logo" width={800} height={800} />
       </div>
     </div>
   );
@@ -52,7 +51,7 @@ const Other = () => {
         </p>
       </div>
       <div className={Trackstyles.image}>
-        <Image src="/lotus.png" alt="track logo" width={800} height={800} />
+        <img src="/lotus.png" alt="track logo" width={800} height={800} />
       </div>
     </div>
   );

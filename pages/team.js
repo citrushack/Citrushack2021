@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image";
 import Container, { siteTitle } from "../components/Container";
 import styles from "../styles/Common.module.css";
 import Teamstyles from "../styles/Team.module.css";
@@ -16,7 +15,7 @@ const Profile = ({ image, link, title, position }) => {
         <a className={Teamstyles.link}>
           <div className={Teamstyles.profile}>
             <div className={Teamstyles.picture}>
-              <Image
+              <img
                 src={image}
                 alt="Profile Picture"
                 width={200}
