@@ -15,7 +15,6 @@ body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   color: #1b1b1b;
-  width:100vw;
 }
 
 body {
@@ -107,6 +106,7 @@ canvas {
   height: 100% !important;
   z-index: 10;
   pointer-events: none;
+  overflow: hidden;
 }
 
 @media (max-width:1068px){

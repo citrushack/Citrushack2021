@@ -4,8 +4,9 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  width: min(90vw,1500px);
+  max-width: 80rem;
   margin: 10rem auto 0 auto;
+  overflow-x: hidden;
 }
 /* Intro Content Column */
 .text {
@@ -32,13 +33,15 @@
   background-position: center;
   transition: all 0.2s ease;
 }
-@media (max-width: 1068px) {
+@media (max-width: 1280px) {
   .infocard {
     font-size: 1em;
   }
   .introduction {
     flex-direction: column;
-    align-items: unset;
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
   .stats {
     margin-left: 0;
