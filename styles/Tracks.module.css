@@ -42,10 +42,14 @@ flex: 33%;
 }
 
 .text{
-flex: 20%;
+    flex: 20%;
 }
 .image{
-flex: 50%;
+    flex: 50%;
+    width:100%;
+}
+.image img{
+    max-width: 100%;
 }
 
 @media (max-width: 1068px) {

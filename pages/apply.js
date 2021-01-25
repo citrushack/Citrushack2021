@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import Cookies from "js-cookie";
 import Container, { siteTitle } from "../components/Container";
 import styles from "../styles/Common.module.css";
@@ -320,15 +320,15 @@ export default function Apply() {
   console.log(errormsg);
 
   //Redirect non authenticated or already finished users
-  useEffect(()=>{
-    if(user){
-      if(user.appComplete){
-        router.push('/account');
-      } 
-    } else{
-      router.push('http://localhost:1337/connect/google');
-    }  
-  }, [user])
+  useEffect(() => {
+    if (user) {
+      if (user.appComplete) {
+        router.push("/account");
+      }
+    } else {
+      router.push("http://localhost:1337/connect/google");
+    }
+  }, [user]);
 
   const onSubmit = (values) => {
     console.log(values);

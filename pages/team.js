@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image";
 import Container, { siteTitle } from "../components/Container";
 import styles from "../styles/Common.module.css";
 import Teamstyles from "../styles/Team.module.css";
@@ -16,12 +15,7 @@ const Profile = ({ image, link, title, position }) => {
         <a className={Teamstyles.link}>
           <div className={Teamstyles.profile}>
             <div className={Teamstyles.picture}>
-              <Image
-                src={image}
-                alt="Profile Picture"
-                width={200}
-                height={200}
-              />
+              <img src={image} alt="Profile Picture" width={200} height={200} />
               <h3>{title}</h3>
               <p>{position}</p>
             </div>
@@ -80,7 +74,7 @@ export default function Team() {
               enable: true,
               outMode: "out",
               random: true,
-              speed: .75,
+              speed: 0.75,
               straight: true,
             },
             number: {
@@ -163,76 +157,78 @@ export default function Team() {
           />
         </div>
         <div className={Teamstyles.credits}>
-        <div className={Teamstyles.col}>
-        <h3>Committee</h3>
-        <ul>
-          <li>Ross Geller</li>
-          <li>Rachel Green</li>
-          <li>Chandler Bing</li>
-          <li>Monica Geller</li>
-          <li>Joey Tribbiani</li>
-          <li>Phoebe Buffay</li>
-        </ul>
-        </div>
-        <div className={Teamstyles.col}>
-        <h3>Committee</h3>
-        <ul>
-          <li>Ross Geller</li>
-          <li>Rachel Green</li>
-          <li>Chandler Bing</li>
-          <li>Monica Geller</li>
-          <li>Joey Tribbiani</li>
-          <li>Phoebe Buffay</li>
-        </ul>
-        </div>
-        <div className={Teamstyles.col}>
-        <h3>Committee</h3>
-        <ul>
-          <li>Ross Geller</li>
-          <li>Rachel Green</li>
-          <li>Chandler Bing</li>
-          <li>Monica Geller</li>
-          <li>Joey Tribbiani</li>
-          <li>Phoebe Buffay</li>
-        </ul>
-        </div>
-        <div className={Teamstyles.col}>
-        <h3>Committee</h3>
-        <ul>
-          <li>Ross Geller</li>
-          <li>Rachel Green</li>
-          <li>Chandler Bing</li>
-          <li>Monica Geller</li>
-          <li>Joey Tribbiani</li>
-          <li>Phoebe Buffay</li>
-        </ul>
-        </div>
-        <div className={Teamstyles.col}>
-        <h3>Committee</h3>
-        <ul>
-          <li>Ross Geller</li>
-          <li>Rachel Green</li>
-          <li>Chandler Bing</li>
-          <li>Monica Geller</li>
-          <li>Joey Tribbiani</li>
-          <li>Phoebe Buffay</li>
-        </ul>
-        </div>
-        <div className={Teamstyles.col}>
-        <h3>Committee</h3>
-        <ul>
-          <li>Ross Geller</li>
-          <li>Rachel Green</li>
-          <li>Chandler Bing</li>
-          <li>Monica Geller</li>
-          <li>Joey Tribbiani</li>
-          <li>Phoebe Buffay</li>
-        </ul>
-        </div>
+          <div className={Teamstyles.col}>
+            <h3>Committee</h3>
+            <ul>
+              <li>Ross Geller</li>
+              <li>Rachel Green</li>
+              <li>Chandler Bing</li>
+              <li>Monica Geller</li>
+              <li>Joey Tribbiani</li>
+              <li>Phoebe Buffay</li>
+            </ul>
+          </div>
+          <div className={Teamstyles.col}>
+            <h3>Committee</h3>
+            <ul>
+              <li>Ross Geller</li>
+              <li>Rachel Green</li>
+              <li>Chandler Bing</li>
+              <li>Monica Geller</li>
+              <li>Joey Tribbiani</li>
+              <li>Phoebe Buffay</li>
+            </ul>
+          </div>
+          <div className={Teamstyles.col}>
+            <h3>Committee</h3>
+            <ul>
+              <li>Ross Geller</li>
+              <li>Rachel Green</li>
+              <li>Chandler Bing</li>
+              <li>Monica Geller</li>
+              <li>Joey Tribbiani</li>
+              <li>Phoebe Buffay</li>
+            </ul>
+          </div>
+          <div className={Teamstyles.col}>
+            <h3>Committee</h3>
+            <ul>
+              <li>Ross Geller</li>
+              <li>Rachel Green</li>
+              <li>Chandler Bing</li>
+              <li>Monica Geller</li>
+              <li>Joey Tribbiani</li>
+              <li>Phoebe Buffay</li>
+            </ul>
+          </div>
+          <div className={Teamstyles.col}>
+            <h3>Committee</h3>
+            <ul>
+              <li>Ross Geller</li>
+              <li>Rachel Green</li>
+              <li>Chandler Bing</li>
+              <li>Monica Geller</li>
+              <li>Joey Tribbiani</li>
+              <li>Phoebe Buffay</li>
+            </ul>
+          </div>
+          <div className={Teamstyles.col}>
+            <h3>Committee</h3>
+            <ul>
+              <li>Ross Geller</li>
+              <li>Rachel Green</li>
+              <li>Chandler Bing</li>
+              <li>Monica Geller</li>
+              <li>Joey Tribbiani</li>
+              <li>Phoebe Buffay</li>
+            </ul>
+          </div>
         </div>
         <Link href="/">
           <a className={styles.card}>
-            <h3>Back to Home <FaChevronRight className={styles.icon} /></h3>
+            <h3>
+              Back to Home <FaChevronRight className={styles.icon} />
+            </h3>
           </a>
         </Link>
       </main>

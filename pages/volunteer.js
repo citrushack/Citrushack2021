@@ -18,15 +18,21 @@ export default function Volunteer() {
         </p>
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Mentors <FaChevronRight className={styles.icon}/></h3>
+            <h3>
+              Mentors <FaChevronRight className={styles.icon} />
+            </h3>
           </a>
 
           <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Volunteers <FaChevronRight className={styles.icon}/></h3>
+            <h3>
+              Volunteers <FaChevronRight className={styles.icon} />
+            </h3>
           </a>
 
           <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn More <FaChevronRight className={styles.icon}/></h3>
+            <h3>
+              Learn More <FaChevronRight className={styles.icon} />
+            </h3>
           </a>
         </div>
       </div>

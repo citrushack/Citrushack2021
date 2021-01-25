@@ -62,8 +62,7 @@ void main() {
 `;
 export default function Home() {
   useEffect(() => {
-    if (
-      document.getElementsByTagName("canvas").length < 2) {
+    if (document.getElementsByTagName("canvas").length < 2) {
       const renderer = new Renderer({ dpr: 1, alpha: true, transparent: true });
       const gl = renderer.gl;
       document.body.appendChild(gl.canvas);
