@@ -33,7 +33,7 @@ const Sustainability = () => {
         </p>
       </div>
       <div className={Trackstyles.image}>
-        <img src="/logo.png" alt="track logo" />
+        <img src="/logoRevised.png" alt="track logo" />
       </div>
     </div>
   );

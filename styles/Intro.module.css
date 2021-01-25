@@ -23,7 +23,7 @@
 
 .infocard {
   padding: 1rem 5rem;
-  font-size: 2rem;
+  font-size: 30px;
   text-align: center;
   color: #fff;
   margin-bottom: 1rem;
@@ -35,9 +35,7 @@
 }
 @media (max-width: 1280px) {
   .infocard {
-    font-size: 1em;
-    padding: 0.3rem 4rem;
-    margin-bottom: 2rem;
+    font-size: 1.5rem;
   }
   .introduction {
     flex-direction: column;

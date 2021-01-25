@@ -1,20 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+
 * {
   box-sizing: border-box;
 }
 html {
   overflow-x: hidden !important;
-  background: #E1FBFC;
-  background: -webkit-linear-gradient(top right, #E1FBFC, #CCF9C6);
-  background: -moz-linear-gradient(top right, #E1FBFC, #CCF9C6);
-  background: linear-gradient(to bottom left, #E1FBFC, #CCF9C6);  /* background-color:#facb7552!important; */
+  background: #e1fbfc;
+  background: -webkit-linear-gradient(top right, #e1fbfc, #ccf9c6);
+  background: -moz-linear-gradient(top right, #e1fbfc, #ccf9c6);
+  background: linear-gradient(
+    to bottom left,
+    #e1fbfc,
+    #ccf9c6
+  ); /* background-color:#facb7552!important; */
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Poppins", sans-serif;
   color: #1b1b1b;
 }
 
@@ -22,11 +30,11 @@ body {
   background-color: transparent !important;
 }
 
-h1{
+h1 {
   line-height: 1.2;
 }
 
-p{
+p {
   line-height: 1.5;
 }
 
@@ -34,8 +42,6 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
-
 
 /* From package what-input to remove default focus border because its ugly */
 [data-whatinput="mouse"] :focus,
@@ -56,7 +62,7 @@ h1 {
   z-index: 10000;
 }
 .MLH img {
-  height:100px;
+  height: 100px;
   width: auto;
 }
 
@@ -70,7 +76,6 @@ h1 {
   margin-right: 2rem;
   padding: 0.5rem 0;
   transition: all 0.2s ease;
-  text-transform: uppercase;
   border-bottom: 3px solid transparent;
 }
 
@@ -84,11 +89,11 @@ h1 {
 .signup {
   color: #fff;
   background-color: #000;
-  padding: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 100px;
   border: 3px solid #000;
   display: block;
   transition: all 0.15s ease;
-  text-transform: uppercase;
 }
 .signup:hover,
 .signup:focus,
@@ -110,10 +115,12 @@ canvas {
   overflow: hidden;
 }
 
-@media (max-width:1068px){
-  .signup{padding: 4px;}
+@media (max-width: 1280px) {
+  .signup {
+    padding: 0.75rem 1rem;
+  }
   .MLH img {
-    height:60px;
+    height: 60px;
     width: auto;
   }
   .MLH {
