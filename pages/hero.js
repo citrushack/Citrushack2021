@@ -18,7 +18,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <main className={`${Herostyles.main} ${Herostyles.content}`}>
+    <main className={`${styles.main} ${Herostyles.heroimage}`}>
       <Particles
         id="tsparticles"
         options={{
@@ -84,7 +84,8 @@ export default function Hero() {
           detectRetina: true,
         }}
       />
-      <h1 className={Herostyles.title}>citrushack 2021</h1>
+      <div className={Herostyles.content}>
+      <h1 className={Herostyles.title}>Citrushack 2021</h1>
       <p className={Herostyles.caption}>
         Find your inner peace.
         <br /> 禅で君の心を鍛練して。
@@ -112,6 +113,7 @@ export default function Hero() {
             LEARN MORE <FaChevronDown className={styles.icon} />
           </h3>
         </Link>
+      </div>
       </div>
     </main>
   );

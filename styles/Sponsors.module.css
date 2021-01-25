@@ -4,7 +4,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: min(90vw,1000px);
+  width: 80rem;
   margin: 0 auto;
   text-align: center;
+}
+@media (max-width: 1280px){
+  .wrapper{
+    width: 100%;
+    padding: 0;
+  }
 }
