@@ -14,18 +14,19 @@ const StickyNav = styled.nav(
   top: 0;
   right: 0;
   background-color: rgba(255,255,255,0.7);
-  outline-bottom: 4px solid #fff;
+  border-bottom: 4px solid #fff;
   width: 100vw;
   padding: 0;
-  @media (max-width: 1068px){
+  @media (max-width: 986px){
    background-color:transparent;
+   border-bottom: none;
   }
 `
 );
 
 const NavigationLinks = ({ title, href }) => (
   <>
-    <li className={Navstyles.navlistlink}>
+    <div className={Navstyles.navlistlink}>
       <Link
         to={href}
         spy={true}
@@ -36,7 +37,7 @@ const NavigationLinks = ({ title, href }) => (
       >
         {title}
       </Link>
-    </li>
+    </div>
   </>
 );
 
@@ -44,7 +45,7 @@ export default function Nav() {
   const isAuthenticated = useIsAuthenticated();
   const signOut = useSignOut();
   const router = useRouter();
-  const isMobile = useMediaQuery("(max-width:1280px)");
+  const isMobile = useMediaQuery("(max-width:986px)");
   const [isHome, setIsHome] = useState(0);
 
   useEffect(()=>{
@@ -67,7 +68,7 @@ export default function Nav() {
         </a>
       )}
       <StickyNav isMobile isHome={isHome}>
-        <ul className={Navstyles.navlistcontainer}>
+        <div className={Navstyles.navlistcontainer}>
           <div>
             <a href="/">
               <img
@@ -87,17 +88,17 @@ export default function Nav() {
             {!isMobile && isHome && <NavigationLinks title="Sponsors" href="Sponsors" />}
             {/* Only reason why this isn't part of a class is of the CSS classes being different. DO NOT CHANGE */}
             {!isAuthenticated() && (
-              <li className={Navstyles.navlistlink}>
+              <div className={Navstyles.navlistlink}>
                 <a
                   href={`http://localhost:1337/connect/google`}
                   className="signup"
                 >
                   Sign Up
                 </a>
-              </li>
+              </div>
             )}
             {isAuthenticated() && (
-              <li className={Navstyles.navlistlink}>
+              <div className={Navstyles.navlistlink}>
                 <a
                   href="/"
                   onClick={(e) => {
@@ -109,10 +110,10 @@ export default function Nav() {
                 >
                   Sign Out
                 </a>
-              </li>
+              </div>
             )}
           </div>
-        </ul>
+        </div>
       </StickyNav>
     </>
   );

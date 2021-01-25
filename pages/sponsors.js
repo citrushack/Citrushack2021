@@ -5,7 +5,7 @@ import { FaChevronRight } from "react-icons/fa";
 
 export default function Sponsors() {
   return (
-    <main className={styles.main}>
+    <main className={`${styles.main} ${styles.tall}`}>
       <div className={sponsorStyles.wrapper}>
         <h1 className={styles.title}>Sponsors</h1>
         <p className={styles.description}>

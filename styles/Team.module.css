@@ -76,7 +76,7 @@
     padding: 0;
     margin: 0;
 }
-@media (max-width: 1280px) {
+@media (max-width: 625px) {
     .main{
         max-width: 100%;
         padding: 0 30px;
@@ -86,4 +86,3 @@
           font-size: 5rem;
       }
 }
-

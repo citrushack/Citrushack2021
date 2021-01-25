@@ -3,9 +3,8 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 30px;
   margin: auto;
-  max-width: 80vw;
+  width: var(--contentWidth);
 }
 .navlistlink {
   list-style: none;
@@ -20,11 +19,10 @@
   width: 80px;
   height: 80px;
 }
-
-@media (max-width: 1068px) {
+/* at 1010px the nav list has no more room*/
+@media (max-width: 986) {
   .navlistcontainer{
     max-width: 100%;
-    padding: 0.5rem 30px;
   }
   .logos {
     height: 50px;

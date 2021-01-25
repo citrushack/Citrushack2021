@@ -8,9 +8,15 @@ html {
   }
 }
 
+/* Place Vars Here */
+:root{
+  --contentWidth: min(80vw, 1280px);
+}
+
 * {
   box-sizing: border-box;
 }
+
 html {
   overflow-x: hidden !important;
   background: #e1fbfc;
@@ -61,9 +67,9 @@ h1 {
 .MLH {
   display: block;
   max-width: 100px;
-  min-width: 60px;
+  min-width: 49px;
   position: fixed;
-  right: 50px;
+  right: 20px;
   top: 0;
   width: 10%;
   z-index: 10000;
@@ -117,13 +123,31 @@ canvas {
   pointer-events: none;
   overflow: hidden;
 }
-
-@media (max-width: 1280px) {
+/* Jump the mlh logo around depending on window size
+   No matter how you size the window it won't touch
+   an element
+*/
+@media (max-width: 1168px) {
   .signup {
     padding: 0.75rem 1rem;
   }
   .MLH {
     position:absolute;
-    left: 100px;
+    left: 300px;
+  }
+}
+@media (max-width: 1100px) {
+  .MLH{
+    left: 200px;
+  }
+}
+@media (max-width: 500px) {
+  .MLH{
+    left: 190px;
+  }
+}
+@media (max-width: 400px) {
+  .MLH{
+    left: 145px;
   }
 }
