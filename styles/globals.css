@@ -50,7 +50,7 @@ h1 {
 
 .MLH {
   display: block;
-  position: absolute;
+  position: fixed;
   left: 22%;
   top: 0px;
   z-index: 10000;
