@@ -4,9 +4,10 @@
 }
 html {
   overflow-x: hidden !important;
-  background: rgb(251, 157, 157);
-  background-repeat: no-repeat;
-  /* background-color:#facb7552!important; */
+  background: #E1FBFC;
+  background: -webkit-linear-gradient(top right, #E1FBFC, #CCF9C6);
+  background: -moz-linear-gradient(top right, #E1FBFC, #CCF9C6);
+  background: linear-gradient(to bottom left, #E1FBFC, #CCF9C6);  /* background-color:#facb7552!important; */
 }
 
 html,
