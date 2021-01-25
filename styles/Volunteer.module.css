@@ -1,6 +1,6 @@
 .wrapper{
   margin: auto;
-  max-width: 80rem;
+  max-width: 100%;
   overflow-x: hidden;
 }
 
@@ -8,5 +8,9 @@
   .wrapper{
     width: 100%;
     padding: 0;
+  }
+  .pad {
+    margin-top: 15%;
+    margin-bottom: 15%;
   }
 }

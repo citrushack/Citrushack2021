@@ -18,7 +18,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <main className={`${styles.main} ${Herostyles.heroimage}`}>
+    <main className={`${styles.main} ${Herostyles.heroimage} ${Herostyles.pad}`}>
       <Particles
         id="tsparticles"
         options={{

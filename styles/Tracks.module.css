@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     margin: auto;
-    max-width: 80rem;
     justify-content: center;
     align-items: center;
 }
@@ -12,7 +11,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  
+  width: 80vw;
 }
 
 .trackselection {
@@ -41,6 +40,7 @@ flex: 30%;
   justify-content: flex-start;
   align-items: center;
   margin: 2rem 3rem;
+  margin-left: 0;
 }
 
 .text{
@@ -51,7 +51,9 @@ flex: 30%;
     width:100%;
 }
 .image img{
-    max-width: 100%;
+    display:block;
+    width:75%;
+    margin-left: auto;
 }
 
 @media (max-width: 1280px) {
@@ -71,6 +73,7 @@ flex: 30%;
     }
     .trackselection{
         margin: 0;
+        padding:0;
         align-self: flex-start;
         flex: 1;
     }
@@ -79,5 +82,10 @@ flex: 30%;
     }
     .footer{
         padding: 0 30px;
+    }
+    .image img{
+        display:block;
+        width:75%;
+        margin: auto;
     }
 }
