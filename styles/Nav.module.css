@@ -27,14 +27,15 @@
 
 @media (max-width: 1068px){
   .logos{ 
-    height: 30px;
+    height: 40px;
     width: auto;
     margin: auto;
+    transform: translateY(9%);
   }  
 .navlistlink{
   font-size: 14px;
 }
 .navlistcontainer{
-  width:70vw;
+  width:80vw;
 }
 }

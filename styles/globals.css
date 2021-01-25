@@ -112,14 +112,14 @@ canvas {
 @media (max-width:1068px){
   .signup{padding: 4px;}
   .MLH img {
-    height:80px;
+    height:60px;
     width: auto;
   }
   .MLH {
     display: block;
     position: absolute;
-    right: 15%;
-    top: 0px;
+    left: 0;
+    top: 0;
     z-index: 10000;
   }
 }
