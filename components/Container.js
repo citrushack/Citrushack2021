@@ -15,7 +15,7 @@ const Nav = dynamic(
   { ssr: false }
 );
 
-export const siteTitle = "Citrushack";
+export const siteTitle = "Citrus Hack";
 
 export default function Container({ children, main }) {
   const router = useRouter();
@@ -45,7 +45,7 @@ export default function Container({ children, main }) {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
         <title>Citrus Hack</title>
-        <meta name="title" content="Citrus Hack/"/>
+        <meta name="title" content="Citrus Hack"/>
         <meta name="description" content="Citrus Hack is where hundreds of students from all over the world come together and form teams, aiming to build a project from scratch in just 36 hours."/>
         <meta property="og:type" content="website"/>
         <meta property="og:url" content="https://citrushack.com/"/>
