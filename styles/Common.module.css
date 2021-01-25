@@ -133,6 +133,12 @@
     padding: 0 30px;
     margin: 0;
   }
+  .title {
+    font-size: 2.2rem;
+  }
+  .description{
+    font-size: 1.1rem;
+  }
   .introduction{
     flex-direction: column;
     align-items: unset;

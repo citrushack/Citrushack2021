@@ -33,6 +33,9 @@
   transition: all 0.2s ease;
 }
 @media (max-width: 1068px) {
+  .infocard {
+    font-size: 1em;
+  }
   .introduction {
     flex-direction: column;
     align-items: unset;
