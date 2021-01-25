@@ -69,11 +69,14 @@
 .title,
 .description {
   text-align: left;
+  margin-bottom:5%;
 }
 /* Description Styles */
 .description {
   font-size: 1.5rem;
   color: #1b1b1b;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .code {
