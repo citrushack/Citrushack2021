@@ -44,7 +44,7 @@ export default function Nav() {
   const isAuthenticated = useIsAuthenticated();
   const signOut = useSignOut();
   const router = useRouter();
-  const isMobile = useMediaQuery("(max-width:1068px)");
+  const isMobile = useMediaQuery("(max-width:1280px)");
   
 
   return (
