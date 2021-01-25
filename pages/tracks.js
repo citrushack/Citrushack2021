@@ -83,23 +83,23 @@ export default function Tracks() {
   return (
     <main className={styles.main}>
       <div className={Trackstyles.tracks}>
-      <h1 className={styles.title}>Tracks</h1>
-      <div className={Trackstyles.trackwrapper}>
-        {showCurrent ? (
-          <div className={Trackstyles.trackcontent}>{data[currentIdx]}</div>
-        ) : null}
-        <ul className={Trackstyles.trackselection}>
-          <li className={Trackstyles.link} onClick={() => setCurrent(0)}>
-            Security
-          </li>
-          <li className={Trackstyles.link} onClick={() => setCurrent(1)}>
-            Sustainability
-          </li>
-          <li className={Trackstyles.link} onClick={() => setCurrent(2)}>
-            Wellness
-          </li>
-        </ul>
-      </div>
+        <h1 className={styles.title}>Tracks</h1>
+        <div className={Trackstyles.trackwrapper}>
+          {showCurrent ? (
+            <div className={Trackstyles.trackcontent}>{data[currentIdx]}</div>
+          ) : null}
+          <ul className={Trackstyles.trackselection}>
+            <li className={Trackstyles.link} onClick={() => setCurrent(0)}>
+              Security
+            </li>
+            <li className={Trackstyles.link} onClick={() => setCurrent(1)}>
+              Sustainability
+            </li>
+            <li className={Trackstyles.link} onClick={() => setCurrent(2)}>
+              Wellness
+            </li>
+          </ul>
+        </div>
       </div>
     </main>
   );

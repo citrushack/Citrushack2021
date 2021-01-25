@@ -5,7 +5,7 @@ import Particles from "react-tsparticles";
 import dynamic from "next/dynamic";
 import React, { useState, useEffect } from "react";
 import { useIsAuthenticated } from "react-auth-kit";
-import {FaChevronRight, FaChevronDown} from "react-icons/fa"
+import { FaChevronRight, FaChevronDown } from "react-icons/fa";
 
 export default function Hero() {
   const isAuthenticated = useIsAuthenticated();
@@ -97,8 +97,7 @@ export default function Hero() {
           className={`${styles.card} ${Herostyles.action}`}
         >
           <h3 className={Herostyles.h3}>
-            SIGN UP{" "}
-            <FaChevronRight className={styles.icon}/>
+            SIGN UP <FaChevronRight className={styles.icon} />
           </h3>
         </a>
         <Link
@@ -110,8 +109,7 @@ export default function Hero() {
           className={`${styles.card} ${styles.clickable}`}
         >
           <h3 className={Herostyles.h3}>
-            LEARN MORE{" "}
-            <FaChevronDown className={styles.icon}/>
+            LEARN MORE <FaChevronDown className={styles.icon} />
           </h3>
         </Link>
       </div>

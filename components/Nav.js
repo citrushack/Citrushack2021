@@ -4,10 +4,11 @@ import styled from "@emotion/styled";
 import { useIsAuthenticated, useSignOut } from "react-auth-kit";
 import logo from "../public/logoRevised.png";
 import { useRouter } from "next/router";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 const StickyNav = styled.nav(
   (props) => `
-  // position: ${props.isHome ? "absolute" : "static"};
+  // position: ${props.isHome ? "sticky" : "static"};
   position: fixed;
   z-index: 5;
   top: 0;
@@ -17,6 +18,8 @@ const StickyNav = styled.nav(
   min-width: 100%;
   background-color: rgba(255,255,255,0.7);
   border-bottom: 4px solid #fff;
+  width: 100vw;
+  height: 90px;
 `
 );
 
@@ -41,62 +44,70 @@ export default function Nav() {
   const isAuthenticated = useIsAuthenticated();
   const signOut = useSignOut();
   const router = useRouter();
+  const isMobile = useMediaQuery("(max-width:1068px)");
+  
 
   return (
     <>
-                      {router.pathname == "/" && (
-  <a
-            id="mlh-trust-badge"
-            className="MLH"
-            href="https://mlh.io/seasons/2021/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2021-season&utm_content=white"
-            target="_blank"
-          >
+      {router.pathname == "/" && !isMobile && (
+        <a
+          id="mlh-trust-badge"
+          className="MLH"
+          href="https://mlh.io/seasons/2021/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2021-season&utm_content=white"
+          target="_blank"
+        >
+          <img
+            src="https://s3.amazonaws.com/logged-assets/trust-badge/2021/mlh-trust-badge-2021-white.svg"
+            alt="Major League Hacking 2021 Hackathon Season"
+          />
+        </a>
+      )}
+      <StickyNav isHome={router.pathname == "/"}>
+        <ul className={Navstyles.navlistcontainer}>
+          <div>
+            <a href="/">
               <img
-                src="https://s3.amazonaws.com/logged-assets/trust-badge/2021/mlh-trust-badge-2021-white.svg"
-                alt="Major League Hacking 2021 Hackathon Season"
+                className={Navstyles.logos}
+                src={logo}
+                alt="Citrushack 2021 Logo"
               />
-          </a>)}
-    <StickyNav isHome={router.pathname == "/" }>
-      <ul className={Navstyles.navlistcontainer}>
-        <div className={Navstyles.logos}>
-          <a href="/"><img src={logo} width="100" height="100" alt="Citrushack 2021 Logo" /></a>
-
-        </div>
-        <div className={Navstyles.links}>
-          <NavigationLinks title="Home" href="Home" />
-          <NavigationLinks title="About" href="About" />
-          <NavigationLinks title="Tracks" href="Tracks" />
-          <NavigationLinks title="Faq" href="Questions" />
-          <NavigationLinks title="Help" href="Help" />
-          <NavigationLinks title="Sponsors" href="Sponsors" />
-          {/* Only reason why this isn't part of a class is of the CSS classes being different. DO NOT CHANGE */}
-          {!isAuthenticated() && (
-            <li className={Navstyles.navlistlink}>
-              <a
-                href={`http://localhost:1337/connect/google`}
-                className="signup"
-              >
-                Sign Up
-              </a>
-            </li>
-          )}
-          {isAuthenticated() && (
-            <li className={Navstyles.navlistlink}>
-              <a
-                href="/"
-                onClick={(e) => {
-                  e.preventDefault;
-                  signOut();
-                }}
-                className="signup"
-              >
-                Sign Out
-              </a>
-            </li>
-          )}
-        </div>
-      </ul>
-    </StickyNav>
+            </a>
+          </div>
+          <div className={Navstyles.links}>
+            {!isMobile && <NavigationLinks title="Home" href="Home" />}
+            {!isMobile && <NavigationLinks title="About" href="About" />}
+            {!isMobile && <NavigationLinks title="Tracks" href="Tracks" />}
+            {!isMobile && <NavigationLinks title="Faq" href="Questions" />}
+            {!isMobile && <NavigationLinks title="Help" href="Help" />}
+            {!isMobile && <NavigationLinks title="Sponsors" href="Sponsors" />}
+            {/* Only reason why this isn't part of a class is of the CSS classes being different. DO NOT CHANGE */}
+            {!isAuthenticated() && (
+              <li className={Navstyles.navlistlink}>
+                <a
+                  href={`http://localhost:1337/connect/google`}
+                  className="signup"
+                >
+                  Sign Up
+                </a>
+              </li>
+            )}
+            {isAuthenticated() && (
+              <li className={Navstyles.navlistlink}>
+                <a
+                  href="/"
+                  onClick={(e) => {
+                    e.preventDefault;
+                    signOut();
+                  }}
+                  className="signup"
+                >
+                  Sign Out
+                </a>
+              </li>
+            )}
+          </div>
+        </ul>
+      </StickyNav>
     </>
   );
 }
