@@ -45,11 +45,10 @@ export default function Nav() {
   const signOut = useSignOut();
   const router = useRouter();
   const isMobile = useMediaQuery("(max-width:1280px)");
-  
 
   return (
     <>
-      {router.pathname == "/"  && (
+      {router.pathname == "/" && (
         <a
           id="mlh-trust-badge"
           className="MLH"
@@ -98,7 +97,7 @@ export default function Nav() {
                   onClick={(e) => {
                     e.preventDefault;
                     signOut();
-                    router.push('/')
+                    router.push("/");
                   }}
                   className="signup"
                 >
