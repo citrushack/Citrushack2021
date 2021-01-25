@@ -17,7 +17,9 @@
   align-items: center;
   
 }
-
+.pad{
+  padding: 0 30px;
+}
 .title,.caption{
   color: white;
   text-shadow: 0px 0px 40px white;
