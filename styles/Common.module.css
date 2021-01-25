@@ -130,7 +130,7 @@
 @media (max-width: 1068px) {
   .main{
     max-width: 100%;
-    padding: 0 30px;
+    padding: 0 100px;
     margin: 0;
   }
   .title {

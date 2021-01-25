@@ -42,11 +42,15 @@
 }
 
 @media (max-width: 1068px) {
+  .title, .caption{
+    text-shadow: 1px 1px 10px white;
+  }
   .title{
-    text-align: center;
-    font-size: 4rem;
+    text-align: left;
+    font-size: 3rem;  
   }
   .caption{
-    font-size: 2rem;
+    font-size: 1.8rem;
+    -webkit-text-stroke-width: 1.2px;
   }
 }
