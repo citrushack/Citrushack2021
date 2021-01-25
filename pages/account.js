@@ -82,7 +82,7 @@ export default function Account() {
         router.push("/apply");
       }
     } else {
-      router.push("http://localhost:1337/connect/google");
+      router.push("/");
     }
   }, [user]);
 
