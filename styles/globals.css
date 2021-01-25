@@ -120,14 +120,14 @@ canvas {
     padding: 0.75rem 1rem;
   }
   .MLH img {
-    height: 60px;
+    height: 100px;
     width: auto;
   }
   .MLH {
     display: block;
     position: absolute;
-    left: 10.5%;
-    top: 50px;
+    left: 35%;
+    top: 0px;
     z-index: 0;
   }
 }
