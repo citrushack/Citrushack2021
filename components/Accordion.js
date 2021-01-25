@@ -5,6 +5,7 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from "react-accessible-accordion";
+import { FaChevronRight, FaChevronDown } from "react-icons/fa";
 
 import styles from "../styles/Accordion.module.css";
 
@@ -13,7 +14,7 @@ const FaqSection = ({ question, answer }) => {
     <AccordionItem className={styles.accordionItem}>
       <AccordionItemHeading className={styles.accordionItemHeading}>
         <AccordionItemButton className={styles.accordionItemButton}>
-          {question}
+          {question} <FaChevronDown/>
         </AccordionItemButton>
       </AccordionItemHeading>
       <AccordionItemPanel className={styles.accordionItemPanel}>
