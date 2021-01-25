@@ -15,7 +15,7 @@ const Security = () => {
         </p>
       </div>
       <div className={Trackstyles.image}>
-        <img src="/logoRevised.png" alt="track logo" width={800} height={800} />
+        <img src="/logoRevised.png" alt="track logo" />
       </div>
     </div>
   );
@@ -33,7 +33,7 @@ const Sustainability = () => {
         </p>
       </div>
       <div className={Trackstyles.image}>
-        <img src="/logo.png" alt="track logo" width={800} height={800} />
+        <img src="/logo.png" alt="track logo" />
       </div>
     </div>
   );
@@ -51,7 +51,7 @@ const Other = () => {
         </p>
       </div>
       <div className={Trackstyles.image}>
-        <img src="/lotus.png" alt="track logo" width={800} height={800} />
+        <img src="/lotus.png" alt="track logo" />
       </div>
     </div>
   );
