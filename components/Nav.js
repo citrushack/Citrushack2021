@@ -98,6 +98,7 @@ export default function Nav() {
                   onClick={(e) => {
                     e.preventDefault;
                     signOut();
+                    router.push('/')
                   }}
                   className="signup"
                 >
