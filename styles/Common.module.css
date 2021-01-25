@@ -7,8 +7,8 @@
 }
 /* Container for each section */
 .main {
-  min-height: 100vh;
-  min-width: 100vw;
+  min-height: 63vh;
+  width: 100vw;
   margin:auto;
   display: flex;
   flex-direction: column;
@@ -130,7 +130,7 @@
 @media (max-width: 1068px) {
   .main{
     max-width: 100%;
-    padding: 0 100px;
+    padding: 0 2%;
     margin: 0;
   }
   .title {
@@ -149,6 +149,7 @@
   }
   .card,.action{
     width: 100%;
+    padding: 0;
   }
   .infogrid
   {
