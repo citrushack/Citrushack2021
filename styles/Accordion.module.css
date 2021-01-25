@@ -38,10 +38,10 @@
   background-image: url("../public/arches.png");
   background-color: rgba(255,255,255,0.1);
   -webkit-animation: fadein 0.5s ease initial; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 0.5s ease; /* Firefox < 16 */
-        -ms-animation: fadein 0.5s ease; /* Internet Explorer */
-         -o-animation: fadein 0.5s ease; /* Opera < 12.1 */
-            animation: fadein 0.5s ease;
+     -moz-animation: fadein 0.5s ease; /* Firefox < 16 */
+      -ms-animation: fadein 0.5s ease; /* Internet Explorer */
+       -o-animation: fadein 0.5s ease; /* Opera < 12.1 */
+          animation: fadein 0.5s ease;
 }
 
 .accordionItem:hover,
@@ -75,4 +75,14 @@
 @-ms-keyframes fadein {
   from {transform:translateY(-20px); opacity: 0;}
   to {transform:translateY(0); opacity: 1;}
+}
+
+
+@media (max-width: 1068px){
+  .accordionItemHeading{
+    font-size: 1.2rem;
+  }
+  .accordionItemButton{
+    padding: 0.8rem 0;
+  }
 }
