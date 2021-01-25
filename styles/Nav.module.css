@@ -34,4 +34,7 @@
 .navlistlink{
   font-size: 14px;
 }
+.navlistcontainer{
+  width:70vw;
+}
 }
