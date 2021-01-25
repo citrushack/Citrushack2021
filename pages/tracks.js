@@ -64,7 +64,6 @@ export default function Tracks() {
     <Other />,
   ]);
 
-  const [showAll, setShowAll] = useState(false);
   const [currentIdx, setCurrentIdx] = useState(0);
   const [showCurrent, setShowCurrent] = useState(true);
 
