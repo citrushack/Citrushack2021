@@ -108,3 +108,19 @@ canvas {
   z-index: 10;
   pointer-events: none;
 }
+
+@media (max-width:1068px){
+  .signup{padding: 4px;}
+  .MLH img {
+    height:80px;
+    width: auto;
+  }
+  .MLH {
+    display: block;
+    position: absolute;
+    right: 15%;
+    left:0;
+    top: 0px;
+    z-index: 10000;
+  }
+}
