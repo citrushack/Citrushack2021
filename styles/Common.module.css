@@ -153,6 +153,11 @@
     width: 100%;
     padding: 0;
   }
+  .card > h3, .clickable > h3 {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    font-size:1rem;
+  }
   .infogrid {
     margin-left: 0;
   }
