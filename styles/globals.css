@@ -4,9 +4,10 @@
 }
 html {
   overflow-x: hidden !important;
-  background: rgb(251, 157, 157);
-  background-repeat: no-repeat;
-  /* background-color:#facb7552!important; */
+  background: #E1FBFC;
+  background: -webkit-linear-gradient(top right, #E1FBFC, #CCF9C6);
+  background: -moz-linear-gradient(top right, #E1FBFC, #CCF9C6);
+  background: linear-gradient(to bottom left, #E1FBFC, #CCF9C6);  /* background-color:#facb7552!important; */
 }
 
 html,
@@ -49,8 +50,8 @@ h1 {
 
 .MLH {
   display: block;
-  position: absolute;
-  left: 37%;
+  position: fixed;
+  left: 22%;
   top: 0px;
   z-index: 10000;
 }
@@ -107,4 +108,19 @@ canvas {
   z-index: 10;
   pointer-events: none;
   overflow: hidden;
+}
+
+@media (max-width:1068px){
+  .signup{padding: 4px;}
+  .MLH img {
+    height:60px;
+    width: auto;
+  }
+  .MLH {
+    display: block;
+    position: absolute;
+    left: 10.5%;
+    top: 50px;
+    z-index: 0;
+  }
 }

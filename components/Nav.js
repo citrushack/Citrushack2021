@@ -13,13 +13,13 @@ const StickyNav = styled.nav(
   z-index: 5;
   top: 0;
   right: 0;
-  margin: 0;
-  padding: 0rem 1rem;
-  min-width: 100%;
   background-color: rgba(255,255,255,0.7);
-  border-bottom: 4px solid #fff;
+  outline-bottom: 4px solid #fff;
   width: 100vw;
   height: 90px;
+  @media (max-width: 1068px){
+    height: 50px;
+  }
 `
 );
 
