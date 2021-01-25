@@ -121,6 +121,6 @@ canvas {
     position: absolute;
     left: 10.5%;
     top: 45px;
-    z-index: 10000;
+    z-index: 0;
   }
 }
