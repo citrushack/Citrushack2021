@@ -49,7 +49,7 @@ export default function Nav() {
 
   return (
     <>
-      {router.pathname == "/" && !isMobile && (
+      {router.pathname == "/"  && (
         <a
           id="mlh-trust-badge"
           className="MLH"
@@ -62,7 +62,7 @@ export default function Nav() {
           />
         </a>
       )}
-      <StickyNav isHome={router.pathname == "/"}>
+      <StickyNav isMobile isHome={router.pathname == "/"}>
         <ul className={Navstyles.navlistcontainer}>
           <div>
             <a href="/">
