@@ -7,14 +7,9 @@ export default function Volunteer() {
     <main className={styles.main}>
       <div className={Volunteerstyles.wrapper}>
         <h1 className={styles.title}>Get Involved</h1>
-        <p className={`${styles.description}`}>
+        <p className={`${styles.description} ${Volunteerstyles.pad}`}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec egestas
-          sapien sit amet metus efficitur semper. Integer id luctus enim.
-          Curabitur a arcu et arcu tincidunt lobortis eget sed risus.
-          Suspendisse vitae libero magna. Pellentesque sodales at urna nec
-          rutrum. Nulla lorem nisl, congue id aliquet vitae, malesuada sed
-          lacus. Phasellus dapibus euismod leo, ut scelerisque tellus rhoncus
-          sed.
+          sapien sit amet metus efficitur semper.
         </p>
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>

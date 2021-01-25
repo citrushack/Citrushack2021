@@ -9,4 +9,8 @@
     width: 100%;
     padding: 0;
   }
+  .pad {
+    margin-top: 15%;
+    margin-bottom: 15%;
+  }
 }

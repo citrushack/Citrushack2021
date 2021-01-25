@@ -10,6 +10,7 @@
   @media (max-width: 1280px){
     .faq{
       width: 100%;
+      margin-top: 22%;
       padding: 0;
     }
   }

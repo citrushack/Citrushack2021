@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     margin: auto;
-    max-width: 80rem;
     justify-content: center;
     align-items: center;
 }
@@ -73,6 +72,7 @@ flex: 33%;
     }
     .trackselection{
         margin: 0;
+        padding:0;
         align-self: flex-start;
         flex: 1;
     }
@@ -81,5 +81,10 @@ flex: 33%;
     }
     .footer{
         padding: 0 30px;
+    }
+    .image img{
+        display:block;
+        width:75%;
+        margin: auto;
     }
 }
