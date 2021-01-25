@@ -9,7 +9,7 @@
 /* Container for each section */
 .main {
   min-height: 63vh;
-  width: 100%;
+  width: 80vw;
   margin: auto;
   display: flex;
   flex-direction: column;
