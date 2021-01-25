@@ -9,6 +9,7 @@
   text-align: center;
   
 }
+/* Tablet or Compact Styles */
 @media (max-width: 1168){
   .wrapper{
     width: 100%;

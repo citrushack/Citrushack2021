@@ -57,10 +57,7 @@
   max-width:500px;
   max-height:500px;
 }
-/* Smaller breakpoint because even on desktop the 
-   horizontal layout gets squished
-   Css vars don't work in media defs, but calc(var(--contentWidth) - 200px))
-*/
+/* Tablet or Compact Styles */
 @media (max-width: 1168px) {
   .tracks {
     width: 100%;

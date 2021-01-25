@@ -17,6 +17,7 @@ const StickyNav = styled.nav(
   border-bottom: 4px solid #fff;
   width: 100vw;
   padding: 0;
+  /* Mobile Styles */
   @media (max-width: 986px){
    background-color:transparent;
    border-bottom: none;

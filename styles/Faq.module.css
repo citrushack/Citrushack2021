@@ -7,10 +7,9 @@
   margin: 10rem auto 0 auto;
   width: var(--contentWidth);
   }
-
-  @media (max-width: 625px){
+/* Mobile Styles */
+  @media (max-width: 986px){
     .faq{
-      width: 100%;
       margin-top: 22%;
       padding: 0;
     }

@@ -33,7 +33,7 @@
   background-position: center;
   transition: all 0.2s ease;
 }
-@media (max-width: 945px) {
+@media (max-width: 986px) {
   .infocard {
     font-size: 1.5rem;
   }
@@ -46,7 +46,4 @@
   .stats {
     margin: 25px 0;
   }
-}
-@media (max-width: 1168px) {
-
 }

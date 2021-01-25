@@ -86,8 +86,8 @@
   to {transform:translateY(0); opacity: 1;}
 }
 
-
-@media (max-width: 625px){
+/* Mobile Styles */
+@media (max-width: 986px){
   .accordion{
     width: 100%;
     padding: 0;

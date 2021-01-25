@@ -19,15 +19,3 @@
   width: 80px;
   height: 80px;
 }
-/* at 1010px the nav list has no more room*/
-@media (max-width: 986) {
-  .navlistcontainer{
-    max-width: 100%;
-  }
-  .logos {
-    height: 50px;
-    width: auto;
-    margin: auto;
-    transform: translateY(9%);
-  }
-}

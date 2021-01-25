@@ -155,7 +155,6 @@
     align-items: unset;
   }
   .grid {
-    min-width: 100%;
     flex-direction: column;
   }
   .card,

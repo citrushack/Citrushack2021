@@ -4,7 +4,8 @@
   overflow-x: hidden;
 }
 
-@media (max-width: 625px){
+/* Mobile Styles */
+@media (max-width: 986px){
   .wrapper{
     width: 100%;
     padding: 0;
@@ -12,5 +13,24 @@
   .pad {
     margin-top: 15%;
     margin-bottom: 15%;
+  }
+
+}
+/* Tablet or Styles */
+@media (max-width: 1168px){
+  .grid > a{
+    width: max(50%, 250px);
+    padding-top:5%;
+    padding-bottom:5%;
+  }
+  .wrapper > * {
+    text-align:center;
+  }
+
+}
+@media (max-width: 986px){
+  .grid > a{
+    padding-top:1%;
+    padding-bottom:1%;
   }
 }
