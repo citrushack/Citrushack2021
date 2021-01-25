@@ -12,11 +12,12 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  
+  width: 80vw;
 }
 
 .trackselection {
 margin: 2rem;
+margin-right: 0;
 flex: 33%;
 }
 
@@ -39,6 +40,7 @@ flex: 33%;
   justify-content: flex-start;
   align-items: center;
   margin: 2rem 3rem;
+  margin-left: 0;
 }
 
 .text{
@@ -49,7 +51,9 @@ flex: 33%;
     width:100%;
 }
 .image img{
-    max-width: 100%;
+    display:block;
+    width:75%;
+    margin-left: auto;
 }
 
 @media (max-width: 1280px) {

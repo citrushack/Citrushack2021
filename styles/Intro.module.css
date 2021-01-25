@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: space-around;
   max-width: 80rem;
+  width:80vw;
   margin: 10rem auto 0 auto;
   overflow-x: hidden;
 }
