@@ -1,9 +1,10 @@
-.tracks{
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
+.tracks {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  width: 80rem;
 }
 
 .trackwrapper {
@@ -11,81 +12,69 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 80vw;
+  width: 80rem;
 }
 
 .trackselection {
-margin: 0;
-padding: 0;
-flex: 30%;
+  margin: 0;
+  padding: 0;
 }
 
 .link {
   list-style: none;
   margin: 1rem;
   padding: 0;
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 30px;
+  font-weight: 600;
   cursor: pointer;
   border-bottom: 3px solid transparent;
   transition: border-bottom ease 0.5s;
 }
-.link:hover, .link:active{
- border-bottom: 3px solid #000;
+.link:hover,
+.link:active {
+  border-bottom: 3px solid #000;
 }
 
 .track {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: center;
-  margin: 2rem 3rem;
-  margin-left: 0;
 }
 
-.text{
-    flex: 20%;
+.text {
+  flex: 30%;
 }
-.image{
-    flex: 50%;
-    width:100%;
+.image {
+  flex: 70%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
-.image img{
-    display:block;
-    width:75%;
-    margin-left: auto;
+.image img {
+  height: 500px;
+  width: 500px;
 }
 
 @media (max-width: 1280px) {
-    .tracks{
-        justify-content: flex-start;
-        align-items: flex-start;
-        width: 100%;
-        padding: 0;
-    }
-    .track{
-        flex-direction: column-reverse;
-        margin: 0;
-        flex: 1;
-    }
-    .trackwrapper{
-        flex-direction: column-reverse;
-    }
-    .trackselection{
-        margin: 0;
-        padding:0;
-        align-self: flex-start;
-        flex: 1;
-    }
-    .link{
-        margin: 1rem 0;
-    }
-    .footer{
-        padding: 0 30px;
-    }
-    .image img{
-        display:block;
-        width:75%;
-        margin: auto;
-    }
+  .tracks {
+    width: 100%;
+    padding: 0;
+    align-items: flex-start;
+  }
+  .trackwrapper {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0;
+  }
+  .trackcontent {
+    width: 100%;
+    padding: 0;
+  }
+  .track {
+    flex-direction: column-reverse;
+    width: 100%;
+    padding: 0;
+  }
 }

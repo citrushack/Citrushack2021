@@ -1,7 +1,11 @@
-@import url('https://rsms.me/inter/inter.css');
-html { font-family: 'Inter', sans-serif; }
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: "Inter", sans-serif;
+}
 @supports (font-variation-settings: normal) {
-  html { font-family: 'Inter var', sans-serif; }
+  html {
+    font-family: "Inter var", sans-serif;
+  }
 }
 
 * {
@@ -56,14 +60,13 @@ h1 {
 
 .MLH {
   display: block;
+  max-width: 100px;
+  min-width: 60px;
   position: fixed;
-  left: 22%;
-  top: 0px;
+  right: 50px;
+  top: 0;
+  width: 10%;
   z-index: 10000;
-}
-.MLH img {
-  height: 100px;
-  width: auto;
 }
 
 /*react-scroll classes applied to navbar*/
@@ -119,15 +122,8 @@ canvas {
   .signup {
     padding: 0.75rem 1rem;
   }
-  .MLH img {
-    height: 60px;
-    width: auto;
-  }
+
   .MLH {
-    display: block;
-    position: absolute;
-    left: 10.5%;
-    top: 50px;
-    z-index: 0;
+    left: 80px;
   }
 }

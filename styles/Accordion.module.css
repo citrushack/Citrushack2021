@@ -2,8 +2,8 @@
   margin: 1rem 0;
   display: flex;
   flex-direction: column;
-  width: 50rem;
-  transition: all 0.2s ease;
+  width: 70rem;
+  transition: all 0.25s ease;
 }
 
 .accordionItem {
@@ -11,14 +11,13 @@
   text-align: left;
   color: inherit;
   text-decoration: none;
-  border-bottom: 3px solid #00000073;
-  transition: color 0.15s ease, border 0.15s ease;
+  transition: all 0.25s ease;
   min-width: 100%;
 
 }
 
 .accordionItemHeading {
-  font-weight: bold;
+  font-weight: 600;
   font-size: 1.5rem;
   min-width: 100%;
   
@@ -30,8 +29,9 @@
   box-shadow: transparent;
   cursor: pointer;
   padding: 1rem;
-  border: 3px solid rgba(0, 0, 0, 0.9);
+  border: 3px solid #fff;
   background-color: rgba(255, 255, 255, 0.882);
+  transition: all 0.25s ease;
 }
 
 .accordionItemButton > svg {
@@ -52,10 +52,11 @@
           animation: fadein 0.5s ease;
 }
 
-.accordionItem:hover,
-.accordionItem:focus,
-.accordionItem:active {
-  border-bottom: 3px solid #ff6060;
+
+.accordionItemButton:hover,
+.accordionItemButton:focus,
+.accordionItemButton:active{
+  border: 3px solid #000;
 }
 
 @keyframes fadein {
@@ -89,11 +90,12 @@
 @media (max-width: 1280px){
   .accordion{
     width: 100%;
+    padding: 0;
   }
   .accordionItemHeading{
     font-size: 1.2rem;
   }
   .accordionItemButton{
-    padding: 0.8rem 0;
+    padding: 0.8rem;
   }
 }

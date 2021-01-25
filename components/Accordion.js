@@ -26,7 +26,7 @@ const FaqSection = ({ question, answer }) => {
 
 export default function AccordionComponent() {
   return (
-    <Accordion allowZeroExpanded className={styles.accordion}>
+    <Accordion className={styles.accordion}>
       <FaqSection
         question="What is a hackathon?"
         answer="A hackathon is an event where you can build a project and demo to judges in order to win awesome prizes! We offer cool workshops to help you learn about new technologies or new programming languages as well!"
