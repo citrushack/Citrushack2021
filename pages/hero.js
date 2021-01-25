@@ -68,7 +68,7 @@ export default function Hero() {
                 enable: true,
                 value_area: 2000,
               },
-              value: 40,
+              value: 30,
             },
             opacity: {
               value: 1,
@@ -85,7 +85,7 @@ export default function Hero() {
         }}
       />
       <div className={Herostyles.content}>
-      <h1 className={Herostyles.title}>Citrushack 2021</h1>
+      <h1 className={Herostyles.title}>Citrus Hack</h1>
       <p className={Herostyles.caption}>
         Find your inner peace.
         <br /> 禅で君の心を鍛練して。

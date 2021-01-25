@@ -16,9 +16,9 @@ const StickyNav = styled.nav(
   background-color: rgba(255,255,255,0.7);
   outline-bottom: 4px solid #fff;
   width: 100vw;
-  height: 90px;
+  padding: 0;
   @media (max-width: 1068px){
-    height: 50px;
+   background-color:transparent;
   }
 `
 );

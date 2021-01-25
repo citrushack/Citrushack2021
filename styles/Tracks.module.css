@@ -16,8 +16,9 @@
 }
 
 .trackselection {
-margin: 2rem;
-flex: 33%;
+margin: 0;
+padding: 0;
+flex: 30%;
 }
 
 .link {
@@ -28,6 +29,7 @@ flex: 33%;
   font-weight: bold;
   cursor: pointer;
   border-bottom: 3px solid transparent;
+  transition: border-bottom ease 0.5s;
 }
 .link:hover, .link:active{
  border-bottom: 3px solid #000;
