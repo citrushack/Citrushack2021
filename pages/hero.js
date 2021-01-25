@@ -87,8 +87,8 @@ export default function Hero() {
       <div className={Herostyles.content}>
         <h1 className={Herostyles.title}>Citrus Hack</h1>
         <p className={Herostyles.caption}>
-          Reach zen.
-          <br /> 禅で君の心を鍛練して。
+          A zen state of mind.
+          <br /> 無心の心。
         </p>
         <div className={`${styles.grid} ${Herostyles.buttonGrid}`}>
           <SignUpButton/>

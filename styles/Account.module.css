@@ -1,5 +1,5 @@
 /*CSS for Sponsors*/
 
 .container{
-    min-height: 100vh;
+    min-height: min(100vh, 500px);
 }
