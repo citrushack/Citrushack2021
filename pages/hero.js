@@ -85,11 +85,13 @@ export default function Hero() {
         }}
       />
       <div className={Herostyles.content}>
+        <div className={Herostyles.text}>
         <h1 className={Herostyles.title}>Citrus Hack</h1>
         <p className={Herostyles.caption}>
           A zen state of mind.
           <br /> 無心の心。
         </p>
+        </div>
         <div className={`${styles.grid} ${Herostyles.buttonGrid}`}>
           <SignUpButton/>
           <Link

@@ -1,5 +1,6 @@
 .main{
     margin: 6rem auto 3rem;
+    max-width: 96rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,12 +52,12 @@
 
 .picture > img{
     border-radius: 50%;
-    border: 3px solid #ffa500;
+    border: 3px solid #fff;
     transition: all 0.2s ease;
 }
 
 .picture > img:hover{
-    border: 3px solid white;
+    border: 3px solid #ffa500;
     box-shadow: 0px 3px 20px rgba(0,0,0,0.2);
     transform: translateY(-5px);
 }
@@ -80,10 +81,19 @@
 @media (max-width: 986px) {
     .main{
         max-width: 100%;
-        padding: 0 30px;
+        padding: 0 10px;
         margin: 2rem 0;
     }
     .title{
         font-size: 5rem;
+    }
+    .picture h3{
+        line-height: 0.75;
+        margin: 0.5rem 0;
+        font-size: 16px;
+    }
+    .picture > img {
+        height: 100px;
+        width: 100px;
     }
 }

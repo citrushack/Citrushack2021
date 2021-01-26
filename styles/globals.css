@@ -20,13 +20,13 @@ html {
 html {
   overflow-x: hidden !important;
   background: #e1fbfc;
-  background: -webkit-linear-gradient(top right, #e1fbfc, #ccf9c6);
+  /* background: -webkit-linear-gradient(top right, #e1fbfc, #ccf9c6);
   background: -moz-linear-gradient(top right, #e1fbfc, #ccf9c6);
   background: linear-gradient(
     to bottom left,
     #e1fbfc,
     #ccf9c6
-  ); /* background-color:#facb7552!important; */
+  ); background-color:#facb7552!important; */
 }
 
 html,
