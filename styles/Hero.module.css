@@ -10,22 +10,36 @@
 
 .content {
   min-height: 100vh;
+  width:80vw;
   margin:auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   text-align: center;
-  
+  text-align:left;
 }
 .caption{
   font-weight: bold;
+  color:white;
+  text-shadow:
+   -1px -1px 0 black,  
+    1px -1px 0 black,
+    -1px 1px 0 black,
+     1px 1px 0 black;
 }
 
 .title {
   font-size: 96px;
   margin: 0;
   font-weight: 900;
+  text-align:left;
+  color:white;
+  text-shadow:
+  -1px -1px 0 black,  
+   1px -1px 0 black,
+   -1px 1px 0 black,
+    1px 1px 0 black;
 }
 
 .caption {
@@ -43,10 +57,13 @@
 .action:active {
   background-color: #ff6060 !important;
 }
-
-@media (max-width: 1280px) {
+.buttonGrid{
+  width: var(--contentWidth);
+  justify-content: flex-start;
+}
+@media (max-width: 625px) {
   .content{
-    width: 80vw;
+    width: var(--contentWidth);
     padding: 0;
     margin: auto;
   }

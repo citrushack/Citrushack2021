@@ -4,21 +4,21 @@ import { Link } from "react-scroll";
 import Particles from "react-tsparticles";
 import dynamic from "next/dynamic";
 import React, { useState, useEffect } from "react";
-import { useIsAuthenticated } from "react-auth-kit";
-import { FaChevronRight, FaChevronDown } from "react-icons/fa";
+import { FaChevronDown } from "react-icons/fa";
+
+const SignUpButton = dynamic(
+  () =>
+    import("../components/SignUpButton").catch((err) => {
+      return () => <p>oops... this failed to load</p>;
+    }),
+  { ssr: false }
+);
 
 export default function Hero() {
-  const isAuthenticated = useIsAuthenticated();
-  const [authHookValue, setHookValue] = useState(false);
-
-  //If I don't force the hook to set on page reload, nextjs hydration gets confused
-  //and never updates the apply button link. I dont like this solution but it works
-  useEffect(() => {
-    setHookValue(isAuthenticated());
-  }, []);
-
   return (
-    <main className={`${styles.main} ${Herostyles.heroimage} ${Herostyles.pad}`}>
+    <main
+      className={`${styles.main} ${Herostyles.heroimage} ${Herostyles.pad}`}
+    >
       <Particles
         id="tsparticles"
         options={{
@@ -85,35 +85,26 @@ export default function Hero() {
         }}
       />
       <div className={Herostyles.content}>
-      <h1 className={Herostyles.title}>Citrus Hack</h1>
-      <p className={Herostyles.caption}>
-        Find your inner peace.
-        <br /> 禅で君の心を鍛練して。
-      </p>
-      <div className={`${styles.grid} ${Herostyles.buttonGrid}`}>
-        <a
-          href={`${
-            authHookValue ? "/apply" : "http://localhost:1337/connect/google"
-          }`}
-          className={`${styles.card} ${Herostyles.action}`}
-        >
-          <h3 className={Herostyles.h3}>
-            SIGN UP <FaChevronRight className={styles.icon} />
-          </h3>
-        </a>
-        <Link
-          to="About"
-          spy={true}
-          smooth={true}
-          duration={800}
-          activeClass="active"
-          className={`${styles.card} ${styles.clickable}`}
-        >
-          <h3 className={Herostyles.h3}>
-            LEARN MORE <FaChevronDown className={styles.icon} />
-          </h3>
-        </Link>
-      </div>
+        <h1 className={Herostyles.title}>Citrus Hack</h1>
+        <p className={Herostyles.caption}>
+          A zen state of mind.
+          <br /> 無心の心。
+        </p>
+        <div className={`${styles.grid} ${Herostyles.buttonGrid}`}>
+          <SignUpButton/>
+          <Link
+            to="About"
+            spy={true}
+            smooth={true}
+            duration={800}
+            activeClass="active"
+            className={`${styles.card} ${styles.clickable}`}
+          >
+            <h3 className={Herostyles.h3}>
+              LEARN MORE <FaChevronDown className={styles.icon} />
+            </h3>
+          </Link>
+        </div>
       </div>
     </main>
   );

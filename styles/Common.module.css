@@ -9,13 +9,17 @@
 /* Container for each section */
 .main {
   min-height: 75vh;
-  width: 100%;
+  width: var(--contentWidth);
   margin: auto;
   margin-bottom:5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow-x: hidden;
+}
+
+.tall{
+  min-height: 100vh;
 }
 
 /* Footer CSS */
@@ -135,17 +139,13 @@
 }
 
 /* Mobile stuff */
-@media (max-width: 1280px) {
+@media (max-width: 986px) {
   .main {
-    max-width: 100%;
-    padding: 0 30px;
-    margin: auto;
-    margin-top:5%;
+    margin-top:15%;
     margin-bottom:5%;
-  
   }
   .title {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
   .description {
     font-size: 1.2rem;
@@ -155,7 +155,6 @@
     align-items: unset;
   }
   .grid {
-    min-width: 100%;
     flex-direction: column;
   }
   .card,

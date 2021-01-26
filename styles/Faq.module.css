@@ -5,12 +5,11 @@
   align-items: center;
   justify-content: space-around;
   margin: 10rem auto 0 auto;
-  width: 80rem;
+  width: var(--contentWidth);
   }
-
-  @media (max-width: 1280px){
+/* Mobile Styles */
+  @media (max-width: 986px){
     .faq{
-      width: 100%;
       margin-top: 22%;
       padding: 0;
     }

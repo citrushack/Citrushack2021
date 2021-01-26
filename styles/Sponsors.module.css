@@ -7,8 +7,10 @@
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
+  
 }
-@media (max-width: 1280px){
+/* Tablet or Compact Styles */
+@media (max-width: 1168){
   .wrapper{
     width: 100%;
     padding: 0;

@@ -14,7 +14,7 @@ const FaqSection = ({ question, answer }) => {
     <AccordionItem className={styles.accordionItem}>
       <AccordionItemHeading className={styles.accordionItemHeading}>
         <AccordionItemButton className={styles.accordionItemButton}>
-          {question} <FaChevronDown/>
+          {question} <FaChevronDown />
         </AccordionItemButton>
       </AccordionItemHeading>
       <AccordionItemPanel className={styles.accordionItemPanel}>

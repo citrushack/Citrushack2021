@@ -4,7 +4,7 @@
   margin: auto;
   justify-content: center;
   align-items: center;
-  width: 80rem;
+  width: var(--contentWidth);
 }
 
 .trackwrapper {
@@ -12,7 +12,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 80rem;
+  width: var(--contentWidth);
 }
 
 .trackselection {
@@ -52,15 +52,20 @@
   justify-content: center;
 }
 .image img {
-  height: 500px;
-  width: 500px;
+  height: 36vw;
+  width: 36vw;
+  max-width:500px;
+  max-height:500px;
 }
-
-@media (max-width: 1280px) {
+/* Tablet or Compact Styles */
+@media (max-width: 1168px) {
   .tracks {
     width: 100%;
-    padding: 0;
     align-items: flex-start;
+  }
+  .image img{
+    height: auto;
+    width: 100%;
   }
   .trackwrapper {
     flex-direction: column-reverse;

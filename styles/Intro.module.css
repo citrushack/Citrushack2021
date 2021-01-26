@@ -4,7 +4,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  width: 80rem;
+  width: var(--contentWidth);
   margin: 10rem auto 0 auto;
   overflow-x: hidden;
 }
@@ -33,7 +33,7 @@
   background-position: center;
   transition: all 0.2s ease;
 }
-@media (max-width: 1280px) {
+@media (max-width: 986px) {
   .infocard {
     font-size: 1.5rem;
   }

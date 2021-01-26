@@ -8,11 +8,9 @@ export default function Intro() {
         <div className={Introstyles.text}>
           <h1 className={styles.title}>Largest hackathon UCR offers</h1>
           <p className={styles.description}>
-            Citrus Hack is where hundreds of students from all over Southern
-            California (and now the country and world) come together and form
-            teams, aiming to build a project of their own from scratch over the
-            duration of 36 hours. Citrus Hack is focused on the brilliant
-            partnership between education and competition.
+            Citrus Hack is where hundreds of students from all over the world
+            come together and form teams, aiming to build a project from scratch
+            in just 36 hours.
           </p>
           <p className={styles.description}>
             This year, Cutie Hack will be held virtually, open to undergraduate

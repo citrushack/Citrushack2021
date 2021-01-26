@@ -2,7 +2,7 @@
   margin: 1rem 0;
   display: flex;
   flex-direction: column;
-  width: 70rem;
+  width: 100%;
   transition: all 0.25s ease;
 }
 
@@ -86,8 +86,8 @@
   to {transform:translateY(0); opacity: 1;}
 }
 
-
-@media (max-width: 1280px){
+/* Mobile Styles */
+@media (max-width: 986px){
   .accordion{
     width: 100%;
     padding: 0;

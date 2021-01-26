@@ -76,14 +76,14 @@
     padding: 0;
     margin: 0;
 }
-@media (max-width: 1280px) {
+/* Mobile styles */
+@media (max-width: 986px) {
     .main{
         max-width: 100%;
         padding: 0 30px;
         margin: 2rem 0;
-      }
-      .title{
-          font-size: 5rem;
-      }
+    }
+    .title{
+        font-size: 5rem;
+    }
 }
-
