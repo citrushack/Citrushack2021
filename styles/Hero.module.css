@@ -51,7 +51,7 @@
   width: var(--contentWidth);
   justify-content: flex-end;
 }
-@media (max-width: 625px) {
+@media (max-width: 868px) {
   .heroimage{
     background-position: bottom -300px center;
   }
@@ -63,7 +63,7 @@
     align-items: center;
   }
   .title{
-    font-size: 60px;  
+    font-size: 50px;  
   }
   .caption{
     font-size: 40px;
