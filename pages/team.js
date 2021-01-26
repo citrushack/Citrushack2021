@@ -102,7 +102,7 @@ export default function Team() {
         <h1 className={Teamstyles.title}>Here's the team.</h1>
         <div className={Teamstyles.grid}>
           <Profile
-            image="/TeamPictures/Danial.JPG"
+            image="/TeamPictures/Danial.jpg"
             link="https://www.linkedin.com/in/danialbeg/"
             title="Danial Beg"
             position="Director"
@@ -114,15 +114,39 @@ export default function Team() {
             position="Director"
           />
           <Profile
-            image="/TeamPictures/Mirei.JPG"
-            link="https://www.linkedin.com/in/mirei-yamashiro-ab8217159/"
-            title="Mirei Yamashiro"
-            position="Marketing Lead"
+            image="/TeamPictures/Saul.jpg"
+            link="https://github.com/SaulGonzalez81"
+            title="Saul Gonzalez"
+            position="Operations Lead"
+          />
+          <Profile
+            image="/TeamPictures/Elbert.jpg"
+            link="https://www.linkedin.com/in/elbert-nguyen"
+            title="Elbert Nguyen"
+            position="Operations Lead"
+          />
+          <Profile
+            image="/TeamPictures/Henry.JPG"
+            link="https://www.linkedin.com/in/henry-zheng00/"
+            title="Henry Zheng"
+            position="Sponsorship Lead"
+          />
+          <Profile
+            image="/TeamPictures/Ricky.jpg"
+            link="https://www.linkedin.com/"
+            title="Ricky Vera"
+            position="Sponsorship Lead"
           />
           <Profile
             image="/TeamPictures/Matthew.jpg"
             link="https://www.linkedin.com/in/mlee212/"
             title="Matthew Lee"
+            position="Marketing Lead"
+          />
+          <Profile
+            image="/TeamPictures/Mirei.jpg"
+            link="https://www.linkedin.com/in/mirei-yamashiro-ab8217159/"
+            title="Mirei Yamashiro"
             position="Marketing Lead"
           />
           <Profile
@@ -137,23 +161,12 @@ export default function Team() {
             title="Ajeet Kokatay"
             position="Web Dev Lead"
           />
+
           <Profile
-            image="/TeamPictures/Henry.JPG"
-            link="https://www.linkedin.com/in/henry-zheng00/"
-            title="Henry Zheng"
-            position="Sponsorship Lead"
-          />
-          <Profile
-            image="/TeamPictures/Rahul.JPG"
+            image="/TeamPictures/Rahul.jpg"
             link="https://www.linkedin.com/in/rahul-sohi-511505163/"
             title="Rahul Sohi"
             position="Volunteer Lead"
-          />
-          <Profile
-            image="/TeamPictures/Saul.jpg"
-            link="https://github.com/SaulGonzalez81"
-            title="Saul Gonzalez"
-            position="Operations Lead"
           />
         </div>
         <div className={Teamstyles.credits}>
