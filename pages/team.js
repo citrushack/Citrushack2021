@@ -237,13 +237,13 @@ export default function Team() {
             </ul>
           </div>
         </div>
-        <Link href="/">
-          <a className={styles.card}>
-            <h3>
-              Back to Home <FaChevronRight className={styles.icon} />
-            </h3>
-          </a>
-        </Link>
+          <Link href="/">
+            <a className={styles.card}>
+              <h3>
+                Back to Home <FaChevronRight className={styles.icon} />
+              </h3>
+            </a>
+          </Link>
       </main>
     </>
   );

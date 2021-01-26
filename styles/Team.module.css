@@ -1,5 +1,5 @@
 .main{
-    margin: 6rem auto 3rem;
+    margin: 6rem auto;
     max-width: 96rem;
     display: flex;
     flex-direction: column;
@@ -12,7 +12,7 @@
     margin: 2rem 0 6rem;
 }
 .title{
-    font-size: 7rem;
+    font-size: 60px;
     text-align: center;
 }
 .teams{
@@ -66,6 +66,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 4em;
+    justify-content: center;
 }
 .col{
     display: flex;
@@ -85,7 +86,7 @@
         margin: 2rem 0;
     }
     .title{
-        font-size: 5rem;
+        font-size: 40px;
     }
     .picture h3{
         line-height: 0.75;
