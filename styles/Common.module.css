@@ -26,22 +26,23 @@
 .footer {
   width: 100%;
   height: 120px;
-  /*display: flex;*/
-  justify-content: center;
-  /*align-items: center;*/
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /*justify-content: center;*/
+  align-items: center;
+  /*text-align: center;*/
   color: #fff;
   background-color: #00000081;
   transition: 0.8s ease;
   box-shadow: 0 50vh 0 50vh #00000081;
+  cursor: default;
 }
 
 .footer:hover {
-  color: #ff6060;
   background-color: #212121;
   background-position: bottom;
 }
-
+/*
 .footer img {
   margin-left: 0.5rem;
 }
@@ -51,31 +52,31 @@
   justify-content: center;
   align-items: center;
 }
-
-.footer p {
-  color: #fff;
-}
-
-.footer p:hover {
-  color: #ff6060;
-}
-
-/* Conact CSS */
-.contact {
+*/
+.footer div {
   display: inline-flex;
-  vertical-align: middle;
 }
 
+/* Link to Team Page CSS */
+
+.teamlink a:hover {
+  color: #ff6060;
+  cursor: pointer;
+}
+
+/* Social Media CSS */
 .contact a {
-  padding-top: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
   color: #fff;
   font-size: 30px;
 }
 
 .contact a:hover {
   color: #ff6060;
+  cursor: pointer;
 }
 
 /* Title styles */
