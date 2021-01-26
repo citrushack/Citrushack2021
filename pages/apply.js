@@ -326,7 +326,7 @@ export default function Apply() {
         router.push("/account");
       }
     } else {
-      router.push("http://localhost:1337/connect/google");
+      router.push("/");
     }
   }, [user]);
 
