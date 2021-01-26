@@ -237,6 +237,7 @@ export default function Team() {
             </ul>
           </div>
         </div>
+        <div className={styles.grid}>
           <Link href="/">
             <a className={styles.card}>
               <h3>
@@ -244,6 +245,7 @@ export default function Team() {
               </h3>
             </a>
           </Link>
+          </div>
       </main>
     </>
   );

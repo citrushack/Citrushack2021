@@ -11,6 +11,7 @@ export default function Sponsors() {
         <p className={styles.description}>
           Those who made this hackathon possible.
         </p>
+        <div className={styles.grid}>
         <Link href="/SponsorUs">
           <a className={styles.card}>
             <h3>
@@ -18,6 +19,7 @@ export default function Sponsors() {
             </h3>
           </a>
         </Link>
+        </div>
       </div>
     </main>
   );
