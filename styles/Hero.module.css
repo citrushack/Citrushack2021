@@ -49,11 +49,11 @@
 }
 .buttonGrid{
   width: var(--contentWidth);
-  justify-content: flex-start;
+  justify-content: flex-end;
 }
 @media (max-width: 625px) {
   .heroimage{
-    background-position: bottom -600px center;
+    background-position: bottom -300px center;
   }
   .content{
     width: var(--contentWidth);
