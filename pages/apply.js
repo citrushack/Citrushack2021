@@ -320,16 +320,16 @@ export default function Apply() {
   const user = authU();
   console.log(errormsg);
 
-  //Redirect non authenticated or already finished users
-  // useEffect(() => {
-  //   if (user) {
-  //     if (user.appComplete) {
-  //       router.push("/account");
-  //     }
-  //   } else {
-  //     router.push("/");
-  //   }
-  // }, [user]);
+  // Redirect non authenticated or already finished users
+  useEffect(() => {
+    if (user) {
+      if (user.appComplete) {
+        router.push("/account");
+      }
+    } else {
+      router.push("/");
+    }
+  }, [user]);
 
   const onSubmit = (values) => {
     console.log(values);

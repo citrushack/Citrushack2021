@@ -9,7 +9,6 @@ import {useState,useEffect} from 'react';
 const StickyNav = styled.nav(
   (props) => `
   position: ${props.isHome ? "sticky" : "static"};
-  position: fixed;
   z-index: 5;
   top: 0;
   right: 0;
@@ -101,11 +100,10 @@ export default function Nav() {
             {isAuthenticated() && (
               <div className={Navstyles.navlistlink}>
                 <a
-                  href="/"
+                  href="#"
                   onClick={(e) => {
                     e.preventDefault;
                     signOut();
-                    router.push("/");
                   }}
                   className="signup"
                 >
