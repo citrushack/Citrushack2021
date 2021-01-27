@@ -8,7 +8,7 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 import {useState,useEffect} from 'react';
 const StickyNav = styled.nav(
   (props) => `
-  // position: ${props.isHome ? "sticky" : "static"};
+  position: ${props.isHome ? "sticky" : "static"};
   position: fixed;
   z-index: 5;
   top: 0;
