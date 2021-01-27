@@ -214,28 +214,6 @@ export default function Team() {
               <li>Phoebe Buffay</li>
             </ul>
           </div>
-          <div className={Teamstyles.col}>
-            <h3>Committee</h3>
-            <ul>
-              <li>Ross Geller</li>
-              <li>Rachel Green</li>
-              <li>Chandler Bing</li>
-              <li>Monica Geller</li>
-              <li>Joey Tribbiani</li>
-              <li>Phoebe Buffay</li>
-            </ul>
-          </div>
-          <div className={Teamstyles.col}>
-            <h3>Committee</h3>
-            <ul>
-              <li>Ross Geller</li>
-              <li>Rachel Green</li>
-              <li>Chandler Bing</li>
-              <li>Monica Geller</li>
-              <li>Joey Tribbiani</li>
-              <li>Phoebe Buffay</li>
-            </ul>
-          </div>
         </div>
         <div className={styles.grid}>
           <Link href="/">
@@ -245,7 +223,7 @@ export default function Team() {
               </h3>
             </a>
           </Link>
-          </div>
+        </div>
       </main>
     </>
   );

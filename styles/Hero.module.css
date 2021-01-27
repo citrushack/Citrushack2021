@@ -27,7 +27,7 @@
   font-size: min(10vh,96px);
   margin: 0;
   font-weight: 800;
-  text-align:left;
+  text-align:center;
   color: #191b1f;
     
 }
@@ -38,14 +38,14 @@
 
 .action {
   border: 3px solid #1b1b1b !important;
-  background-color: #1b1b1b !important;
+  background-color: #ff6060 !important;
   color: #fff;
 }
 
 .action:hover,
 .action:focus,
 .action:active {
-  background-color: #ff6060 !important;
+  background-color: #f87575 !important;
 }
 .buttonGrid{
   width: var(--contentWidth);

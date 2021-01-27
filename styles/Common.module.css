@@ -25,7 +25,7 @@
 /* Footer CSS */
 .footer {
   width: 100%;
-  margin: 40px 0;
+  padding: 20px 0 40px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,6 +40,7 @@
 .footer:hover {
   background-color: #212121;
   background-position: bottom;
+  box-shadow: 0 50vh 0 50vh #212121;
 }
 /*
 .footer img {
