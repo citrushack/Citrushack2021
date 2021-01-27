@@ -91,7 +91,7 @@ export default function Nav() {
             {!isAuthenticated() && (
               <div className={Navstyles.navlistlink}>
                 <a
-                  href={`http://localhost:1337/connect/google`}
+                  href={`https://cms.citrushack.com/connect/google`}
                   className="signup"
                 >
                   Sign Up
