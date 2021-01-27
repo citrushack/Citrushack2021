@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }) {
     <Provider store={store}>
       <AuthProvider
         authStorageType={"cookie"}
-        cookieDomain="localhost"
+        cookieDomain="cms.citrushack.com"
         cookieSecure="false"
       >
         <Head>
