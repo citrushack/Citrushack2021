@@ -6,7 +6,7 @@ import { fetch } from "whatwg-fetch";
 import Container, { siteTitle } from "../../../components/Container";
 import styles from "../../../styles/Common.module.css";
 
-const backendUrl = "http://cms.citrushack.com";
+const backendUrl = "https://cms.citrushack.com";
 
 export default function Redirect() {
   const router = useRouter();
