@@ -24,7 +24,7 @@
 }
 
 .title {
-  font-size: 96px;
+  font-size: min(10vh,96px);
   margin: 0;
   font-weight: 800;
   text-align:left;
@@ -33,7 +33,7 @@
 }
 
 .caption {
-  font-size: 3rem;
+  font-size: min(5vh, 3rem);
 }
 
 .action {

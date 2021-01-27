@@ -10,12 +10,13 @@
   list-style: none;
   cursor: pointer;
   font-weight: 750;
+  font-size: 12px;
 }
 .links {
   display: flex;
   align-items: center;
 }
 .logos {
-  width: 80px;
-  height: 80px;
+  width: auto;
+  height: min(80px, 9vh);
 }
