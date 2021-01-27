@@ -6,10 +6,10 @@ import logo from "../public/logoRevised.png";
 import { useRouter } from "next/router";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import {useState,useEffect} from 'react';
+
 const StickyNav = styled.nav(
   (props) => `
-  position: ${props.isHome ? "sticky" : "static"};
-  position: fixed;
+  position: ${props.isHome ? "fixed" : "static"};
   z-index: 5;
   top: 0;
   right: 0;
@@ -71,13 +71,13 @@ export default function Nav() {
       <StickyNav isMobile isHome={isHome}>
         <div className={Navstyles.navlistcontainer}>
           <div>
-            <a href="/">
+            <Link href="/">
               <img
                 className={Navstyles.logos}
                 src={logo}
                 alt="Citrushack 2021 Logo"
               />
-            </a>
+            </Link>
           </div>
           <div className={Navstyles.links}>
             {!isMobile && isHome && <NavigationLinks title="Home" href="Home" />}
@@ -90,27 +90,26 @@ export default function Nav() {
             {/* Only reason why this isn't part of a class is of the CSS classes being different. DO NOT CHANGE */}
             {!isAuthenticated() && (
               <div className={Navstyles.navlistlink}>
-                <a
+                <Link
                   href={`https://cms.citrushack.com/connect/google`}
                   className="signup"
                 >
                   Sign Up
-                </a>
+                </Link>
               </div>
             )}
             {isAuthenticated() && (
               <div className={Navstyles.navlistlink}>
-                <a
-                  href="/"
+                <Link
+                  href="#"
                   onClick={(e) => {
                     e.preventDefault;
                     signOut();
-                    router.push("/");
                   }}
                   className="signup"
                 >
                   Sign Out
-                </a>
+                </Link>
               </div>
             )}
           </div>
