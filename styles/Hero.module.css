@@ -53,7 +53,8 @@
 }
 @media (max-width: 868px) {
   .heroimage{
-    background-position: bottom -300px center;
+    background-size: contain;
+    background-position: center bottom;
   }
   .content{
     width: var(--contentWidth);
