@@ -6,7 +6,6 @@ import logo from "../public/logoRevised.png";
 import { useRouter } from "next/router";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import {useState,useEffect} from 'react';
-import Link from "next/link";
 
 const StickyNav = styled.nav(
   (props) => `
