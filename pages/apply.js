@@ -21,6 +21,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { submitAsync, selectError } from "../lib/slices/applySlice";
 import { useRouter } from "next/router";
 import { useSignIn, useAuthUser } from "react-auth-kit";
+import css from "../styles/Apply.module.css";
 
 const checkIn = [
   {
@@ -320,15 +321,15 @@ export default function Apply() {
   console.log(errormsg);
 
   //Redirect non authenticated or already finished users
-  useEffect(() => {
-    if (user) {
-      if (user.appComplete) {
-        router.push("/account");
-      }
-    } else {
-      router.push("/");
-    }
-  }, [user]);
+  // useEffect(() => {
+  //   if (user) {
+  //     if (user.appComplete) {
+  //       router.push("/account");
+  //     }
+  //   } else {
+  //     router.push("/");
+  //   }
+  // }, [user]);
 
   const onSubmit = (values) => {
     console.log(values);
@@ -346,7 +347,7 @@ export default function Apply() {
   return (
     <Container main>
       <CssBaseline />
-      <main className={styles.main}>
+      <main className={css.main}>
         <Form
           onSubmit={onSubmit}
           validate={validate}

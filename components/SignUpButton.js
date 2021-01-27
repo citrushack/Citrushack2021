@@ -10,7 +10,7 @@ export default function SignUpButton() {
   return (
     <a
     href={`${
-      isAuthenticated() ? "/account" : "http://localhost:1337/connect/google"
+      isAuthenticated() ? "/account" : "https://cms.citrushack.com/connect/google"
     }`}
     className={`${styles.card} ${Herostyles.action}`}
   >

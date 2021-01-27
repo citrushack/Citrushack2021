@@ -8,7 +8,7 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 import {useState,useEffect} from 'react';
 const StickyNav = styled.nav(
   (props) => `
-  // position: ${props.isHome ? "sticky" : "static"};
+  position: ${props.isHome ? "sticky" : "static"};
   position: fixed;
   z-index: 5;
   top: 0;
@@ -91,7 +91,7 @@ export default function Nav() {
             {!isAuthenticated() && (
               <div className={Navstyles.navlistlink}>
                 <a
-                  href={`http://localhost:1337/connect/google`}
+                  href={`https://cms.citrushack.com/connect/google`}
                   className="signup"
                 >
                   Sign Up
