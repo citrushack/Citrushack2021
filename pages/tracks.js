@@ -3,6 +3,8 @@ import { useState } from "react";
 import styles from "../styles/Common.module.css";
 import Trackstyles from "../styles/Tracks.module.css";
 
+import { FaChevronRight } from "react-icons/fa";
+
 const Security = () => {
   return (
     <div className={Trackstyles.track}>
@@ -88,14 +90,20 @@ export default function Tracks() {
             <div className={Trackstyles.trackcontent}>{data[currentIdx]}</div>
           ) : null}
           <ul className={Trackstyles.trackselection}>
-            <li className={Trackstyles.link} onClick={() => setCurrent(0)}>
-              Security
+            <li className={styles.card} onClick={() => setCurrent(0)}>
+              <h3>
+                Security <FaChevronRight className={styles.icon} />
+              </h3>
             </li>
-            <li className={Trackstyles.link} onClick={() => setCurrent(1)}>
-              Sustainability
+            <li className={styles.card} onClick={() => setCurrent(1)}>
+              <h3>
+                Sustainability <FaChevronRight className={styles.icon} />
+              </h3>
             </li>
-            <li className={Trackstyles.link} onClick={() => setCurrent(2)}>
-              Wellness
+            <li className={styles.card} onClick={() => setCurrent(2)}>
+              <h3>
+                Wellness <FaChevronRight className={styles.icon} />
+              </h3>
             </li>
           </ul>
         </div>
