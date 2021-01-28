@@ -17,18 +17,50 @@
 
 .trackselection {
   margin: 0;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.trackselection li{
+  list-style: none;
+  margin: 0;
   padding: 0;
 }
 
-.link {
-  list-style: none;
-  margin: 1rem;
-  padding: 0;
-  font-size: 30px;
+.large {
+  width: 230px;
+}
+.diagonal {
+  position: relative;
+  line-height: 70px;
+  background: #000;
+  color: white;
+  border: none;
   font-weight: 600;
+  overflow: hidden;
+  z-index: 1;
+  padding: 0px;
+  border-radius: 100px;
   cursor: pointer;
-  border-bottom: 3px solid transparent;
-  transition: border-bottom ease 0.5s;
+}
+.diagonal:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500%;
+  height: 1000%;
+  background: #ff6060;
+  z-index: -1;
+  transform-origin: 0% 0%;
+  transform: translateX(calc(20% - 0px)) translateY(10%) rotate(-45deg);
+  /transform: translateY(10%) translateX(16%) rotate(-45deg);
+  transition: transform .3s;
+}
+.diagonal:hover::after {
+  transform: translateY(10%) translateX(-25px) rotate(-45deg);
 }
 .link:hover,
 .link:active {
