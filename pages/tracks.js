@@ -20,6 +20,7 @@ const variants = {
   },
   exit: (direction) => {
     return {
+
       zIndex: 0,
       x: direction < 0 ? 1000 : -1000,
       opacity: 0
@@ -28,7 +29,7 @@ const variants = {
 };
 const fade = {
   enter: {
-      y: -5,
+      y: -25,
       opacity: 0
   },
   center: {
@@ -37,7 +38,8 @@ const fade = {
   },
   exit:
   {
-      y:-5,
+      position: 'absolute',
+      y:-25,
       opacity: 0,
   }
 };
@@ -138,7 +140,7 @@ export default function Tracks() {
       <div className={Trackstyles.tracks}>
         <h1 className={styles.title}>Choose Your Track</h1>
       </div>
-      <AnimatePresence exitBeforeEnter initial={false} custom={direction}>
+      <AnimatePresence initial={false} custom={direction}>
         <motion.div
           key={page}
           custom={direction}
