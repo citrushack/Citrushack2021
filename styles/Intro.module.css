@@ -33,9 +33,11 @@
   background-position: center;
   transition: all 0.2s ease;
 }
-@media (max-width: 986px) {
+@media (max-width: 768px) {
   .infocard {
-    font-size: 1.5rem;
+    font-size: 5vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
   }
   .introduction {
     flex-direction: column;

@@ -100,7 +100,7 @@ export default function Hero() {
             smooth={true}
             duration={800}
             activeClass="active"
-            className={`${styles.card} ${styles.clickable}`}
+            className={`${styles.card} ${styles.clickable} ${Herostyles.secondary}`}
           >
             <h3 className={Herostyles.h3}>
               LEARN MORE <FaChevronDown className={styles.icon} />

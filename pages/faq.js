@@ -8,7 +8,7 @@ export default function Faq() {
       <div className={Faqstyles.faq}>
         <h1 className={styles.title}>Questions?</h1>
         <p className={styles.description}>
-          Here are the most commonly asked questions! Feel free to ask us any
+          Here are the most commonly asked questions. Feel free to ask us any
           question you don't see on here.
         </p>
         <AccordionComponent />

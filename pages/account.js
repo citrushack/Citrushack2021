@@ -64,13 +64,25 @@ export default function Account() {
   const dispatch = useDispatch();
   const authU = useAuthUser();
   const errormsg = useSelector(selectError);
+  // const errormsg = '';
+
   const groupInfo = useSelector(selectGroup);
+  // const groupInfo = {
+  //   payload: null
+  // };
+
+
   const isFetching = useSelector(selectisFetching);
+  // const isFetching = false;
+
   const statusPayload = useSelector(selectStatusInfo);
+  // const statusPayload = {
+  //   payload: {status:false}};
+
   const groupExists = !!groupInfo.payload;
   const router = useRouter();
   const user = authU();
-
+  // const user = {firstname: 'testing'};
   useEffect(() => {
     dispatch(refreshGroup());
     dispatch(refreshStatus());
@@ -98,7 +110,7 @@ export default function Account() {
     dispatch(joinGroup(values));
   };
 
-  return (
+  return ( 
     <Container main>
       <CssBaseline />
       <main
@@ -111,9 +123,9 @@ export default function Account() {
           exit="out"
           style={{
             marginBottom: "2em",
-            backgroundColor: "#d8edbb",
-            backgroundImage:
-              'url("https://www.transparenttextures.com/patterns/wavecut.png");',
+            backgroundColor: "#f8f8f8",
+            borderRadius: '20px',
+            boxShadow: '0px 0px 20px 1px #e6e5e5',
           }}
           variants={pageVariants}
           transition={{
@@ -129,17 +141,11 @@ export default function Account() {
             transition={{ duration: 4, ease: [0.43, 0.13, 0.23, 0.96] }}
             className="scaleDiv"
           >
-            <h1 style={{ textAlign: "center" }}>
-              <span role="img" aria-label="flag">
-                🍊
-              </span>{" "}
+            <h1 style={{ textAlign: "center", fontSize : '1.3em' }}>
               Application status:{" "}
               {statusPayload.payload
                 ? getStatus(statusPayload.payload.status)
                 : "Loading..."}
-              <span role="img" aria-label="flag">
-                🍊
-              </span>{" "}
             </h1>
           </motion.div>
           <motion.div
@@ -158,9 +164,9 @@ export default function Account() {
               <Grid item xs={12}></Grid>
               <Typography
                 style={{
-                  fontSize: "1.5em",
-                  fontWeight: 800,
-                  padding: "4rem",
+                  fontSize: "1.3em",
+                  fontWeight: 400,
+                  padding: "2rem",
                 }}
                 align="left"
                 variant="h5"
@@ -193,7 +199,7 @@ export default function Account() {
             }}
             transition={{ duration: 4, ease: [0.43, 0.13, 0.23, 0.96] }}
             className="groupCard"
-            style={{ padding: "2em", backgroundColor: "lightgrey" }}
+            style={{ padding: "2em", backgroundColor: "#eaeaea" }}
           >
             <Box textAlign="center">
               <Typography variant="h6" component="h1" gutterBottom>
@@ -209,6 +215,7 @@ export default function Account() {
                 align="center"
                 component="h1"
                 gutterBottom
+                style={{textSize: '2rem'}}
               >
                 {groupInfo && groupInfo.payload && groupInfo.payload.uid}
               </Typography>
@@ -234,8 +241,8 @@ export default function Account() {
                 <Button
                   variant="contained"
                   style={{
-                    background: "rgba(16, 27, 30, 0.83)",
-                    color: "white",
+                    background: "rgb(54 222 123 / 71%)",
+                    color: "black",
                     // boxShadow: '3px 3px 0px -1px rgba(0, 0, 0, 0.45)',
                     border: "1px solid black",
                   }}
@@ -318,7 +325,9 @@ export default function Account() {
                               type="submit"
                               style={{
                                 width: "100%",
-                                background: "rgba(16, 27, 30, 0.83)",
+                                background: "rgb(141 231 247)",
+                                border: "1px solid black",
+                                color:'black',
                               }}
                               disabled={isFetching}
                             >

@@ -4,10 +4,10 @@
   background-image: url(../public/CherryBlossomSharpWebP.png);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: left -47vw center;
+  background-position: left -37vw center;
   overflow-x: hidden;
   /* Overlay white onto the image */
-  box-shadow: inset 0 0 0 2000px rgb(255 255 255 / 18%);
+  box-shadow: inset 0 0 0 2000px rgb(255 255 255 / 35%);
 }
 
 .content {
@@ -20,10 +20,7 @@
   align-items: flex-end;
   text-align: right;
 }
-.caption{
-  font-weight: bold;
-  color:#191b1f;
-}
+
 
 .title {
   font-size: min(10vh,96px);
@@ -31,12 +28,25 @@
   font-weight: 800;
   text-align:center;
   color: #191b1f;
-  text-shadow: 0 0 35px white, 0 0 70px white, 0 0 24px white, 0 0 48px white;
+  text-shadow: 0 0 77px #fff, 0 0 70px #fff, 0 0 94px #fff, 0 0 70px #fff;
 }
 
-.caption {
+.caption{
+  font-weight: bold;
+  color:#191b1f;
   font-size: min(5vh, 3rem);
-  text-shadow: 0 0 35px white, 0 0 57px white, 0 0 28px white, 0 0 30px white, 0 0 30px white;
+  text-shadow: 0 0 53px #fff,0 0 61px #fff,0 0 61px #fff,0 0 61px #fff,0 0 39px #fff;
+}
+
+.secondary {
+  border: 3px solid #98a5a7 !important;
+  color: #1b1b1b;
+}
+
+.secondary:hover,
+.secondary:focus,
+.secondary:active {
+  background-color: #c7edff !important;
 }
 
 .action {
@@ -73,5 +83,11 @@
   }
   .caption{
     font-size: 30px;
+  }
+}
+/* Adjust tree on vertical monitors */
+@media (max-aspect-ratio: 1/1) and (min-aspect-ratio: 1/16) and (min-width: 769px) {
+  .heroimage{
+    background-position: left calc(130% - 20vw) center;
   }
 }

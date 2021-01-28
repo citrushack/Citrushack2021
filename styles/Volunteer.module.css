@@ -5,7 +5,7 @@
 }
 
 /* Mobile Styles */
-@media (max-width: 986px){
+@media (max-width: 768px){
   .wrapper{
     width: 100%;
     padding: 0;
@@ -28,7 +28,7 @@
   }
 
 }
-@media (max-width: 986px){
+@media (max-width: 768px){
   .grid > a{
     padding-top:1%;
     padding-bottom:1%;
