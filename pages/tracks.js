@@ -90,18 +90,18 @@ export default function Tracks() {
             <div className={Trackstyles.trackcontent}>{data[currentIdx]}</div>
           ) : null}
           <ul className={Trackstyles.trackselection}>
-            <li onClick={() => setCurrent(0)}>
-              <h3 className={`${Trackstyles.large} ${Trackstyles.diagonal}`}>
+            <li className={styles.card} onClick={() => setCurrent(0)}>
+              <h3>
                 Security <FaChevronRight className={styles.icon} />
               </h3>
             </li>
-            <li onClick={() => setCurrent(1)}>
-              <h3 className={`${Trackstyles.large} ${Trackstyles.diagonal}`}>
+            <li className={styles.card} onClick={() => setCurrent(1)}>
+              <h3>
                 Sustainability <FaChevronRight className={styles.icon} />
               </h3>
             </li>
-            <li onClick={() => setCurrent(2)}>
-              <h3 className={`${Trackstyles.large} ${Trackstyles.diagonal}`}>
+            <li className={styles.card} onClick={() => setCurrent(2)}>
+              <h3>
                 Wellness <FaChevronRight className={styles.icon} />
               </h3>
             </li>
