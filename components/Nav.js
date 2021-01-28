@@ -90,12 +90,12 @@ export default function Nav() {
             {/* Only reason why this isn't part of a class is of the CSS classes being different. DO NOT CHANGE */}
             {!isAuthenticated() && (
               <div className={Navstyles.navlistlink}>
-                <Link
+                <a
                   href={`https://cms.citrushack.com/connect/google`}
                   className="signup"
                 >
                   Sign Up
-                </Link>
+                </a>
               </div>
             )}
             {isAuthenticated() && (

@@ -62,7 +62,7 @@ export default function AccordionComponent() {
       />
       <FaqSection
         question="What will I need to participate?"
-        answer="A working device (i.e your laptop or PC) and a stable internet connection. And, of course, you@"
+        answer="A working device (i.e your laptop or PC) and a stable internet connection. And, of course, you."
       />
       <FaqSection
         question="What if I don’t have a team?"
