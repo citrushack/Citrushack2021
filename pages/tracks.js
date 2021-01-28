@@ -140,6 +140,8 @@ export default function Tracks() {
       <div className={Trackstyles.tracks}>
         <h1 className={styles.title}>Choose Your Track</h1>
       </div>
+      <div className={Trackstyles.wrapper}>
+      <FaChevronLeft className={Trackstyles.prev} onClick={() => paginate(-1)} />
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
           key={page}
@@ -170,7 +172,11 @@ export default function Tracks() {
         </motion.div>
       </AnimatePresence>
       <FaChevronRight className={Trackstyles.next} onClick={() => paginate(1)}/>
-      <FaChevronLeft className={Trackstyles.prev} onClick={() => paginate(-1)} />
+      <div className={Trackstyles.pagemobile}>
+      <FaChevronLeft className={Trackstyles.prevmobile} onClick={() => paginate(-1)} />
+      <FaChevronRight className={Trackstyles.nextmobile} onClick={() => paginate(1)} />
+      </div>
+      </div>
     </main>
   );
 }
