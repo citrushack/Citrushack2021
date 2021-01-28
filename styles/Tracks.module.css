@@ -16,55 +16,27 @@
 }
 
 .trackselection {
-  margin: 0;
-  padding: 0 20px;
   display: flex;
   flex-direction: column;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
 }
 
 .trackselection li{
   list-style: none;
-  margin: 0;
+  margin: 1rem 0;
   padding: 0;
+  cursor: pointer;
+  background-color: #1b1b1b !important;
+  border: 3px solid #1b1b1b !important;
+  color: #fff !important;
 }
 
-.large {
-  width: 230px;
-}
-.diagonal {
-  position: relative;
-  line-height: 70px;
-  background: #000;
-  color: white;
-  border: none;
-  font-weight: 600;
-  overflow: hidden;
-  z-index: 1;
-  padding: 0px;
-  border-radius: 100px;
-  cursor: pointer;
-}
-.diagonal:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 500%;
-  height: 1000%;
-  background: #ff6060;
-  z-index: -1;
-  transform-origin: 0% 0%;
-  transform: translateX(calc(20% - 30px)) translateY(10%) rotate(-45deg);
-  transform: translateY(10%) translateX(16%) rotate(-45deg);
-  transition: transform .3s;
-}
-.diagonal:hover::after {
-  transform: translateY(10%) translateX(-25px) rotate(-45deg);
-}
-.link:hover,
-.link:active {
-  border-bottom: 3px solid #000;
+.trackselection li h3{
+  font-size: 16px;
+  padding: 14px;
 }
 
 .track {
@@ -117,5 +89,12 @@
   .image img{
       height: 300px;
       width: 300px;
+  }
+  .trackselection li{
+    margin: 0.25rem;
+  }
+  .trackselection li h3{
+    width: 100%;
+    margin: 0 0rem 0.5rem 0;
   }
 }
