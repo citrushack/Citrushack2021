@@ -75,7 +75,7 @@
   }
 }
 /* Adjust tree on vertical monitors */
-@media (max-aspect-ratio: 1/1) and (min-aspect-ratio: 1/16) {
+@media (max-aspect-ratio: 1/1) and (min-aspect-ratio: 1/16) and (min-width: 986px) {
   .heroimage{
     background-position: left calc(130% - 20vw) center;
   }
