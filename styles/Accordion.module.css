@@ -87,7 +87,7 @@
 }
 
 /* Mobile Styles */
-@media (max-width: 986px){
+@media (max-width: 768px){
   .accordion{
     width: 100%;
     padding: 0;

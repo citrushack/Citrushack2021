@@ -8,7 +8,7 @@
   width: var(--contentWidth);
   }
 /* Mobile Styles */
-  @media (max-width: 986px){
+  @media (max-width: 768px){
     .faq{
       margin-top: 22%;
       padding: 0;

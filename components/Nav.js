@@ -18,7 +18,7 @@ const StickyNav = styled.nav(
   width: 100vw;
   padding: 0;
   /* Mobile Styles */
-  @media (max-width: 986px){
+  @media (max-width: 768px){
    background-color:transparent;
    border-bottom: none;
   }
@@ -46,7 +46,7 @@ export default function Nav() {
   const isAuthenticated = useIsAuthenticated();
   const signOut = useSignOut();
   const router = useRouter();
-  const isMobile = useMediaQuery("(max-width:986px)");
+  const isMobile = useMediaQuery("(max-width:768px)");
   const [isHome, setIsHome] = useState(0);
 
   useEffect(()=>{

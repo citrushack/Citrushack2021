@@ -8,7 +8,7 @@
 }
 /* Container for each section */
 .main {
-  min-height: 75vh;
+  min-height: 50vh;
   width: var(--contentWidth);
   margin: auto;
   margin-bottom:5%;
@@ -20,6 +20,10 @@
 
 .tall{
   min-height: 100vh;
+}
+
+.topAlign {
+  justify-content: flex-start;
 }
 
 /* Footer CSS */
@@ -159,7 +163,7 @@
   height: 1em;
 }
 
-/* Pointer Styles */
+/* Card Button Modifer */
 .clickable {
   cursor: pointer;
 }
@@ -169,7 +173,7 @@
 }
 
 /* Mobile stuff */
-@media (max-width: 986px) {
+@media (max-width: 768px) {
   .main {
     margin-top:15%;
     margin-bottom:5%;
