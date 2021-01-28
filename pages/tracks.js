@@ -38,7 +38,7 @@ const fade = {
   },
   exit:
   {
-      position: 'absolute',
+      display: 'none',
       y:-25,
       opacity: 0,
   }
