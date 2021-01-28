@@ -55,8 +55,8 @@
   background: #ff6060;
   z-index: -1;
   transform-origin: 0% 0%;
-  transform: translateX(calc(20% - 0px)) translateY(10%) rotate(-45deg);
-  /transform: translateY(10%) translateX(16%) rotate(-45deg);
+  transform: translateX(calc(20% - 30px)) translateY(10%) rotate(-45deg);
+  transform: translateY(10%) translateX(16%) rotate(-45deg);
   transition: transform .3s;
 }
 .diagonal:hover::after {
