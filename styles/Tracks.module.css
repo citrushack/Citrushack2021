@@ -92,10 +92,13 @@
   }
   .image {
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
   .image img {
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
+    padding: 20px;
   }
 
   .tracktitle {
