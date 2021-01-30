@@ -38,7 +38,7 @@
 
 .open .accordionItemButton > svg {
   transform: rotate(180deg);
-  transition: 0.2s linear;
+  transition: 0.25s linear;
 }
 
 .accordionItemPanel {
