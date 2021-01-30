@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FaChevronDown, FaPlus } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa";
 import styles from "../styles/Accordion.module.css";
 
 export default class FaqSection extends Component {

@@ -91,6 +91,8 @@
     flex-direction: column-reverse;
     width: 100%;
     padding: 10px;
+    height: 600px !important;
+    justify-content: center;
   }
   .image {
     width: 100%;

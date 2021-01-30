@@ -17,8 +17,6 @@
 .accordionItemHeading {
   font-weight: 600;
   font-size: 1.5rem;
-  max-width: 100%;
-  word-wrap: break-word;
   
 }
 
@@ -27,7 +25,6 @@
   border: none;
   box-shadow: transparent;
   cursor: pointer;
-  padding: 1rem;
   border-bottom: 2px solid lightgray;
   background-color: rgba(255, 255, 255, 0.882);
 }
@@ -53,7 +50,7 @@
 }
 
 .open .accordionItemPanel {
-  max-height: 100rem;
+  max-height: 100%;
   padding: 1.5rem;
   line-height: 1.5;
   font-size: 1.2rem;
@@ -64,12 +61,12 @@
 
 .answer {
   opacity: 0;
-  transition: 0.2s linear;
+  transition: 0.2s ease;
 }
 
 .open .answer {
   opacity: 1;
-  transition: 0.15s linear;
+  transition: 0.15s ease;
 }
 
 /* Mobile Styles */
@@ -80,7 +77,6 @@
   }
   .accordionItemHeading{
     font-size: 1rem;
-    padding-right: 1rem;
   }
   .accordionItemButton{
     padding: 0.6rem;
