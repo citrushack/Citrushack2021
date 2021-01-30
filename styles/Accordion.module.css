@@ -6,7 +6,6 @@
 }
 
 .accordionItem {
-  margin-bottom: 1rem;
   text-align: left;
   color: inherit;
   text-decoration: none;
@@ -27,6 +26,7 @@
   cursor: pointer;
   border-bottom: 2px solid lightgray;
   background-color: rgba(255, 255, 255, 0.882);
+  padding: 1.5rem 0.5rem;
 }
 
 .accordionItemButton > svg {
