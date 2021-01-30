@@ -26,7 +26,6 @@
 .image {
   display: flex;
   flex: 1;
-  justify-content: flex-end;
   width: 500px;
   height: 500px;
   margin: auto;
@@ -91,20 +90,21 @@
   .track {
     flex-direction: column-reverse;
     width: 100%;
-    padding: 5%;
-    justify-content: space-around;
+    padding: 10px;
   }
   .image {
     width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
     margin: 0;
   }
   .image img {
     height: 300px;
     width: 300px;
-    padding: 20px;
     margin: 0;
+    padding: 10px;
   }
   .text{
     margin: 0;
