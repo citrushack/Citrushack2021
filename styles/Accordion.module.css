@@ -26,12 +26,16 @@
   cursor: pointer;
   border-bottom: 2px solid lightgray;
   background-color: rgba(255, 255, 255, 0.882);
-  padding: 1.5rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+
 .accordionItemButton > svg {
-  float: right;
   transition: 0.15s ease;
+  min-width: 15px;
+  min-height: 15px;
 }
 
 .open .accordionItemButton > svg {
@@ -79,6 +83,14 @@
     font-size: 1rem;
   }
   .accordionItemButton{
-    padding: 0.6rem;
+    padding: 0.1rem 0;
+  }
+  .accordionItemButton p{
+    padding: 0 10px 0 0;
+    margin-right: 2px;
+  }
+  .open .accordionItemPanel{
+    font-size: 16px;
+    padding: 0 1rem;
   }
 }
