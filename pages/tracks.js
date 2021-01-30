@@ -20,8 +20,8 @@ const variants = {
   },
   exit: (direction) => {
     return {
-
-      zIndex: 0,
+      position: 'absolute',
+      zIndex: -1,
       x: direction < 0 ? 1000 : -1000,
       opacity: 0
     };
@@ -38,7 +38,6 @@ const fade = {
   },
   exit:
   {
-      display: 'none',
       y:-25,
       opacity: 0,
   }
