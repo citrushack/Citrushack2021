@@ -55,7 +55,7 @@ export default function Nav() {
 
   return (
     <>
-      {isHome && (
+      {/* {isHome && (
         <a
           id="mlh-trust-badge"
           className="MLH"
@@ -67,7 +67,7 @@ export default function Nav() {
             alt="Major League Hacking 2021 Hackathon Season"
           />
         </a>
-      )}
+      )} */}
       <StickyNav isMobile isHome={isHome}>
         <div className={Navstyles.navlistcontainer}>
           <div>
