@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import styles from "../styles/Common.module.css";
 import Trackstyles from "../styles/Tracks.module.css";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimateSharedLayout } from "framer-motion";
 import { wrap } from "popmotion";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 
@@ -20,8 +20,7 @@ const variants = {
   },
   exit: (direction) => {
     return {
-
-      zIndex: 0,
+      zIndex: -1,
       x: direction < 0 ? 1000 : -1000,
       opacity: 0
     };
@@ -38,13 +37,12 @@ const fade = {
   },
   exit:
   {
-      display: 'none',
       y:-25,
       opacity: 0,
   }
 };
-
-const swipeConfidenceThreshold = 10000;
+const fadeTransition = { duration: 1.5, ease: [0.43, 0.13, 0.23, 0.96] };
+const swipeConfidenceThreshold = 40000;
 const swipePower = (offset, velocity) => {
   return Math.abs(offset) * velocity;
 };
@@ -56,7 +54,7 @@ const Security = () => {
     animate="center"
     exit="exit"
     variants={fade}
-    transition={{ duration: .7, ease: [0.43, 0.13, 0.23, 0.96] }}
+    transition={fadeTransition}
     className={Trackstyles.track}>
       <div className={Trackstyles.text}>
         <h2 className={Trackstyles.tracktitle}>🔒 Security</h2>
@@ -80,7 +78,7 @@ const Sustainability = () => {
     animate="center"
     exit="exit"
     variants={fade}
-    transition={{ duration: .7, ease: [0.43, 0.13, 0.23, 0.96] }}
+    transition={fadeTransition}
     className={Trackstyles.track}>
       <div className={Trackstyles.text}>
         <h2 className={Trackstyles.tracktitle}>🌲 Sustainability</h2>
@@ -104,7 +102,7 @@ const Wellness = () => {
     animate="center"
     exit="exit"
     variants={fade}
-    transition={{ duration: .7, ease: [0.43, 0.13, 0.23, 0.96] }}
+    transition={fadeTransition}
     className={Trackstyles.track}>
       <div className={Trackstyles.text}>
         <h2 className={Trackstyles.tracktitle}>🌸 Wellness</h2>
@@ -126,6 +124,19 @@ const slides = [
   <Wellness />,
 ];
 
+
+const MotionWrapper = ({children}) => {
+  return (
+    <motion.div   
+      whileHover={{ scale: 1.2 }}
+      whileTap={{ scale: 0.8 }}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+
 export default function Tracks() {
 
   const [[page, direction], setPage] = useState([0, 0]);
@@ -134,15 +145,15 @@ export default function Tracks() {
   const paginate = (newDirection) => {
     setPage([page + newDirection, newDirection]);
   };
-
+  
   return (
     <main className={styles.main}>
       <div className={Trackstyles.tracks}>
         <h1 className={styles.title}>Choose Your Track</h1>
       </div>
       <div className={Trackstyles.wrapper}>
-      <FaChevronLeft className={Trackstyles.prev} onClick={() => paginate(-1)} />
-      <AnimatePresence initial={false} custom={direction}>
+      <MotionWrapper><FaChevronLeft className={Trackstyles.prev} onClick={() => paginate(-1)} /></MotionWrapper>
+      <AnimateSharedLayout initial={false} custom={direction}>
         <motion.div
           key={page}
           custom={direction}
@@ -170,11 +181,11 @@ export default function Tracks() {
         >
           {slides[imageIndex]}
         </motion.div>
-      </AnimatePresence>
-      <FaChevronRight className={Trackstyles.next} onClick={() => paginate(1)}/>
+      </AnimateSharedLayout>
+      <MotionWrapper><FaChevronRight className={Trackstyles.next} onClick={() => paginate(1)}/></MotionWrapper>
       <div className={Trackstyles.pagemobile}>
-      <FaChevronLeft className={Trackstyles.prevmobile} onClick={() => paginate(-1)} />
-      <FaChevronRight className={Trackstyles.nextmobile} onClick={() => paginate(1)} />
+      <MotionWrapper><FaChevronLeft className={Trackstyles.prevmobile} onClick={() => paginate(-1)} /></MotionWrapper>
+      <MotionWrapper><FaChevronRight className={Trackstyles.nextmobile} onClick={() => paginate(1)} /></MotionWrapper>
       </div>
       </div>
     </main>

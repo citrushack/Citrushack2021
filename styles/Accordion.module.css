@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  transition: all 0.25s ease;
 }
 
 .accordionItem {
@@ -11,7 +10,6 @@
   text-align: left;
   color: inherit;
   text-decoration: none;
-  transition: all 0.25s ease;
   min-width: 100%;
 
 }
@@ -31,27 +29,37 @@
   padding: 1rem;
   border: 3px solid #fff;
   background-color: rgba(255, 255, 255, 0.882);
-  transition: all 0.25s ease;
 }
 
 .accordionItemButton > svg {
-  float:right;
+  float: right;
+  transition: 0.3s linear;
 }
 
+.open .accordionItemButton > svg {
+  transform: rotate(180deg);
+  transition: 0.25s linear;
+}
 
 .accordionItemPanel {
+  max-height: 0;
+  overflow-y: hidden;
+  padding: 0 1.5rem;
+  font-size: 1.2rem;
+  background-image: url("../public/arches.png");
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: 0.3s ease;
+}
+
+.open .accordionItemPanel {
+  max-height: 100rem;
   padding: 1.5rem;
   line-height: 1.5;
   font-size: 1.2rem;
   background-image: url("../public/arches.png");
   background-color: rgba(255, 255, 255, 0.8);
-  -webkit-animation: fadein 0.5s ease initial; /* Safari, Chrome and Opera > 12.1 */
-     -moz-animation: fadein 0.5s ease; /* Firefox < 16 */
-      -ms-animation: fadein 0.5s ease; /* Internet Explorer */
-       -o-animation: fadein 0.5s ease; /* Opera < 12.1 */
-          animation: fadein 0.5s ease;
+  transition: 0.4s ease;
 }
-
 
 .accordionItemButton:hover,
 .accordionItemButton:focus,
@@ -59,31 +67,14 @@
   border: 3px solid #000;
 }
 
-@keyframes fadein {
-  from {transform:translateY(-20px); opacity: 0;}
-  to {transform:translateY(0); opacity: 1;}
-}
-@keyframes fadein {
-  from {transform:translateY(-20px); opacity: 0;}
-  to {transform:translateY(0); opacity: 1;}
+.answer {
+  opacity: 0;
+  transition: 0.2s linear;
 }
 
-/* Firefox < 16 */
-@-moz-keyframes fadein {
-  from {transform:translateY(-20px); opacity: 0;}
-  to {transform:translateY(0); opacity: 1;}
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-  from {transform:translateY(-20px); opacity: 0;}
-  to {transform:translateY(0); opacity: 1;}
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-  from {transform:translateY(-20px); opacity: 0;}
-  to {transform:translateY(0); opacity: 1;}
+.open .answer {
+  opacity: 1;
+  transition: 0.15s linear;
 }
 
 /* Mobile Styles */
