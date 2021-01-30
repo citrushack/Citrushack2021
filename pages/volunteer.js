@@ -23,12 +23,12 @@ export default function Volunteer() {
               Volunteers <FaChevronRight className={styles.icon} />
             </h3>
           </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
+          {/* Uncomment when site is live. */}
+          {/* <a href="https://nextjs.org/learn" className={styles.card}>
             <h3>
               Learn More <FaChevronRight className={styles.icon} />
             </h3>
-          </a>
+          </a> */}
         </div>
       </div>
     </main>

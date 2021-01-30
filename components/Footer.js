@@ -13,7 +13,7 @@ export default function Footer() {
       </div>
       <div className={styles.teamlink}>
         <a href="/team">
-          Powered by love and coffee from the Citrushack team.
+          Powered by zen and coffee from the Citrushack team. Click to learn more. &gt;
         </a>
       </div>
     </div>
