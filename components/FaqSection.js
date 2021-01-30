@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FaChevronDown } from "react-icons/fa";
+import { FaChevronDown, FaPlus } from "react-icons/fa";
 import styles from "../styles/Accordion.module.css";
 
 export default class FaqSection extends Component {
@@ -18,7 +18,7 @@ export default class FaqSection extends Component {
         <div className={(this.state.open ? `${styles.accordionItem} ${styles.open}` : `${styles.accordionItem}`)} onClick={() => this.Toggle()}>
           <div className={styles.accordionItemHeading}>
             <div className={styles.accordionItemButton}>
-              {this.props.question} <FaChevronDown />
+              {this.props.question} <FaPlus />
             </div>
           </div>
           <div className={styles.accordionItemPanel}>

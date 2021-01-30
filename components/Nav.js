@@ -55,6 +55,7 @@ export default function Nav() {
 
   return (
     <>
+    {/* Uncomment when approved for MLH */}
       {/* {isHome && (
         <a
           id="mlh-trust-badge"
@@ -84,7 +85,7 @@ export default function Nav() {
             {!isMobile && !isHome && <a className="link" href="/">Home</a>}
             {!isMobile && isHome && <NavigationLinks title="About" href="About" />}
             {!isMobile && isHome && <NavigationLinks title="Tracks" href="Tracks" />}
-            {!isMobile && isHome && <NavigationLinks title="Faq" href="Questions" />}
+            {!isMobile && isHome && <NavigationLinks title="FAQ" href="Questions" />}
             {!isMobile && isHome && <NavigationLinks title="Help" href="Help" />}
             {!isMobile && isHome && <NavigationLinks title="Sponsors" href="Sponsors" />}
             {/* Only reason why this isn't part of a class is of the CSS classes being different. DO NOT CHANGE */}
