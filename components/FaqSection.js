@@ -18,7 +18,7 @@ export default class FaqSection extends Component {
         <div className={(this.state.open ? `${styles.accordionItem} ${styles.open}` : `${styles.accordionItem}`)} onClick={() => this.Toggle()}>
           <div className={styles.accordionItemHeading}>
             <div className={styles.accordionItemButton}>
-              {this.props.question} <FaPlus />
+              <p>{this.props.question}</p> <FaPlus />
             </div>
           </div>
           <div className={styles.accordionItemPanel}>
