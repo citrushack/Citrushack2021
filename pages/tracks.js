@@ -9,7 +9,7 @@ import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 const variants = {
   enter: (direction) => {
     return {
-      x: direction > 0 ? 1000 : -1000,
+      x: direction > 0 ? 10 : -10,
       opacity: 0
     };
   },
@@ -21,14 +21,14 @@ const variants = {
   exit: (direction) => {
     return {
       zIndex: -1,
-      x: direction < 0 ? 1000 : -1000,
+      x: direction < 0 ? 10 : -10,
       opacity: 0
     };
   }
 };
 const fade = {
   enter: {
-      y: -25,
+      y: -10,
       opacity: 0
   },
   center: {
@@ -37,11 +37,11 @@ const fade = {
   },
   exit:
   {
-      y:-25,
+      y:-10,
       opacity: 0,
   }
 };
-const fadeTransition = { duration: 1.5, ease: [0.43, 0.13, 0.23, 0.96] };
+const fadeTransition = { duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96] };
 const swipeConfidenceThreshold = 40000;
 const swipePower = (offset, velocity) => {
   return Math.abs(offset) * velocity;

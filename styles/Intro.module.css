@@ -35,9 +35,7 @@
 }
 @media (max-width: 768px) {
   .infocard {
-    font-size: 5vw;
-    padding-left: 10vw;
-    padding-right: 10vw;
+    font-size: 20px;
   }
   .introduction {
     flex-direction: column;

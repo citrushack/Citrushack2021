@@ -12,9 +12,11 @@ export default function Footer() {
         <a href="https://www.instagram.com/citrushack_ucr/?hl=en"><FaInstagram/></a>
       </div>
       <div className={styles.teamlink}>
-        <a href="/team">
-          Powered by love and coffee from the Citrushack team.
+        <Link href="/team">
+        <a>
+          Powered by zen and coffee from the Citrushack team. Click to learn more. &gt;
         </a>
+        </Link>
       </div>
     </div>
   );

@@ -22,30 +22,17 @@
 
 
 .title {
-  font-size: min(10vh,96px);
+  font-size: 81px;
   margin: 0;
-  font-weight: 800;
+  font-weight: 900;
   text-align:center;
   color: #191b1f;
-  text-shadow: 0 0 77px #fff, 0 0 70px #fff, 0 0 94px #fff, 0 0 70px #fff;
 }
 
 .caption{
   font-weight: bold;
   color:#191b1f;
-  font-size: min(5vh, 3rem);
-  text-shadow: 0 0 53px #fff,0 0 61px #fff,0 0 61px #fff,0 0 61px #fff,0 0 39px #fff;
-}
-
-.secondary {
-  border: 3px solid #98a5a7 !important;
-  color: #1b1b1b;
-}
-
-.secondary:hover,
-.secondary:focus,
-.secondary:active {
-  background-color: #c7edff !important;
+  font-size: 40px;
 }
 
 .action {

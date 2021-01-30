@@ -171,7 +171,29 @@ export default function Team() {
         </div>
         <div className={Teamstyles.credits}>
           <div className={Teamstyles.col}>
-            <h3>Committee</h3>
+            <h3>Sponsorship Committee</h3>
+            <ul>
+              <li>Shubham Batra</li>
+              <li>Aaron Jiang</li>
+              <li>Joseph Mangapit</li>
+            </ul>
+          </div>
+          <div className={Teamstyles.col}>
+            <h3>Operations Committee</h3>
+            <ul>
+              <li>Shubham Batra</li>
+              <li>Howard Chen</li>
+              <li>Swastyak Gaur</li>
+              <li>Raghav Gupta</li>
+              <li>Audrey Kim</li>
+              <li>Paulian Le</li>
+              <li>Nathan Melwani</li>
+              <li>Zubair Qazi</li>
+              <li>Rahul Sohi</li>
+            </ul>
+          </div>
+          <div className={Teamstyles.col}>
+            <h3>Marketing Committee</h3>
             <ul>
               <li>Ross Geller</li>
               <li>Rachel Green</li>
@@ -182,36 +204,9 @@ export default function Team() {
             </ul>
           </div>
           <div className={Teamstyles.col}>
-            <h3>Committee</h3>
+            <h3>Web Dev Committee</h3>
             <ul>
-              <li>Ross Geller</li>
-              <li>Rachel Green</li>
-              <li>Chandler Bing</li>
-              <li>Monica Geller</li>
-              <li>Joey Tribbiani</li>
-              <li>Phoebe Buffay</li>
-            </ul>
-          </div>
-          <div className={Teamstyles.col}>
-            <h3>Committee</h3>
-            <ul>
-              <li>Ross Geller</li>
-              <li>Rachel Green</li>
-              <li>Chandler Bing</li>
-              <li>Monica Geller</li>
-              <li>Joey Tribbiani</li>
-              <li>Phoebe Buffay</li>
-            </ul>
-          </div>
-          <div className={Teamstyles.col}>
-            <h3>Committee</h3>
-            <ul>
-              <li>Ross Geller</li>
-              <li>Rachel Green</li>
-              <li>Chandler Bing</li>
-              <li>Monica Geller</li>
-              <li>Joey Tribbiani</li>
-              <li>Phoebe Buffay</li>
+              <li>J.S. Pescasio</li>
             </ul>
           </div>
         </div>
