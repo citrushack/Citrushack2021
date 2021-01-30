@@ -37,7 +37,6 @@
 .wrapper {
   display: flex;
   align-items: center;
-  height:50vh;
 }
 .next,
 .prev {
@@ -116,7 +115,6 @@
     width: 100%;
   }
   .wrapper {
-    height:70vh;
     flex-direction: column;
   }
   .next,

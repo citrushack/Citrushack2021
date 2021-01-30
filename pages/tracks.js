@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import styles from "../styles/Common.module.css";
 import Trackstyles from "../styles/Tracks.module.css";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimateSharedLayout } from "framer-motion";
 import { wrap } from "popmotion";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 
@@ -20,7 +20,6 @@ const variants = {
   },
   exit: (direction) => {
     return {
-      position: 'absolute',
       zIndex: -1,
       x: direction < 0 ? 1000 : -1000,
       opacity: 0
@@ -141,7 +140,7 @@ export default function Tracks() {
       </div>
       <div className={Trackstyles.wrapper}>
       <FaChevronLeft className={Trackstyles.prev} onClick={() => paginate(-1)} />
-      <AnimatePresence initial={false} custom={direction}>
+      <AnimateSharedLayout initial={false} custom={direction}>
         <motion.div
           key={page}
           custom={direction}
@@ -169,7 +168,7 @@ export default function Tracks() {
         >
           {slides[imageIndex]}
         </motion.div>
-      </AnimatePresence>
+      </AnimateSharedLayout>
       <FaChevronRight className={Trackstyles.next} onClick={() => paginate(1)}/>
       <div className={Trackstyles.pagemobile}>
       <FaChevronLeft className={Trackstyles.prevmobile} onClick={() => paginate(-1)} />
