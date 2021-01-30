@@ -42,7 +42,7 @@ const fade = {
   }
 };
 const fadeTransition = { duration: 1.5, ease: [0.43, 0.13, 0.23, 0.96] };
-const swipeConfidenceThreshold = 10000;
+const swipeConfidenceThreshold = 40000;
 const swipePower = (offset, velocity) => {
   return Math.abs(offset) * velocity;
 };
