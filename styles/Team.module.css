@@ -97,4 +97,7 @@
         height: 100px;
         width: 100px;
     }
+    .col{
+        margin: 0;
+    }
 }
