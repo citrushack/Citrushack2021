@@ -10,8 +10,8 @@ function MyApp({ Component, pageProps }) {
     <Provider store={store}>
       <AuthProvider
         authStorageType={"cookie"}
-        cookieDomain="citrushackdemo.vercel.app"
-        cookieSecure="false"
+        cookieDomain="citrushack.com"
+        cookieSecure={true}
       >
         <Head>
           <meta

@@ -1,7 +1,7 @@
 import Navstyles from "../styles/Nav.module.css";
 import { Link, animateScroll as scroll } from "react-scroll";
 import styled from "@emotion/styled";
-import { useIsAuthenticated, useSignOut } from "react-auth-kit";
+import { useIsAuthenticated, useSignIn } from "react-auth-kit";
 import logo from "../public/logoRevised.png";
 import { useRouter } from "next/router";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
@@ -44,7 +44,7 @@ const NavigationLinks = ({ title, href }) => (
 
 export default function Nav() {
   const isAuthenticated = useIsAuthenticated();
-  const signOut = useSignOut();
+  const signIn = useSignIn();
   const router = useRouter();
   const isMobile = useMediaQuery("(max-width:768px)");
   const [isHome, setIsHome] = useState(0);
@@ -72,7 +72,7 @@ export default function Nav() {
       <StickyNav isMobile isHome={isHome}>
         <div className={Navstyles.navlistcontainer}>
           <div>
-            <Link href="/">
+            <Link to="/">
               <img
                 className={Navstyles.logos}
                 src={logo}
@@ -101,16 +101,21 @@ export default function Nav() {
             )}
             {isAuthenticated() && (
               <div className={Navstyles.navlistlink}>
-                <Link
+                <a
                   href="#"
                   onClick={(e) => {
                     e.preventDefault;
-                    signOut();
+                    signIn({
+                      token: '',
+                      expiresIn: 0,
+                      tokenType: '',
+                      authState: '',
+                    })
                   }}
                   className="signup"
                 >
                   Sign Out
-                </Link>
+                </a>
               </div>
             )}
           </div>

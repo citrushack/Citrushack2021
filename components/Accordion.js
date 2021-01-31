@@ -32,7 +32,7 @@ export default class Accordion extends Component {
           answer="Applications will be accepted on a rolling basis but will close on April 4th."
         />
         <FaqSection
-          question="My question is not listed?"
+          question="My question isn't listed!"
           answer="Email us at citrushack@gmail.com and we can answer your questions"
         />
         <FaqSection
@@ -53,9 +53,7 @@ export default class Accordion extends Component {
         />
         <FaqSection
           question="If I’m residing outside of the U.S, can I still attend and/or win a prize?"
-          answer="If you’re residing outside of the U.S, you can still attend! However, due to shipping restrictions and COVID, we won’t be able to send any type of physical prizes, swag items, or raffle prizes to those residing outside of the U.S. You are still eligible to win a category, however
-          If you currently attend a university within the U.S but reside outside of the U.S, you’ll be able to win a category but will not be eligible to receive a physical prize, swag item, or raffle prize. 
-          If you both attend a university outside of the U.S and also reside outside of the U.S, you will e ineligible to win or receive a prize, but are still encouraged to attend and participate in all festivities."
+          answer="Those outside of the US can still attend, compete, and win. However, due to shipping restrictions and COVID, we won’t be able to send any physical items to those residing outside of the U.S."
           />
       </div>
     );

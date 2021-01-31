@@ -6,30 +6,32 @@ import { motion, AnimateSharedLayout } from "framer-motion";
 import { wrap } from "popmotion";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 
+
 const variants = {
   enter: (direction) => {
     return {
-      x: direction > 0 ? 10 : -10,
-      opacity: 0
+      x: direction > 0 ? 1000 : -1000,
+      zIndex: -1,
+      opacity: 0,
     };
   },
   center: {
-    zIndex: 1,
     x: 0,
+    zIndex: 0,
     opacity: 1
   },
   exit: (direction) => {
     return {
+      x: direction < 0 ? 1000 : -1000,
       zIndex: -1,
-      x: direction < 0 ? 10 : -10,
-      opacity: 0
+      opacity: 0,
     };
   }
 };
 const fade = {
   enter: {
       y: -10,
-      opacity: 0
+      opacity: 0.5
   },
   center: {
     y: 0,
@@ -147,13 +149,15 @@ export default function Tracks() {
   };
   
   return (
-    <main className={styles.main}>
+    <motion.main   animate={{ y: 9 }}
+    transition={{ repeat: 5,     repeatType: "reverse",    duration: 2.5 }}
+    className={styles.main}>
       <div className={Trackstyles.tracks}>
         <h1 className={styles.title}>Choose Your Track</h1>
       </div>
       <div className={Trackstyles.wrapper}>
       <MotionWrapper><FaChevronLeft className={Trackstyles.prev} onClick={() => paginate(-1)} /></MotionWrapper>
-      <AnimateSharedLayout initial={false} custom={direction}>
+      <AnimateSharedLayout exitBeforeEnter initial={false} custom={direction}>
         <motion.div
           key={page}
           custom={direction}
@@ -163,12 +167,13 @@ export default function Tracks() {
           exit="exit"
           className={Trackstyles.contain}
           transition={{
-            x: { type: "spring", stiffness: 300, damping: 30 },
+            x: { duration: 0.2 },
             opacity: { duration: 0.2 }
           }}
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
           dragElastic={1}
+          layout
           onDragEnd={(e, { offset, velocity }) => {
             const swipe = swipePower(offset.x, velocity.x);
 
@@ -188,6 +193,6 @@ export default function Tracks() {
       <MotionWrapper><FaChevronRight className={Trackstyles.nextmobile} onClick={() => paginate(1)} /></MotionWrapper>
       </div>
       </div>
-    </main>
+    </motion.main>
   );
 }

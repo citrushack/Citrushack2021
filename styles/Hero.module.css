@@ -20,6 +20,10 @@
   text-align: right;
 }
 
+.secondary{ 
+  background-color: #f8f8f8;
+  border: 3px solid #a0a0a0; 
+}
 
 .title {
   font-size: 81px;

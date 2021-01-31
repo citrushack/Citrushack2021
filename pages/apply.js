@@ -12,9 +12,12 @@ import {
   Button,
   CssBaseline,
 } from "@material-ui/core";
-import { Alert, AlertTitle } from "@material-ui/lab";
-import { TextField, Autocomplete } from "mui-rff";
-import { countries, genders } from "../data/data";
+import { MuiPickersUtilsProvider } from "@material-ui/pickers";
+import 'date-fns';
+import DateFnsUtils from '@date-io/date-fns';
+import { Alert, AlertTitle, createFilterOptions } from "@material-ui/lab";
+import { TextField, Autocomplete, DatePicker } from "mui-rff";
+import { countries, genders, majors, unis } from "../data/data";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Dropzone from "../components/Dropzone";
 import { useDispatch, useSelector } from "react-redux";
@@ -22,6 +25,9 @@ import { submitAsync, selectError } from "../lib/slices/applySlice";
 import { useRouter } from "next/router";
 import { useSignIn, useAuthUser } from "react-auth-kit";
 import css from "../styles/Apply.module.css";
+
+
+const filter = createFilterOptions();
 
 const checkIn = [
   {
@@ -90,7 +96,6 @@ const checkIn = [
         label="State"
         name="state"
         margin="none"
-        required={true}
       />
     ),
   },
@@ -155,65 +160,75 @@ const demoInfo = [
   {
     size: 12,
     field: (
-      <TextField
-        variant="outlined"
+      <Autocomplete
         label="School"
         name="school"
-        margin="none"
         required={true}
-        // label="School"
-        // name="school"
-        // required={true}
-        // options={unis}
-        // freeSolo
-        // getOptionValue={option => option?.uni || `${option}`}
-        // getOptionLabel={option => option?.uni || `${option}`}
-        // renderOption={option => option.uni}
-        // disableCloseOnSelect={false}
-        // onChange={(_event, newValue, reason, details) => {
-        //   if (newValue && reason === 'select-option' && details?.option.uni) {
-        //     // Create a new value from the user input
-        //     unis.push({
-        //       uni: details?.option.uni,
-        //     });
-        //   }
-        // }}
-        // filterOptions={(options, params) => {
-        //   const filtered = filter(options, params);
-        //   //console.log(filtered);
-        //   // Suggest the creation of a new value
-        //   if (params.inputValue.length) {
-        //     filtered.push({
-        //       uni: params.inputValue,
-        //     });
-        //   }
-
-        //   return filtered;
-        // }}
-        // selectOnFocus
-        // autoHighlight
-        // autoSelect
-        // handleHomeEndKeys
-        // clearOnBlur
+        options={unis}
+        freeSolo
+        getOptionValue={option => `${option}`}
+        getOptionLabel={option => `${option}`}
+        renderOption={option => option}
+        disableCloseOnSelect={false}
+        onChange={(_event, newValue, reason, details) => {
+          if (newValue && reason === 'select-option' && details?.option) {
+            // Create a new value from the user input
+            unis.push(
+              details?.option.uni,
+            );
+          }
+        }}
+        filterOptions={(options, params) => {
+          const filtered = filter(options, params);
+          //console.log(filtered);
+          // Suggest the creation of a new value
+          if (params.inputValue.trim().length) {
+            filtered.push(
+            params.inputValue,
+            );
+          }
+          return filtered;
+        }}
+        selectOnFocus
+        autoHighlight
+        autoSelect
+        handleHomeEndKeys
+        clearOnBlur
       />
     ),
   },
   {
     size: 12,
     field: (
-      <TextField variant="outlined" margin="none" label="Major" name="major" />
+      <Autocomplete
+      label="Major"
+      name="major"
+      required={true}
+      options={majors}
+      getOptionValue={(option) => option.major}
+      getOptionLabel={(option) => option.major}
+      renderOption={(option) => (
+        <React.Fragment>{option.major}</React.Fragment>
+      )}
+      selectOnFocus
+      autoHighlight
+      autoSelect
+      handleHomeEndKeys/>
     ),
   },
   {
     size: 12,
     field: (
-      <TextField
-        variant="outlined"
-        label="Graduation Year"
-        name="year"
-        margin="none"
-        required={true}
-      />
+        <DatePicker
+          variant="inline"
+          openTo="year"
+          views={["year", "month"]}
+          label="Expected Graduation"
+          helperText="Start from year selection"
+          name="year"
+          dateFunsUtils={DateFnsUtils}
+          required={true} 
+        />
     ),
   },
 ];
@@ -270,6 +285,7 @@ function countryToFlag(isoCode) {
 
 //Form validation functions
 const validate = (values) => {
+  console.log(values);
   var errors = {};
   if (values.github && !validateGithub(values.github)) {
     errors.github = "Invalid url";
@@ -279,9 +295,7 @@ const validate = (values) => {
   }
   if (!values.year) {
     errors.year = "Required";
-  } else if (!validateYear(values.year)) {
-    errors.year = "Invalid year";
-  }
+  } 
   if (!values["addr1"]) errors["addr1"] = "Required";
   if (!values.resume) errors.resume = "Resume upload required";
   if (!values.country) errors.country = "Required";
@@ -343,6 +357,34 @@ export default function Apply() {
       })
     );
   };
+
+  if (new Date() < new Date("Sun Feb 01 2021 00:50:30 GMT-0800 (Pacific Standard Time)")) {
+    return (
+      <Container main>
+        <main
+        className={`${css.main}`}
+        id="accountContainer"
+        >
+         <h1>Applications are currently closed. Check back on the 1st of February!</h1>
+        </main>
+      </Container>
+    );
+  }
+
+
+
+  if(!user){
+    return (
+      <Container main>
+        <main
+        className={`${css.main}`}
+        id="accountContainer"
+        >
+         <h1>Loading...</h1>
+        </main>
+      </Container>
+    );
+  }
 
   return (
     <Container main>

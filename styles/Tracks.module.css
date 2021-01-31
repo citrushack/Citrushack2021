@@ -29,10 +29,18 @@
   width: 500px;
   height: 500px;
   margin: auto;
+  user-select: none;
 }
 .image img {
   width: 500px;
   height: auto;
+  user-select: none;
+  user-drag: none; 
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 .wrapper {
   display: flex;
@@ -46,22 +54,34 @@
   font-size: 40px;
   padding: 10px;
   border-radius: 50%;
-  z-index: 2;
   background-color: #676767;
   color: #fff;
   flex: none;
+  z-index: 100;
+  opacity:.99;
 }
 
 .contain {
-  background-color: #f8f8f8;
+  background-color: #f7f7f7;
   border-radius: 20px;
   width: 100%;
   margin: 0 2rem;
   padding: 0 2rem;
   box-shadow: 0px 0px 20px 1px #e6e5e5;
 }
+.contain *{
+  user-select: none;
+  user-drag: none; 
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  z-index:-10;
+}
 .next {
   right: 10px;
+  
 }
 
 .prev {
@@ -113,7 +133,7 @@
     margin: 0;
   }
   .tracktitle {
-    font-size: 30px;
+    font-size: 6.5vw;
   }
 
   .contain {
