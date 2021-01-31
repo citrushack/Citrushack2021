@@ -52,6 +52,19 @@ export default function Sponsors() {
               scale: 1.1,
             }}
             transition={hoverTrans}
+            href="https://techpartnerships.ucr.edu/launchpad-ucr"
+          >
+            <img
+              src="/sponsors/launchpad.png"
+              className={`${ss.launchpad}`}
+              alt="launchpad logo"
+            ></img>
+          </motion.a>
+          <motion.a
+            whileHover={{
+              scale: 1.1,
+            }}
+            transition={hoverTrans}
             href="https://acmucr.org/"
           >
             <img src="/sponsors/acm_ucr.png" className={`${ss.acm}`} alt="acm logo"></img>

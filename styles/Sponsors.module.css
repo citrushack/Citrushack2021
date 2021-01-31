@@ -20,7 +20,7 @@
   margin-top: 10%;
 }
 
-.acm, .linode, .xyz, .wolfram, .ieee, .echoAR, .digitalocean  {
+.acm, .linode, .xyz, .wolfram, .ieee, .echoAR, .digitalocean, .launchpad  {
   width: min(400px, 80vw);
   height: auto;
 }
