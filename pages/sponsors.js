@@ -3,6 +3,7 @@ import styles from "../styles/Common.module.css";
 import ss from "../styles/Sponsors.module.css";
 import { FaChevronRight } from "react-icons/fa";
 import { motion } from 'framer-motion';
+import { secondary } from "../styles/Hero.module.css";
 
 const hoverTrans = { duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96] };
 
@@ -16,7 +17,7 @@ export default function Sponsors() {
         </p>
         <div className={styles.grid}>
         <Link href="/sponsorus">
-          <a className={styles.card}>
+          <a className={`${styles.card} ${secondary}`}>
             <h3>
               Sponsor us <FaChevronRight className={styles.icon} />
             </h3>
