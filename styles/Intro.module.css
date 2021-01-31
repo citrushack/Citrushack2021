@@ -23,7 +23,7 @@
 .background{
   background-image: url("../public/backgrounds/gravel_2x.png");
   background-repeat: no-repeat;
-  background-position: left 35vw bottom -50vh;
+  background-position: 35rem -7rem;
 }
 .infocard {
   padding: 1rem 5rem;
