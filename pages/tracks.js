@@ -9,7 +9,7 @@ import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 const variants = {
   enter: (direction) => {
     return {
-      x: direction > 0 ? 10 : -10,
+      x: direction > 0 ? 100 : -100,
       opacity: 0
     };
   },
@@ -21,7 +21,7 @@ const variants = {
   exit: (direction) => {
     return {
       zIndex: -1,
-      x: direction < 0 ? 10 : -10,
+      x: direction < 0 ? 100 : -100,
       opacity: 0
     };
   }
