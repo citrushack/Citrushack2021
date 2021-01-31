@@ -72,7 +72,7 @@ export default function Nav() {
       <StickyNav isMobile isHome={isHome}>
         <div className={Navstyles.navlistcontainer}>
           <div>
-            <Link href="/">
+            <Link to="/">
               <img
                 className={Navstyles.logos}
                 src={logo}
@@ -102,7 +102,7 @@ export default function Nav() {
             {isAuthenticated() && (
               <div className={Navstyles.navlistlink}>
                 <Link
-                  href="#"
+                  to="#"
                   onClick={(e) => {
                     e.preventDefault;
                     signOut();
