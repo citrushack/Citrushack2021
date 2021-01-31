@@ -10,24 +10,27 @@ const variants = {
   enter: (direction) => {
     return {
       x: direction > 0 ? 1000 : -1000,
-      opacity: 0
+      zIndex: -1,
+      opacity: 0,
     };
   },
   center: {
     x: 0,
+    zIndex: 0,
     opacity: 1
   },
   exit: (direction) => {
     return {
       x: direction < 0 ? 1000 : -1000,
-      opacity: 0
+      zIndex: -1,
+      opacity: 0,
     };
   }
 };
 const fade = {
   enter: {
       y: -10,
-      opacity: 0
+      opacity: 0.5
   },
   center: {
     y: 0,
@@ -151,7 +154,7 @@ export default function Tracks() {
       </div>
       <div className={Trackstyles.wrapper}>
       <MotionWrapper><FaChevronLeft className={Trackstyles.prev} onClick={() => paginate(-1)} /></MotionWrapper>
-      <AnimateSharedLayout initial={false} custom={direction}>
+      <AnimateSharedLayout exitBeforeEnter initial={false} custom={direction}>
         <motion.div
           key={page}
           custom={direction}
@@ -161,12 +164,13 @@ export default function Tracks() {
           exit="exit"
           className={Trackstyles.contain}
           transition={{
-            x: { type: "spring", stiffness: 300, damping: 30 },
+            x: { duration: 0.2 },
             opacity: { duration: 0.2 }
           }}
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
           dragElastic={1}
+          layout
           onDragEnd={(e, { offset, velocity }) => {
             const swipe = swipePower(offset.x, velocity.x);
 

@@ -5,14 +5,12 @@
   padding-top: 10rem;
   justify-content: center;
   align-items: center;
-  user-select: none;
   width: var(--contentWidth);
 }
 
 .tracktitle {
   font-size: 40px;
   margin: 0;
-  user-select: none;
 }
 
 .track {
@@ -21,7 +19,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 24px;
-  user-select: none;
 }
 .text {
   flex: 1;
@@ -38,6 +35,12 @@
   width: 500px;
   height: auto;
   user-select: none;
+  user-drag: none; 
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 .wrapper {
   display: flex;
@@ -51,11 +54,11 @@
   font-size: 40px;
   padding: 10px;
   border-radius: 50%;
-  z-index: 2;
   background-color: #676767;
   color: #fff;
   flex: none;
   z-index: 100;
+  opacity:.99;
 }
 
 .contain {
@@ -65,11 +68,20 @@
   margin: 0 2rem;
   padding: 0 2rem;
   box-shadow: 0px 0px 20px 1px #e6e5e5;
+}
+.contain *{
   user-select: none;
-  z-index: -1;
+  user-drag: none; 
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  z-index:-10;
 }
 .next {
   right: 10px;
+  
 }
 
 .prev {
