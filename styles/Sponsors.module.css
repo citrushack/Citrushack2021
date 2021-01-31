@@ -9,6 +9,17 @@
   text-align: center;
   
 }
+.logoflex{
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: space-around;
+  max-width: 1200px;
+  margin: auto;
+}
+
 /* Tablet or Compact Styles */
 @media (max-width: 1168){
   .wrapper{
