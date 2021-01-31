@@ -6,7 +6,7 @@ import logo from "../public/logoRevised.png";
 import { useRouter } from "next/router";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import {useState,useEffect} from 'react';
-import Cookies from "js-cookie";
+import { destroyCookie } from 'nookies'
 
 const StickyNav = styled.nav(
   (props) => `
@@ -107,10 +107,10 @@ export default function Nav() {
                   onClick={(e) => {
                     e.preventDefault;
                     signOut();
-                    Cookies.remove('_auth_token');
-                    Cookies.remove('_auth_time') ;
-                    Cookies.remove('_auth_token_type');
-                    Cookies.remove('_auth_state'); 
+                    destroyCookie(null,'_auth_token', {path : '/'})
+                    destroyCookie(null,'_auth_time', {path : '/'})
+                    destroyCookie(null,'_auth_token_type', {path : '/'})
+                    destroyCookie(null,'_auth_state', {path : '/'});
                   }}
                   className="signup"
                 >
