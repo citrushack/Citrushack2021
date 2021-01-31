@@ -107,10 +107,10 @@ export default function Nav() {
                   onClick={(e) => {
                     e.preventDefault;
                     signOut();
-                    Cookies.remove('_auth_token', { path: '/' }); 
-                    Cookies.remove('_auth_time', { path: '/' }); 
-                    Cookies.remove('_auth_token_type', { path: '/' });
-                    Cookies.remove('_auth_state', { path: '/' }); 
+                    Cookies.remove('_auth_token');
+                    Cookies.remove('_auth_time') ;
+                    Cookies.remove('_auth_token_type');
+                    Cookies.remove('_auth_state'); 
                   }}
                   className="signup"
                 >
