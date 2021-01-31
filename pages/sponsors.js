@@ -15,7 +15,7 @@ export default function Sponsors() {
           Those who made this hackathon possible.
         </p>
         <div className={styles.grid}>
-        <Link href="/SponsorUs">
+        <Link href="/sponsorus">
           <a className={styles.card}>
             <h3>
               Sponsor us <FaChevronRight className={styles.icon} />
