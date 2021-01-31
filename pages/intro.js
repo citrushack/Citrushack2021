@@ -3,11 +3,11 @@ import Introstyles from "../styles/Intro.module.css";
 
 export default function Intro() {
   return (
-    <main className={styles.main}>
+    <main className={`${styles.main} ${Introstyles.background}`}>
       <section className={Introstyles.introduction}>
         <div className={Introstyles.text}>
           <h1 className={styles.title}>Largest hackathon UCR offers</h1>
-          <p className={`${styles.description} ${Introstyles.background}`}>
+          <p className={`${styles.description}`}>
             Citrus Hack is where hundreds of students from all over the world
             come together and form teams, aiming to build a project from scratch
             in just 36 hours.

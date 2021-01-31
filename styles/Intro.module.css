@@ -22,9 +22,8 @@
 }
 .background{
   background-image: url("../public/backgrounds/gravel.png");
-  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left 30vw bottom -100vh;
 }
 .infocard {
   padding: 1rem 5rem;
@@ -39,6 +38,9 @@
   transition: all 0.2s ease;
 }
 @media (max-width: 768px) {
+  .background{
+    background-image: none;
+  }
   .infocard {
     font-size: 20px;
   }

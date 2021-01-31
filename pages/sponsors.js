@@ -30,6 +30,15 @@ export default function Sponsors() {
               scale: 1.1,
             }}
             transition={hoverTrans}
+            href="https://www.losangeles.spaceforce.mil/"
+          >
+            <img src="/sponsors/usaf.png" className={`${ss.usaf}`} alt="usaf logo"></img>
+          </motion.a>
+          <motion.a
+            whileHover={{
+              scale: 1.1,
+            }}
+            transition={hoverTrans}
             href="https://www.digitalocean.com/"
           >
             <img src="/sponsors/digitalocean.png" className={`${ss.digitalocean}`} alt="digitalocean logo"></img>
@@ -87,15 +96,6 @@ export default function Sponsors() {
               scale: 1.1,
             }}
             transition={hoverTrans}
-            href="https://gen.xyz/"
-          >
-            <img src="/sponsors/xcolor.png" className={`${ss.xyz}`} alt="xyz logo"></img>
-          </motion.a>
-          <motion.a
-            whileHover={{
-              scale: 1.1,
-            }}
-            transition={hoverTrans}
             href="https://ieee.ee.ucr.edu/"
           >
             <img src="/sponsors/IEEE.png" className={`${ss.ieee}`} alt="ieee logo"></img>
@@ -137,15 +137,7 @@ export default function Sponsors() {
             ></img>
           </motion.a>
 
-          <motion.a
-            whileHover={{
-              scale: 1.1,
-            }}
-            transition={hoverTrans}
-            href="https://www.losangeles.spaceforce.mil/"
-          >
-            <img src="/sponsors/usaf.png" className={`${ss.usaf}`} alt="usaf logo"></img>
-          </motion.a>
+
 
       </div>
       </div>
