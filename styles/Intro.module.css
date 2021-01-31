@@ -20,7 +20,12 @@
   flex-direction: column;
   margin-left: 2rem;
 }
-
+.background{
+  background-image: url("../public/backgrounds/gravel.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .infocard {
   padding: 1rem 5rem;
   font-size: 30px;
