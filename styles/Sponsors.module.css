@@ -7,7 +7,6 @@
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
-  
 }
 .logoflex{
   flex: none;
@@ -18,8 +17,16 @@
   align-content: space-around;
   max-width: 1200px;
   margin: auto;
+  margin-top: 10%;
 }
 
+.acm, .linode, .xyz, .wolfram, .ieee, .echoAR, .digitalocean  {
+  width: min(400px, 80vw);
+  height: auto;
+}
+.wolfram, .usaf, .balsamiq, .sketch {
+  width: min(320px, 80vw);
+}
 /* Tablet or Compact Styles */
 @media (max-width: 1168){
   .wrapper{
