@@ -21,9 +21,10 @@
   margin-left: 2rem;
 }
 .background{
-  background-image: url("../public/backgrounds/gravel_2x.png");
+  background-image: url("../public/backgrounds/gravel_crop.png");
   background-repeat: no-repeat;
-  background-position: 35rem -7rem;
+  /* background-position: 35rem -7rem; */
+  background-position: right 0% bottom 50%;
 }
 .infocard {
   padding: 1rem 5rem;
