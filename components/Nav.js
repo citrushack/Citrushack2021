@@ -101,8 +101,8 @@ export default function Nav() {
             )}
             {isAuthenticated() && (
               <div className={Navstyles.navlistlink}>
-                <Link
-                  to="#"
+                <a
+                  href="#"
                   onClick={(e) => {
                     e.preventDefault;
                     signOut();
@@ -110,7 +110,7 @@ export default function Nav() {
                   className="signup"
                 >
                   Sign Out
-                </Link>
+                </a>
               </div>
             )}
           </div>
