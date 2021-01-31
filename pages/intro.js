@@ -7,12 +7,11 @@ export default function Intro() {
       <section className={Introstyles.introduction}>
         <div className={Introstyles.text}>
           <h1 className={styles.title}>Largest hackathon UCR offers</h1>
-          <p className={styles.description}>
+          <p className={`${styles.description} ${Introstyles.background}`}>
             Citrus Hack is where hundreds of students from all over the world
             come together and form teams, aiming to build a project from scratch
             in just 36 hours.
-          </p>
-          <p className={styles.description}>
+            <br /><br />
             This year, Cutie Hack will be held virtually, open to undergraduate
             and high school students all around the world!
           </p>

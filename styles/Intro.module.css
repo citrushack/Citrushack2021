@@ -20,14 +20,19 @@
   flex-direction: column;
   margin-left: 2rem;
 }
-
+.background{
+  background-image: url("../public/backgrounds/gravel.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .infocard {
   padding: 1rem 5rem;
   font-size: 30px;
   text-align: center;
   color: #fff;
   margin-bottom: 1rem;
-  background-image: url("../public/brushstrokebanneraltered.png");
+  background-image: url("../public/backgrounds/brushstroke.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;

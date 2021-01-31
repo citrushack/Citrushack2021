@@ -26,14 +26,16 @@
 .image {
   display: flex;
   flex: 1;
-  width: 500px;
-  height: 500px;
+ width: 100%;
+ height: 100%;
+ justify-content: space-around;
   margin: auto;
+  padding: 20px;
   user-select: none;
 }
 .image img {
-  width: 500px;
-  height: auto;
+  width: 400px;
+  height: 400px;
   user-select: none;
   user-drag: none; 
   user-select: none;
@@ -115,8 +117,8 @@
     justify-content: center;
   }
   .image {
-    height: 300px;
-    width: 300px;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -127,7 +129,6 @@
     height: 300px;
     width: 300px;
     margin: 0;
-    padding: 0 10px;
   }
   .text{
     margin: 0;
