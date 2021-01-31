@@ -6,7 +6,7 @@ import logo from "../public/logoRevised.png";
 import { useRouter } from "next/router";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import {useState,useEffect} from 'react';
-import { destroyCookie } from 'nookies'
+import cookieCutter from 'cookie-cutter';
 
 const StickyNav = styled.nav(
   (props) => `
@@ -107,10 +107,10 @@ export default function Nav() {
                   onClick={(e) => {
                     e.preventDefault;
                     signOut();
-                    destroyCookie(null,'_auth_token', {path : '/'})
-                    destroyCookie(null,'_auth_time', {path : '/'})
-                    destroyCookie(null,'_auth_token_type', {path : '/'})
-                    destroyCookie(null,'_auth_state', {path : '/'});
+                    cookieCutter.set('_auth_token', '', {expires: new Date(0)});
+                    cookieCutter.set('_auth_time', '', {expires: new Date(0)});
+                    cookieCutter.set('_auth_token_type', '', {expires: new Date(0)});
+                    cookieCutter.set('_auth_state', '', {expires: new Date(0)});
                   }}
                   className="signup"
                 >
