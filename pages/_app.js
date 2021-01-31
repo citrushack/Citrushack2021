@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
       <AuthProvider
         authStorageType={"cookie"}
         cookieDomain="citrushack.com"
-        cookieSecure="false"
+        cookieSecure={true}
       >
         <Head>
           <meta
