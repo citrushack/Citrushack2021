@@ -5,12 +5,14 @@
   padding-top: 10rem;
   justify-content: center;
   align-items: center;
+  user-select: none;
   width: var(--contentWidth);
 }
 
 .tracktitle {
   font-size: 40px;
   margin: 0;
+  user-select: none;
 }
 
 .track {
@@ -19,6 +21,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 24px;
+  user-select: none;
 }
 .text {
   flex: 1;
@@ -29,10 +32,12 @@
   width: 500px;
   height: 500px;
   margin: auto;
+  user-select: none;
 }
 .image img {
   width: 500px;
   height: auto;
+  user-select: none;
 }
 .wrapper {
   display: flex;
@@ -50,6 +55,7 @@
   background-color: #676767;
   color: #fff;
   flex: none;
+  z-index: 100;
 }
 
 .contain {
@@ -59,6 +65,8 @@
   margin: 0 2rem;
   padding: 0 2rem;
   box-shadow: 0px 0px 20px 1px #e6e5e5;
+  user-select: none;
+  z-index: -1;
 }
 .next {
   right: 10px;
@@ -127,7 +135,6 @@
   .next,
   .prev {
     display: none;
-    z-index: 100;
   }
   .pagemobile{
     display: flex;
