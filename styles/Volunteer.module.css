@@ -4,12 +4,12 @@
   overflow-x: hidden;
 }
 .color1 {
-  background-color: #ffd17c;
-  border: 3px solid #ce9a3b;
+  background-color: #ffdd9e;
+  border: 3px solid #debd7e;
 }
 .color2 {
-  background-color: hsl(108deg 75% 74%);
-  border: 3px solid #7fb970;
+  background-color: hsl(108deg 46% 79%);
+  border: 3px solid #8fbd82;
 }
 /* Mobile Styles */
 @media (max-width: 768px){
