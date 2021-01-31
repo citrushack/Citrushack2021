@@ -12,7 +12,7 @@ export default function Sponsors() {
       </Head>
       <main className={styles.main}>
         <h1 className={styles.title}>Sponsor Us</h1>
-        <p className={styles.description}>Be like Raid Shadow Legends</p>
+        <p className={styles.description}>Email citrushack@gmail.com to learn more!</p>
         <Link href="/">
           <a className={styles.card}>
             <h3>Back to Home&rarr;</h3>
