@@ -12,7 +12,7 @@ export default function Intro() {
             come together and form teams, aiming to build a project from scratch
             in just 36 hours.
             <br /><br />
-            This year, Cutie Hack will be held virtually, open to undergraduate
+            This year, Citrus Hack will be held virtually, open to undergraduate
             and high school students all around the world!
           </p>
         </div>
