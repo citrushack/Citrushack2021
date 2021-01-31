@@ -1,6 +1,7 @@
 # Citrushack 2021
 
 > Author: Rajbir Johar and Ajeet Kokatay
+
 > Contributors:  claynaut J.S. Pescasio
 
 ## Getting Started
