@@ -25,10 +25,13 @@
   box-shadow: transparent;
   cursor: pointer;
   border-bottom: 2px solid lightgray;
-  background-color: rgba(255, 255, 255, 0.882);
+  background-color: rgba(251, 251, 251, 0.882);
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.accordionItemButton p {
+  flex: 1;
 }
 
 
