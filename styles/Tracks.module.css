@@ -127,6 +127,7 @@
   .next,
   .prev {
     display: none;
+    z-index: 100;
   }
   .pagemobile{
     display: flex;
