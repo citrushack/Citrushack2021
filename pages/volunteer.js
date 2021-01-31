@@ -12,13 +12,13 @@ export default function Volunteer() {
           sapien sit amet metus efficitur semper.
         </p>
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
+          <a href="https://forms.gle/fCtHkDG7favDxifF6" className={styles.card}>
             <h3>
               Mentors <FaChevronRight className={styles.icon} />
             </h3>
           </a>
 
-          <a href="https://nextjs.org/docs" className={styles.card}>
+          <a href="https://forms.gle/ewWRkKgzq4q9Zhok6" className={styles.card}>
             <h3>
               Volunteers <FaChevronRight className={styles.icon} />
             </h3>
