@@ -1,12 +1,11 @@
 import Navstyles from "../styles/Nav.module.css";
 import { Link, animateScroll as scroll } from "react-scroll";
 import styled from "@emotion/styled";
-import { useIsAuthenticated, useSignOut } from "react-auth-kit";
+import { useIsAuthenticated, useSignIn } from "react-auth-kit";
 import logo from "../public/logoRevised.png";
 import { useRouter } from "next/router";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import {useState,useEffect} from 'react';
-import cookieCutter from 'cookie-cutter';
 
 const StickyNav = styled.nav(
   (props) => `
@@ -45,7 +44,7 @@ const NavigationLinks = ({ title, href }) => (
 
 export default function Nav() {
   const isAuthenticated = useIsAuthenticated();
-  const signOut = useSignOut();
+  const signIn = useSignIn();
   const router = useRouter();
   const isMobile = useMediaQuery("(max-width:768px)");
   const [isHome, setIsHome] = useState(0);
@@ -106,11 +105,12 @@ export default function Nav() {
                   href="#"
                   onClick={(e) => {
                     e.preventDefault;
-                    signOut();
-                    cookieCutter.set('_auth_token', '', {expires: new Date(0)});
-                    cookieCutter.set('_auth_time', '', {expires: new Date(0)});
-                    cookieCutter.set('_auth_token_type', '', {expires: new Date(0)});
-                    cookieCutter.set('_auth_state', '', {expires: new Date(0)});
+                    signIn({
+                      token: '',
+                      expiresIn: 0,
+                      tokenType: '',
+                      authState: '',
+                    })
                   }}
                   className="signup"
                 >
