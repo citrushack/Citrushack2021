@@ -3,7 +3,14 @@
   width: var(--contentWidth);
   overflow-x: hidden;
 }
-
+.color1 {
+  background-color: #ffd17c;
+  border: 3px solid #ce9a3b;
+}
+.color2 {
+  background-color: hsl(108deg 75% 74%);
+  border: 3px solid #7fb970;
+}
 /* Mobile Styles */
 @media (max-width: 768px){
   .wrapper{

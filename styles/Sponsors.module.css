@@ -19,7 +19,10 @@
   margin: auto;
   margin-top: 10%;
 }
-
+.color1 {
+  background-color: #ffd17c;
+  border: 3px solid #ce9a3b;
+}
 .acm, .linode, .xyz, .wolfram, .ieee, .echoAR, .digitalocean  {
   width: min(400px, 80vw);
   height: auto;
