@@ -6,6 +6,7 @@ import { motion, AnimateSharedLayout } from "framer-motion";
 import { wrap } from "popmotion";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 
+
 const variants = {
   enter: (direction) => {
     return {
@@ -148,7 +149,9 @@ export default function Tracks() {
   };
   
   return (
-    <main className={styles.main}>
+    <motion.main   animate={{ y: 9 }}
+    transition={{ repeat: 5,     repeatType: "reverse",    duration: 2.5 }}
+    className={styles.main}>
       <div className={Trackstyles.tracks}>
         <h1 className={styles.title}>Choose Your Track</h1>
       </div>
@@ -190,6 +193,6 @@ export default function Tracks() {
       <MotionWrapper><FaChevronRight className={Trackstyles.nextmobile} onClick={() => paginate(1)} /></MotionWrapper>
       </div>
       </div>
-    </main>
+    </motion.main>
   );
 }
