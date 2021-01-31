@@ -101,7 +101,12 @@ export default function Account() {
   if (!user) {
     return (
       <Container main>
-        <h1>Loading...</h1>
+        <main
+        className={`${styles.main} ${accountStyles.container}`}
+        id="accountContainer"
+        >
+         <h1>Loading...</h1>
+        </main>
       </Container>
     );
   }

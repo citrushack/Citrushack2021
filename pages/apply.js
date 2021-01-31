@@ -358,6 +358,34 @@ export default function Apply() {
     );
   };
 
+  if (new Date() < new Date("Sun Feb 01 2021 00:50:30 GMT-0800 (Pacific Standard Time)")) {
+    return (
+      <Container main>
+        <main
+        className={`${css.main}`}
+        id="accountContainer"
+        >
+         <h1>Applications are currently closed.</h1>
+        </main>
+      </Container>
+    );
+  }
+
+
+
+  if(!user){
+    return (
+      <Container main>
+        <main
+        className={`${css.main}`}
+        id="accountContainer"
+        >
+         <h1>Loading...</h1>
+        </main>
+      </Container>
+    );
+  }
+
   return (
     <Container main>
       <CssBaseline />
