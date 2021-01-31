@@ -91,7 +91,7 @@ const Sustainability = () => {
         </p>
       </div>
       <div className={Trackstyles.image}>
-        <motion.img src="/logoRevised.png" alt="track logo" />
+        <motion.img src="/tracks/waterfall.png" alt="Sustainability track waterfall" />
       </div>
     </motion.div>
   );
@@ -115,7 +115,7 @@ const Wellness = () => {
         </p>
       </div>
       <div className={Trackstyles.image}>
-        <motion.img src="/lotus.png" alt="track logo" />
+        <motion.img src="/tracks/lotus.png" alt="Wellness track lotus" />
       </div>
     </motion.div>
   );
