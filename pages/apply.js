@@ -76,10 +76,6 @@ const checkIn = [
             &nbsp; {option.label} ({option.code})
           </React.Fragment>
         )}
-        selectOnFocus
-        autoHighlight
-        autoSelect
-        handleHomeEndKeys
         />
     ),
   },
