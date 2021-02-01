@@ -12,6 +12,7 @@ import {
   Button,
   CssBaseline,
   MenuItem,
+  TextField as TextFieldNative,
 } from "@material-ui/core";
 import { MuiPickersUtilsProvider } from "@material-ui/pickers";
 import 'date-fns';
@@ -75,7 +76,7 @@ const checkIn = [
             &nbsp; {option.label} ({option.code})
           </React.Fragment>
         )}
-        renderInput={(params) => <TextField {...params} name="ignore" label="Couոtry" variant="outlined" />}
+        renderInput={(params) => <TextFieldNative  required={true} {...params} name="ignore" label="Couոtry" variant="outlined" />}
         />
     ),
   },
@@ -504,6 +505,16 @@ export default function Apply() {
                       your address with anyone.
                     </Typography>
                   </Box>
+                </Grid>
+                <Grid item xs={12}>
+                {submitFailed && errors.count && (
+                    <>
+                      <br></br>
+                      <Alert severity="error">
+                        <AlertTitle>Country {errors.count}</AlertTitle>
+                      </Alert>
+                    </>
+                  )}
                 </Grid>
                 {checkIn.map((item, idx) => (
                   <Grid item xs={item.size} key={idx}>
