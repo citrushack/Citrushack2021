@@ -78,6 +78,7 @@ const checkIn = [
         )}
         selectOnFocus
         autoHighlight
+        autoComplete='off'
       />
     ),
   },
@@ -237,6 +238,7 @@ const demoInfo = [
         autoSelect
         handleHomeEndKeys
         clearOnBlur
+        autoComplete='off'
       />
     ),
   },
