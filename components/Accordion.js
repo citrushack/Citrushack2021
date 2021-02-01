@@ -16,11 +16,11 @@ export default class Accordion extends Component {
         />
         <FaqSection
           question="Can I submit a project I’ve already worked on?"
-          answer="No, you must start working on project code after hacking starts at 8 AM. Projects started before that time or have been submitted to other hackathons will be disqualified. Make sure your submission is unique to Citrus Hack!"
+          answer="No, you must start working on project code after hacking starts at 9 PM. Projects started before that time or have been submitted to other hackathons will be disqualified. Make sure your submission is unique to Citrus Hack!"
         />
         <FaqSection
           question="How long is Citrus Hack?"
-          answer="Citrus Hack 2021 will be a 36-hour hackathon. Hacking will start at 10 PM (PDT) on Friday (April 9th) and end at 10 AM (PDT) on Sunday, April 11th. The closing ceremony will be held at 1 PM through."
+          answer="Citrus Hack 2021 will be a 36-hour hackathon. Hacking will start at 9 PM (PDT) on Friday (April 9th) and end at 9 AM (PDT) on Sunday, April 11th. The closing ceremony will be held at 1 PM through."
         />
         <FaqSection question="Is Citrus Hack free?" answer="Yes!" />
         <FaqSection
