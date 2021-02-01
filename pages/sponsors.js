@@ -24,8 +24,8 @@ export default function Sponsors() {
             </h3>
           </a>
         </div>
-        <div className={`${ss.logoflex}`}>
-          <motion.a
+        <div>
+        <motion.a
             whileHover={{
               scale: 1.1,
             }}
@@ -34,6 +34,8 @@ export default function Sponsors() {
           >
             <img src="/sponsors/usaf.png" className={`${ss.usaf}`} alt="usaf logo"></img>
           </motion.a>
+        </div>
+        <div className={`${ss.logoflex}`}>
           <motion.a
             whileHover={{
               scale: 1.1,
