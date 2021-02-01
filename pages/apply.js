@@ -27,7 +27,6 @@ import { submitAsync, selectError, selectFetch } from "../lib/slices/applySlice"
 import { useRouter } from "next/router";
 import { useSignIn, useAuthUser } from "react-auth-kit";
 import css from "../styles/Apply.module.css";
-
 const checkboxData = [
   {label: 'Yes', value: true},
   {label: 'No', value: false},
@@ -575,6 +574,13 @@ export default function Apply() {
                         <AlertTitle>Error: {errormsg}</AlertTitle>
                       </Alert>
                     )}
+
+                    <Typography>
+                      By clicking submit, you certify that you have read and agree to the <Link href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" onClick={(e) => {e.preventDefault()}}>
+                      MLH Code of Conduct</Link>. 
+                      <br/>
+                      You also authorize us to share your application/registration information for event administration, ranking, MLH administration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the MLH Privacy Policy. You further agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy.
+                    </Typography>
                     <Button
                       variant="contained"
                       color="primary"
