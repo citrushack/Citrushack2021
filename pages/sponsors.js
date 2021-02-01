@@ -121,19 +121,6 @@ export default function Sponsors() {
               scale: 1.1,
             }}
             transition={hoverTrans}
-            href="https://www.echoar.xyz/"
-          >
-            <img
-              src="/sponsors/echoAR.png"
-              className={`${ss.echoAR}`}
-              alt="echoAR logo"
-            ></img>
-          </motion.a>
-          <motion.a
-            whileHover={{
-              scale: 1.1,
-            }}
-            transition={hoverTrans}
             href="https://www.sketch.com/"
           >
             <img

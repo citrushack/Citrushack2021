@@ -39,9 +39,14 @@
   font-size: 40px;
   color: #1b1b1b;
 }
+.description{
+  font-size: 1.5rem;
+  color: #1b1b1b;
+}
 .action{
   background-color: #ffafeb;
   border: 3px solid #d393f8;
+  margin-bottom: -3rem;
 }
 /* Tablet or Compact Styles */
 @media (max-width: 1168){

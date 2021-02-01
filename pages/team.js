@@ -195,12 +195,13 @@ export default function Team() {
           <div className={Teamstyles.col}>
             <h3>Marketing Committee</h3>
             <ul>
-              <li>Ross Geller</li>
-              <li>Rachel Green</li>
-              <li>Chandler Bing</li>
-              <li>Monica Geller</li>
-              <li>Joey Tribbiani</li>
-              <li>Phoebe Buffay</li>
+              <li>Miles Chu</li>
+              <li>Andrei Dimaano</li>
+              <li>Swastyak Gaur</li>
+              <li>Cassidy Hang</li>
+              <li>Mihir Jain</li>
+              <li>Nathan Lee</li>
+              <li>Zubair Qazi</li>
             </ul>
           </div>
           <div className={Teamstyles.col}>
