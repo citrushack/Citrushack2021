@@ -21,10 +21,10 @@
   margin-left: 2rem;
 }
 .background{
-  background-image: url("../public/backgrounds/gravel.png");
-  background-size: contain;
+  background-image: url("../public/backgrounds/gravel_crop.png");
   background-repeat: no-repeat;
-  background-position: center;
+  /* background-position: 35rem -7rem; */
+  background-position: right 0% bottom 77%;
 }
 .infocard {
   padding: 1rem 5rem;
@@ -39,6 +39,9 @@
   transition: all 0.2s ease;
 }
 @media (max-width: 768px) {
+  .background{
+    background-image: none;
+  }
   .infocard {
     font-size: 20px;
   }

@@ -14,7 +14,7 @@ export default function Footer() {
       <div className={styles.teamlink}>
         <Link href="/team">
         <a>
-          Powered by zen and coffee from the Citrushack team. Click to learn more. &gt;
+          Powered by zen and coffee from the Citrushack team. <br/> Click to learn more. &gt;
         </a>
         </Link>
       </div>

@@ -8,8 +8,7 @@ export default function Volunteer() {
       <div className={vs.wrapper}>
         <h1 className={styles.title}>Get Involved</h1>
         <p className={`${styles.description} ${vs.pad}`}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec egestas
-          sapien sit amet metus efficitur semper.
+        Not interested in hacking but still want to participate? <br/> Fill out the forms below if you'd like to help hackers throughout the day.
         </p>
         <div className={styles.grid}>
           <a href="https://forms.gle/fCtHkDG7favDxifF6" className={`${styles.card} ${vs.color1}`}>
