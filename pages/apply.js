@@ -359,7 +359,7 @@ function countryToFlag(isoCode) {
 
 //Form validation functions
 const validate = (values) => {
-  console.log(values);
+  // console.log(values);
   var errors = {};
   if (values.github && !validateGithub(values.github)) {
     errors.github = "Invalid url";
@@ -422,9 +422,9 @@ export default function Apply() {
   const isFetching = useSelector(selectFetch);
 
   const user = authU();
-  console.log(errormsg);
+  // console.log(errormsg);
   const onSubmit = (values) => {
-    console.log(values);
+    // console.log(values);
     dispatch(
       submitAsync({
         ...values,
