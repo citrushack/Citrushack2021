@@ -278,8 +278,8 @@ const demoInfo = [
     size: 12,
     field: (
       <Select name="firsthackathon" label="Is this your first hackathon?">
-        <MenuItem value="S">Yes</MenuItem>
-        <MenuItem value="M">No</MenuItem>
+        <MenuItem value={true}>Yes</MenuItem>
+        <MenuItem value={false}>No</MenuItem>
       </Select>
     ),
   },
