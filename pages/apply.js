@@ -469,7 +469,7 @@ export default function Apply() {
           className={`${css.main}`}
           id="accountContainer"
           >
-           <h1>Applications are currently closed. Check back on the 1st of February!</h1>
+           <h1>Applications are currently closed. Check back on the 1st of February, at 3pm.</h1>
           </main>
         </Container>
       );
