@@ -19,6 +19,7 @@
     "date-fns": "^2.16.1",
     "final-form": "^4.20.1",
     "framer-motion": "^3.2.0",
+    "js-cookie": "^2.2.1",
     "material-ui": "^0.20.2",
     "mui-rff": "^3.0.3",
     "next": "10.0.4",
