@@ -87,6 +87,7 @@ export default function Hero() {
       <div className={Herostyles.content}>
         <div className={Herostyles.text}>
         <h1 className={Herostyles.title}>Citrus Hack</h1>
+        <h1>April 9-11, 2021</h1>
         <p className={Herostyles.caption}>
           Create your zen.
           <br /> 自分の禅を作れ。

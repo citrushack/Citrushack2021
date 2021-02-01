@@ -24,8 +24,24 @@
   width: min(400px, 80vw);
   height: auto;
 }
-.wolfram, .usaf, .balsamiq, .sketch {
+.wolfram, .balsamiq, .sketch {
   width: min(320px, 80vw);
+}
+
+.usaf{
+  width: min(500px, 80vw);
+}
+.title{
+  margin: 0;
+  line-height: 0.75;
+  margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 40px;
+  color: #1b1b1b;
+}
+.action{
+  background-color: #ffafeb;
+  border: 3px solid #d393f8;
 }
 /* Tablet or Compact Styles */
 @media (max-width: 1168){
