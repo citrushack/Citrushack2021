@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: space-around;
   width: var(--contentWidth);
-  margin: 10rem auto 0 auto;
+  margin: 10rem auto;
   overflow-x: hidden;
 }
 /* Intro Content Column */
@@ -22,9 +22,9 @@
 }
 .background{
   background-image: url("../public/backgrounds/gravel_crop.png");
+  background-size: contain;
   background-repeat: no-repeat;
-  /* background-position: 35rem -7rem; */
-  background-position: right 0% bottom 77%;
+  background-position: right center;
 }
 .infocard {
   padding: 1rem 5rem;

@@ -2,9 +2,9 @@
 .heroimage{
   width: 100vw;
   background-image: url(../public/backgrounds/cherryblossom.png);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: left -37vw center;
+  background-position: left -200px bottom -50px;
   overflow-x: hidden;
   /* Overlay white onto the image */
 }
