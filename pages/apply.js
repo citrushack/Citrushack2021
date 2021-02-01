@@ -64,7 +64,7 @@ const checkIn = [
     field: (
       <Autocomplete
         label="Couոtry"
-        name="coun"
+        name="count"
         required={true}
         options={countries}
         getOptionValue={(option) => option.code}
@@ -413,7 +413,7 @@ function validateSite(year) {
   return re.test(year);
 }
 
-const initialValues = {count :'sd'};
+const initialValues = {};
 
 export default function Apply() {
   const matches = useMediaQuery("(min-width:600px)");
