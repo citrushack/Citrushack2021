@@ -235,7 +235,6 @@ const demoInfo = [
         autoSelect
         handleHomeEndKeys
         clearOnBlur
-        autoComplete="new-password"
       />
     ),
   },
@@ -494,7 +493,7 @@ export default function Apply() {
             errors,
             submitFailed,
           }) => (
-            <form  role="presentation" onSubmit={handleSubmit} noValidate>
+            <form onSubmit={handleSubmit} noValidate>
               <Grid container alignItems="flex-start" spacing={2}>
                 <Grid item>
                   <Box style={{ marginTop: 16 }}>
