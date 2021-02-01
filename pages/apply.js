@@ -78,6 +78,8 @@ const checkIn = [
         )}
         selectOnFocus
         autoHighlight
+        autoSelect
+        handleHomeEndKeys
         />
     ),
   },
