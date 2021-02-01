@@ -63,8 +63,8 @@ const checkIn = [
     size: 12,
     field: (
       <Autocomplete
-        label="Country"
-        name="country"
+        label="Couոtry"
+        name="coun"
         required={true}
         options={countries}
         getOptionValue={(option) => option.code}
@@ -77,9 +77,9 @@ const checkIn = [
           </React.Fragment>
         )}
         selectOnFocus
+        autoSelect
         autoHighlight
-        autoComplete='off'
-      />
+        />
     ),
   },
   {
@@ -238,7 +238,7 @@ const demoInfo = [
         autoSelect
         handleHomeEndKeys
         clearOnBlur
-        autoComplete='off'
+        autoComplete="new-password"
       />
     ),
   },
@@ -382,7 +382,7 @@ const validate = (values) => {
   }
   if (!values["addr1"]) errors["addr1"] = "Required";
   if (!values.resume) errors.resume = "Resume upload required";
-  if (!values.country) errors.country = "Required";
+  if (!values.count) errors.count = "Required";
   if (!values.city) errors.city = "Required";
   if (!values.state) errors.state = "Required";
   if (!values.zip) errors.zip = "Required";
@@ -414,7 +414,7 @@ function validateSite(year) {
   return re.test(year);
 }
 
-const initialValues = {};
+const initialValues = {count :'sd'};
 
 export default function Apply() {
   const matches = useMediaQuery("(min-width:600px)");
@@ -495,7 +495,7 @@ export default function Apply() {
             errors,
             submitFailed,
           }) => (
-            <form onSubmit={handleSubmit} noValidate>
+            <form  role="presentation" onSubmit={handleSubmit} noValidate>
               <Grid container alignItems="flex-start" spacing={2}>
                 <Grid item>
                   <Box style={{ marginTop: 16 }}>
