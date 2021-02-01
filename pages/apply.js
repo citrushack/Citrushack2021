@@ -11,12 +11,13 @@ import {
   Card,
   Button,
   CssBaseline,
+  MenuItem,
 } from "@material-ui/core";
 import { MuiPickersUtilsProvider } from "@material-ui/pickers";
 import 'date-fns';
 import DateFnsUtils from '@date-io/date-fns';
 import { Alert, AlertTitle, createFilterOptions } from "@material-ui/lab";
-import { TextField, Autocomplete, DatePicker } from "mui-rff";
+import { TextField, Autocomplete, DatePicker, Select, Checkboxes } from "mui-rff";
 import { countries, genders, majors, unis } from "../data/data";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Dropzone from "../components/Dropzone";
@@ -26,6 +27,10 @@ import { useRouter } from "next/router";
 import { useSignIn, useAuthUser } from "react-auth-kit";
 import css from "../styles/Apply.module.css";
 
+const checkboxData = [
+  {label: 'Yes', value: true},
+  {label: 'No', value: false},
+];
 
 const filter = createFilterOptions();
 
@@ -111,6 +116,31 @@ const checkIn = [
       />
     ),
   },
+  {
+    size: 12,
+    field: (
+      <Select name="tshirt" label="T-shirt size" required={true}>
+        <MenuItem value="S">S</MenuItem>
+        <MenuItem value="M">M</MenuItem>
+        <MenuItem value="L">L</MenuItem>
+        <MenuItem value="XL">XL</MenuItem>
+        <MenuItem value="XXL">XXL</MenuItem>
+        <MenuItem value="NA">I don't want a shirt</MenuItem>
+      </Select>
+    ),
+  },
+  {
+    size: 12,
+    field: (
+      <TextField
+        variant="outlined"
+        label="Phone Number"
+        name="phone"
+        margin="none"
+        required={true}
+      />
+    ),
+  },
 ];
 const demoInfo = [
   {
@@ -155,6 +185,19 @@ const demoInfo = [
         autoSelect
         handleHomeEndKeys
       />
+    ),
+  },
+  {
+    size: 12,
+    field: (
+      <Select name="race" label="Race / ethnicity">
+        <MenuItem value="American Indian / Alaskan Native">American Indian / Alaskan Native</MenuItem>
+        <MenuItem value="Asian / Pacific Islander">Asian / Pacific Islander</MenuItem>
+        <MenuItem value="Black / African American">Black / African American</MenuItem>
+        <MenuItem value="Hispanic">Hispanic</MenuItem>
+        <MenuItem value="White / Caucasian">White / Caucasian</MenuItem>
+        <MenuItem value="Prefer Not to Answer">Prefer Not to Answer</MenuItem>
+      </Select>
     ),
   },
   {
@@ -231,6 +274,15 @@ const demoInfo = [
         />
     ),
   },
+  {
+    size: 12,
+    field: (
+      <Select name="firsthackathon" label="Is this your first hackathon?">
+        <MenuItem value="S">Yes</MenuItem>
+        <MenuItem value="M">No</MenuItem>
+      </Select>
+    ),
+  },
 ];
 const hackerInfo = [
   {
@@ -262,11 +314,35 @@ const hackerInfo = [
     field: (
       <TextField
         variant="outlined"
+        label="Personal site link"
+        name="site"
+        margin="none"
+        required={false}
+      />
+    ),
+  },
+  {
+    size: 12,
+    field: (
+      <TextField
+        variant="outlined"
+        label="Tell us about a project you're proud of!"
+        multiline
+        name="proudof"
+        margin="none"
+        required={false}
+      />
+    ),
+  },
+  {
+    size: 12,
+    field: (
+      <TextField
+        variant="outlined"
         label="Anything you'd like to add?"
         multiline
         name="extra"
         margin="none"
-        required={false}
       />
     ),
   },
@@ -296,6 +372,12 @@ const validate = (values) => {
   if (!values.year) {
     errors.year = "Required";
   } 
+  if (values.phone && !validateNumber(values.phone)) {
+    errors.phone = "Invalid Number";
+  }
+  if (values.site && !validateSite(values.site)) {
+    errors.site = "Invalid URL";
+  }
   if (!values["addr1"]) errors["addr1"] = "Required";
   if (!values.resume) errors.resume = "Resume upload required";
   if (!values.country) errors.country = "Required";
@@ -309,6 +391,10 @@ const validate = (values) => {
   if (!values.gender) errors.gender = "Required";
   return errors;
 };
+function validateNumber(url){
+  const re = /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/;
+  return re.test(url);
+}
 function validateLinkedin(url) {
   const re = /(https?:\/\/(.+?\.)?linkedin\.com(\/[A-Za-z0-9\-._~:/?#[\]@!$&'()*+,;=]*)?)/;
   return re.test(url);
@@ -319,6 +405,10 @@ function validateGithub(url) {
 }
 function validateYear(year) {
   const re = /^(19|20)\d{2}$/;
+  return re.test(year);
+}
+function validateSite(year) {
+  const re = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/;
   return re.test(year);
 }
 
@@ -358,21 +448,6 @@ export default function Apply() {
     );
   };
 
-  if (new Date() < new Date("Sun Feb 01 2021 00:50:30 GMT-0800 (Pacific Standard Time)")) {
-    return (
-      <Container main>
-        <main
-        className={`${css.main}`}
-        id="accountContainer"
-        >
-         <h1>Applications are currently closed. Check back on the 1st of February!</h1>
-        </main>
-      </Container>
-    );
-  }
-
-
-
   if(!user){
     return (
       <Container main>
@@ -384,6 +459,21 @@ export default function Apply() {
         </main>
       </Container>
     );
+  }
+
+  if(user.username!='ajeetkokatay'){
+    if (new Date() < new Date("Sun Feb 01 2021 00:50:30 GMT-0800 (Pacific Standard Time)")) {
+      return (
+        <Container main>
+          <main
+          className={`${css.main}`}
+          id="accountContainer"
+          >
+           <h1>Applications are currently closed. Check back on the 1st of February!</h1>
+          </main>
+        </Container>
+      );
+    }
   }
 
   return (
