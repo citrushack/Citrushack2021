@@ -461,20 +461,20 @@ export default function Apply() {
     );
   }
 
-  if(user.username!='ajeetkokatay'){
-    if (new Date() < new Date("Sun Feb 01 2021 00:50:30 GMT-0800 (Pacific Standard Time)")) {
-      return (
-        <Container main>
-          <main
-          className={`${css.main}`}
-          id="accountContainer"
-          >
-           <h1>Applications are currently closed. Check back on the 1st of February, at 3pm.</h1>
-          </main>
-        </Container>
-      );
-    }
-  }
+  // if(user.username!='ajeetkokatay'){
+  //   if (new Date() < new Date("Sun Feb 01 2021 00:50:30 GMT-0800 (Pacific Standard Time)")) {
+  //     return (
+  //       <Container main>
+  //         <main
+  //         className={`${css.main}`}
+  //         id="accountContainer"
+  //         >
+  //          <h1>Applications are currently closed. Check back on the 1st of February, at 3pm.</h1>
+  //         </main>
+  //       </Container>
+  //     );
+  //   }
+  // }
 
   return (
     <Container main>
