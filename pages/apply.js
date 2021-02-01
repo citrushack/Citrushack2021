@@ -22,7 +22,7 @@ import { countries, genders, majors, unis } from "../data/data";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Dropzone from "../components/Dropzone";
 import { useDispatch, useSelector } from "react-redux";
-import { submitAsync, selectError } from "../lib/slices/applySlice";
+import { submitAsync, selectError, selectFetch } from "../lib/slices/applySlice";
 import { useRouter } from "next/router";
 import { useSignIn, useAuthUser } from "react-auth-kit";
 import css from "../styles/Apply.module.css";
@@ -75,6 +75,7 @@ const checkIn = [
             &nbsp; {option.label} ({option.code})
           </React.Fragment>
         )}
+        renderInput={(params) => <TextField {...params} name="ignore" label="Couոtry" variant="outlined" />}
         />
     ),
   },
@@ -116,6 +117,18 @@ const checkIn = [
   {
     size: 12,
     field: (
+      <TextField
+        variant="outlined"
+        label="Phone Number"
+        name="phone"
+        margin="none"
+        required={true}
+      />
+    ),
+  },
+  {
+    size: 12,
+    field: (
       <Select name="tshirt" label="T-shirt size" required={true}>
         <MenuItem value="S">S</MenuItem>
         <MenuItem value="M">M</MenuItem>
@@ -124,18 +137,6 @@ const checkIn = [
         <MenuItem value="XXL">XXL</MenuItem>
         <MenuItem value="NA">I don't want a shirt</MenuItem>
       </Select>
-    ),
-  },
-  {
-    size: 12,
-    field: (
-      <TextField
-        variant="outlined"
-        label="Phone Number"
-        name="phone"
-        margin="none"
-        required={true}
-      />
     ),
   },
 ];
@@ -419,20 +420,10 @@ export default function Apply() {
   const authU = useAuthUser();
   const router = useRouter();
   const errormsg = useSelector(selectError);
+  const isFetching = useSelector(selectFetch);
+
   const user = authU();
   console.log(errormsg);
-
-  // Redirect non authenticated or already finished users
-  useEffect(() => {
-    if (user) {
-      if (user.appComplete) {
-        router.push("/account");
-      }
-    } else {
-      router.push("/");
-    }
-  }, [user]);
-
   const onSubmit = (values) => {
     console.log(values);
     dispatch(
@@ -445,6 +436,18 @@ export default function Apply() {
       })
     );
   };
+
+  // Redirect non authenticated or already finished users
+  useEffect(() => {
+    if (user) {
+      if (user.appComplete) {
+        router.push("/account");
+      }
+    } else {
+      router.push("/");
+    }
+  }, [user]);
+
 
   if(!user){
     return (
@@ -567,7 +570,7 @@ export default function Apply() {
                       color="primary"
                       type="submit"
                       size="large"
-                      disabled={false /*isFetching*/}
+                      disabled={isFetching}
                       style={{
                         width: "100%",
                         background: "#9be36d",
