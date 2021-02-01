@@ -69,7 +69,6 @@ const checkIn = [
         options={countries}
         getOptionValue={(option) => option.code}
         getOptionLabel={(option) => option.label}
-        disableCloseOnSelect={true}
         renderOption={(option) => (
           <React.Fragment>
             <span>{countryToFlag(option.code)} </span>
