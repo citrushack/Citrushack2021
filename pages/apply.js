@@ -77,7 +77,6 @@ const checkIn = [
           </React.Fragment>
         )}
         selectOnFocus
-        autoSelect
         autoHighlight
         />
     ),
