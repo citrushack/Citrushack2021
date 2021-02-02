@@ -171,6 +171,7 @@ export default function Team() {
             <h3>Sponsorship Committee</h3>
             <ul>
               <li>Shubham Batra</li>
+              <li>Albert Dang</li>
               <li>Aaron Jiang</li>
               <li>Joseph Mangapit</li>
             </ul>
