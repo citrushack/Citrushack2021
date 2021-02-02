@@ -1,7 +1,7 @@
 /*CSS for Hero section*/
 .heroimage{
   width: 100vw;
-  background-image: url(../public/backgrounds/cherryblossom.png);
+  background-image: url(../public/backgrounds/cherryblossomwebp.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left -200px bottom -50px;

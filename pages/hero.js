@@ -49,19 +49,28 @@ export default function Hero() {
               color: "#ffffff",
               distance: 150,
               enable: false,
-              opacity: 0.5,
+              opacity: {
+                "random": {
+                  "enable": true,
+                },
+              },
               width: 1,
             },
             collisions: {
               enable: false,
             },
             move: {
-              direction: "bottom-right",
+              direction: "bottom",
               enable: true,
               outMode: "out",
               random: true,
-              speed: 0.75,
               straight: true,
+              speed: 1.5,
+              gravity: {
+                acceleration	:	9.8,
+                enable	:		true,
+                maxSpeed : 0.3
+              }
             },
             number: {
               density: {
@@ -76,13 +85,17 @@ export default function Hero() {
               },
               "animation": {
                 "enable": true,
-                "speed": 5
+                "speed": 10
               },
               "direction": "random"
             },        
-            opacity: {
-              value: 0.5,
-            },
+            "opacity": {
+              "random": {
+                "enable": true,
+                minimumValue: 0.2,
+                maximumValue: 0.25,
+              },
+            },  
             shape: {
               type: "image",
               image: {

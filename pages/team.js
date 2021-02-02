@@ -84,9 +84,6 @@ export default function Team() {
               },
               value: 16,
             },
-            opacity: {
-              value: 1,
-            },
             shape: {
               type: "circle",
             },
