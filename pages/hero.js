@@ -40,7 +40,7 @@ export default function Hero() {
             events: {
               resize: true,
             },
-          },
+          },    
           particles: {
             color: {
               value: ["#ffc0cb", "#fc9aab", "#f78195"],
@@ -70,16 +70,32 @@ export default function Hero() {
               },
               value: 30,
             },
+            "rotate": {
+              "random": {
+                "enable": true
+              },
+              "animation": {
+                "enable": true,
+                "speed": 5
+              },
+              "direction": "random"
+            },        
             opacity: {
-              value: 1,
+              value: 0.5,
             },
             shape: {
-              type: "circle",
+              type: "image",
+              image: {
+                src: "/backgrounds/leaf.png",
+                width: 200,
+                height: 200
+              }
             },
             size: {
               random: true,
-              value: 10,
+              value: 25,
             },
+            
           },
           detectRetina: true,
         }}
