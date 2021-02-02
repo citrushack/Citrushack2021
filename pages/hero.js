@@ -69,7 +69,7 @@ export default function Hero() {
               gravity: {
                 acceleration	:	9.8,
                 enable	:		true,
-                maxSpeed : 0.3
+                maxSpeed : 0.4
               }
             },
             number: {
