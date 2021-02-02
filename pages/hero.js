@@ -27,7 +27,9 @@ export default function Hero() {
               value: "",
             },
             position: {
-              value: "",
+              "position": "-50% 50%",
+              "repeat": "no-repeat",
+              "size": "cover"    
             },
           },
           fpsLimit: 30,
@@ -45,31 +47,20 @@ export default function Hero() {
             color: {
               value: ["#ffc0cb", "#fc9aab", "#f78195"],
             },
-            links: {
-              color: "#ffffff",
-              distance: 150,
-              enable: false,
-              opacity: {
-                "random": {
-                  "enable": true,
-                },
-              },
-              width: 1,
-            },
             collisions: {
               enable: false,
             },
             move: {
-              direction: "bottom",
+              direction: "right",
               enable: true,
               outMode: "out",
               random: true,
               straight: true,
-              speed: 1.5,
+              speed: 0.3,
               gravity: {
                 acceleration	:	9.8,
                 enable	:		true,
-                maxSpeed : 0.4
+                maxSpeed : 0.3
               }
             },
             number: {
