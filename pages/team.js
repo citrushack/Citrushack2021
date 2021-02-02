@@ -84,9 +84,6 @@ export default function Team() {
               },
               value: 16,
             },
-            opacity: {
-              value: 1,
-            },
             shape: {
               type: "circle",
             },
@@ -208,6 +205,7 @@ export default function Team() {
             <h3>Web Dev Committee</h3>
             <ul>
               <li>J.S. Pescasio</li>
+              <li>Andrei Dimaano</li>
             </ul>
           </div>
         </div>

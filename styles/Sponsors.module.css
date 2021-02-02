@@ -26,10 +26,10 @@
 .wolfram, .balsamiq, .sketch {
   width: min(320px, 80vw);
 }
-
-.usaf{
-  width: min(500px, 80vw);
+.usaf {
+  width: min(450px, 80vw);
 }
+
 .title{
   margin: 0;
   line-height: 0.75;
@@ -45,12 +45,15 @@
 .action{
   background-color: #ffd5e5;
   border: 3px solid #ffbddc;
-  margin-bottom: -3rem;
+  margin-bottom: -.5rem;
 }
 /* Tablet or Compact Styles */
 @media (max-width: 1168){
   .wrapper{
     width: 100%;
     padding: 0;
+  }
+  .action{
+    margin-bottom: -0.1rem;
   }
 }

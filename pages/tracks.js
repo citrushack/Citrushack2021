@@ -60,10 +60,7 @@ const Security = () => {
       <div className={Trackstyles.text}>
         <h2 className={Trackstyles.tracktitle}>🔒 Security</h2>
         <p className={styles.description}>
-          Security gives you the peace of mind in order to lead to a calmer
-          state of mind. Projects entered in this category aim to increase the
-          sense of security and safety for people in order to help them clear
-          their mind of troubles.
+          Projects entered in this category aim to help people feel secure. A sense of security can be the key to a zen state of mind. 
         </p>
       </div>
       <div className={Trackstyles.image}>
@@ -86,9 +83,8 @@ const Sustainability = () => {
       <div className={Trackstyles.text}>
         <h2 className={Trackstyles.tracktitle}>🌱 Sustainability</h2>
         <p className={styles.description}>
-          Nature allows one to help clear their mind of stresses. Projects in
-          this category aim to protect the planet’s natural treasures and help
-          solve the planet’s environmental issues.
+          Projects in this category aim to protect the planet’s natural treasures and help
+          solve the planet’s environmental issues. We've only got one planet - we've got to treat it well.
         </p>
       </div>
       <div className={Trackstyles.image}>
@@ -114,10 +110,7 @@ const Wellness = () => {
       <div className={Trackstyles.text}>
         <h2 className={Trackstyles.tracktitle}>🌸 Wellness</h2>
         <p className={styles.description}>
-          After some very difficult times in the last year, we have seen how
-          important health and wellness is for mental and physical health.
-          Projects in this category aim to improve or bring awareness to the
-          health or wellness of others.
+        In this category, you'll come up with a creative solution to improve the wellness of society. Last year was rough for both mental and physical health - let's get to healing. 
         </p>
       </div>
       <div className={Trackstyles.image}>

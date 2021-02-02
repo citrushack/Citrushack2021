@@ -220,7 +220,7 @@ export default function Account() {
                 align="center"
                 component="h1"
                 gutterBottom
-                style={{textSize: '2rem'}}
+                style={{fontSize: '1.9rem'}}
               >
                 {groupInfo && groupInfo.payload && groupInfo.payload.uid}
               </Typography>

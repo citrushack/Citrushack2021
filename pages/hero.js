@@ -27,7 +27,9 @@ export default function Hero() {
               value: "",
             },
             position: {
-              value: "",
+              "position": "-50% 50%",
+              "repeat": "no-repeat",
+              "size": "cover"    
             },
           },
           fpsLimit: 30,
@@ -40,28 +42,31 @@ export default function Hero() {
             events: {
               resize: true,
             },
-          },
+          },    
           particles: {
             color: {
               value: ["#ffc0cb", "#fc9aab", "#f78195"],
             },
-            links: {
-              color: "#ffffff",
-              distance: 150,
-              enable: false,
-              opacity: 0.5,
-              width: 1,
-            },
             collisions: {
               enable: false,
             },
-            move: {
-              direction: "bottom-right",
-              enable: true,
-              outMode: "out",
-              random: true,
-              speed: 0.75,
-              straight: true,
+            position:{
+              x: -100,
+              y: 100,
+            },
+            "move": {
+              "enable": true,
+              "speed": .55,
+              "direction": "bottom-right",
+              "random": true,
+              "straight": true,
+              "out_mode": "out",
+              "bounce": false,
+                gravity: {
+                 acceleration    :   9.8,
+                 enable  :       true,
+                 maxSpeed : .5
+               },
             },
             number: {
               density: {
@@ -70,16 +75,36 @@ export default function Hero() {
               },
               value: 30,
             },
-            opacity: {
-              value: 1,
-            },
+            "rotate": {
+              "random": {
+                "enable": true
+              },
+              "animation": {
+                "enable": true,
+                "speed": 10
+              },
+              "direction": "random"
+            },        
+            "opacity": {
+              "random": {
+                "enable": true,
+                minimumValue: 0.2,
+                maximumValue: 0.25,
+              },
+            },  
             shape: {
-              type: "circle",
+              type: "image",
+              image: {
+                src: "/backgrounds/leaf.png",
+                width: 200,
+                height: 200
+              }
             },
             size: {
               random: true,
-              value: 10,
+              value: 25,
             },
+            
           },
           detectRetina: true,
         }}
