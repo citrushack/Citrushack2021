@@ -45,7 +45,7 @@
 .action{
   background-color: #ffd5e5;
   border: 3px solid #ffbddc;
-  margin-bottom: -2rem;
+  margin-bottom: -.5rem;
 }
 /* Tablet or Compact Styles */
 @media (max-width: 1168){
