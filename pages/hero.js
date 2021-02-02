@@ -50,18 +50,23 @@ export default function Hero() {
             collisions: {
               enable: false,
             },
-            move: {
-              direction: "right",
-              enable: true,
-              outMode: "out",
-              random: true,
-              straight: true,
-              speed: 0.3,
-              gravity: {
-                acceleration	:	9.8,
-                enable	:		true,
-                maxSpeed : 0.3
-              }
+            position:{
+              x: -100,
+              y: 100,
+            },
+            "move": {
+              "enable": true,
+              "speed": .55,
+              "direction": "bottom-right",
+              "random": true,
+              "straight": true,
+              "out_mode": "out",
+              "bounce": false,
+                gravity: {
+                 acceleration    :   9.8,
+                 enable  :       true,
+                 maxSpeed : .5
+               },
             },
             number: {
               density: {
