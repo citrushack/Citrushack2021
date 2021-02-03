@@ -19,6 +19,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 24px;
+  font-weight: 480;
 }
 .text {
   flex: 1;
@@ -62,15 +63,37 @@
   z-index: 100;
   opacity:.99;
 }
+.helperText {
+  padding-top: 20px;
+}
+
+
+.overrideColor{
+  text-shadow: none;
+  color: white;
+}
 
 .contain {
-  background-color: #f7f7f7;
+  background-color: #1b1b1b;
+  
   border-radius: 20px;
   width: 100%;
   margin: 0 2rem;
   padding: 0 2rem;
   box-shadow: 0px 0px 20px 1px #e6e5e5;
 }
+
+.contain::after{
+  content:"swipe to explore";
+  font-weight: bold;
+  text-align: right;
+  display:block;
+  padding-bottom:1.5rem;
+  margin-top: -1.5rem;
+  font-family: "Inter", sans-serif;
+  color:white;
+}
+
 .contain *{
   user-select: none;
   user-drag: none; 
@@ -90,6 +113,7 @@
   left: 10px;
 }
 
+
 .prevmobile,
 .nextmobile {
   display: none;
@@ -104,16 +128,17 @@
   color: #fff;
 }
 /* Tablet or Compact Styles */
-@media (max-width: 1280px) {
+@media (max-width: 960px) {
   .tracks {
     width: 100%;
     align-items: flex-start;
   }
   .track {
+    /* Set height so buttons don't jump around */
+    height:max(69vh, 620px);
     flex-direction: column-reverse;
     width: 100%;
     padding: 10px;
-    height: 100%;
     justify-content: center;
   }
   .image {
@@ -155,6 +180,11 @@
     width: 100%;
     margin: 20px 0;
   }
+  .nextmobile::before{
+    content: "HHHHHHHHHHHHHHHHHHHHHHHHH";
+    color:black;
+  }
+  
   .prevmobile,.nextmobile{
     display: flex;
   }

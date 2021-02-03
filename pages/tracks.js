@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import styles from "../styles/Common.module.css";
-import Trackstyles from "../styles/Tracks.module.css";
+import ts from "../styles/Tracks.module.css";
 import { motion, AnimateSharedLayout } from "framer-motion";
 import { wrap } from "popmotion";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
@@ -55,15 +55,15 @@ const Security = () => {
       exit="exit"
       variants={fade}
       transition={fadeTransition}
-      className={Trackstyles.track}
+      className={ts.track}
     >
-      <div className={Trackstyles.text}>
-        <h2 className={Trackstyles.tracktitle}>🔒 Security</h2>
-        <p className={styles.description}>
+      <div className={ts.text}>
+        <h2 className={`${`${ts.tracktitle} ${ts.overrideColor}`} ${ts.overrideColor}`}>🔒 Security</h2>
+        <p className={`${`${ts.description} ${ts.overrideColor}`} ${ts.overrideColor}`}>
           Projects entered in this category aim to help people feel secure. A sense of security can be the key to a zen state of mind. 
         </p>
       </div>
-      <div className={Trackstyles.image}>
+      <div className={ts.image}>
         <motion.img src="/tracks/rocktrack.png" alt="Security track rocks" />
       </div>
     </motion.div>
@@ -78,16 +78,16 @@ const Sustainability = () => {
       exit="exit"
       variants={fade}
       transition={fadeTransition}
-      className={Trackstyles.track}
+      className={ts.track}
     >
-      <div className={Trackstyles.text}>
-        <h2 className={Trackstyles.tracktitle}>🌱 Sustainability</h2>
-        <p className={styles.description}>
+      <div className={ts.text}>
+        <h2 className={`${ts.tracktitle} ${ts.overrideColor}`}>🌱 Sustainability</h2>
+        <p className={`${ts.description} ${ts.overrideColor}`}>
           Projects in this category aim to protect the planet’s natural treasures and help
           solve the planet’s environmental issues. We've only got one planet - we've got to treat it well.
         </p>
       </div>
-      <div className={Trackstyles.image}>
+      <div className={ts.image}>
         <motion.img
           src="/tracks/waterfall.png"
           alt="Sustainability track waterfall"
@@ -105,15 +105,15 @@ const Wellness = () => {
       exit="exit"
       variants={fade}
       transition={fadeTransition}
-      className={Trackstyles.track}
+      className={ts.track}
     >
-      <div className={Trackstyles.text}>
-        <h2 className={Trackstyles.tracktitle}>🌸 Wellness</h2>
-        <p className={styles.description}>
+      <div className={ts.text}>
+        <h2 className={`${ts.tracktitle} ${ts.overrideColor}`}>🌸 Wellness</h2>
+        <p className={`${ts.description} ${ts.overrideColor}`}>
         In this category, you'll come up with a creative solution to improve the wellness of society. Last year was rough for both mental and physical health - let's get to healing. 
         </p>
       </div>
-      <div className={Trackstyles.image}>
+      <div className={ts.image}>
         <motion.img src="/tracks/lotustrack.png" alt="Wellness track lotus" />
       </div>
     </motion.div>
@@ -143,13 +143,13 @@ export default function Tracks() {
       transition={{ repeat: 5, repeatType: "reverse", duration: 2.5 }}
       className={styles.main}
     >
-      <div className={Trackstyles.tracks}>
+      <div className={ts.tracks}>
         <h1 className={styles.title}>Choose Your Track</h1>
       </div>
-      <div className={Trackstyles.wrapper}>
+      <div className={ts.wrapper}>
         <MotionWrapper>
           <FaChevronLeft
-            className={Trackstyles.prev}
+            className={ts.prev}
             onClick={() => paginate(-1)}
           />
         </MotionWrapper>
@@ -161,7 +161,7 @@ export default function Tracks() {
             initial="enter"
             animate="center"
             exit="exit"
-            className={Trackstyles.contain}
+            className={ts.contain}
             transition={{
               x: { duration: 0.2 },
               opacity: { duration: 0.2 },
@@ -185,20 +185,20 @@ export default function Tracks() {
         </AnimateSharedLayout>
         <MotionWrapper>
           <FaChevronRight
-            className={Trackstyles.next}
+            className={ts.next}
             onClick={() => paginate(1)}
           />
         </MotionWrapper>
-        <div className={Trackstyles.pagemobile}>
+        <div className={ts.pagemobile}>
           <MotionWrapper>
             <FaChevronLeft
-              className={Trackstyles.prevmobile}
+              className={ts.prevmobile}
               onClick={() => paginate(-1)}
             />
           </MotionWrapper>
-          <MotionWrapper>
+          <MotionWrapper >
             <FaChevronRight
-              className={Trackstyles.nextmobile}
+              className={ts.nextmobile}
               onClick={() => paginate(1)}
             />
           </MotionWrapper>

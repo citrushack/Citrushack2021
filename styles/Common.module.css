@@ -109,6 +109,7 @@
 .description {
   text-align: left;
   margin-bottom:5%;
+  text-shadow: 0px 0px 10px #ffffff, 0px 0px 10px #ffffff, 0px 0px 10px #ffffff, 0px 0px 10px #ffffff;
 }
 /* Description Styles */
 .description {
