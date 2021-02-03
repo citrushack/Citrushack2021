@@ -152,6 +152,7 @@
   }
   .image img {
     height: 300px;
+    user-select: none;
     width: 300px;
     margin: 0;
   }
