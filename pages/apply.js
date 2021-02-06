@@ -385,6 +385,7 @@ const validate = (values) => {
   if (!values.firstname) errors.firstname = "Required";
   if (!values.lastname) errors.lastname = "Required";
   if (!values.school) errors.school = "Required";
+  if (!values.phone) errors.phone = "Required";
   if (!values.tshirt) errors.tshirt = "Required";
   if (!values.major) errors.major = "Required";
   if (!values.gender) errors.gender = "Required";
