@@ -1,16 +1,16 @@
 .tracks {
   display: flex;
   flex-direction: column;
-  margin: auto;
-  padding-top: 10rem;
   justify-content: center;
   align-items: center;
   width: var(--contentWidth);
+  margin: auto;
+  padding-top: 10rem;
 }
 
 .tracktitle {
-  font-size: 40px;
   margin: 0;
+  font-size: 40px;
 }
 
 .track {
@@ -21,15 +21,17 @@
   padding: 24px;
   font-weight: 480;
 }
+
 .text {
   flex: 1;
 }
+
 .image {
   display: flex;
   flex: 1;
- width: 100%;
- height: 100%;
- justify-content: space-around;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
   margin: auto;
   padding: 20px;
   user-select: none;
@@ -37,7 +39,6 @@
 .image img {
   width: 400px;
   height: 400px;
-  user-select: none;
   user-drag: none; 
   user-select: none;
   -moz-user-select: none;
@@ -51,22 +52,21 @@
 }
 .next,
 .prev {
-  user-select: none;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 40px;
+  z-index: 100;
+  opacity: .99;
+  flex: none;
   padding: 10px;
   border-radius: 50%;
   background-color: #676767;
+  font-size: 40px;
+  font-weight: bold;
   color: #fff;
-  flex: none;
-  z-index: 100;
-  opacity:.99;
+  user-select: none;
+  cursor: pointer;
 }
 .helperText {
   padding-top: 20px;
 }
-
 
 .overrideColor{
   text-shadow: none;
@@ -74,45 +74,41 @@
 }
 
 .contain {
-  background-color: #1b1b1b;
-  
-  border-radius: 20px;
   width: 100%;
   margin: 0 2rem;
   padding: 0 2rem;
+  border-radius: 20px;
+  background-color: #1b1b1b;
   box-shadow: 0px 0px 20px 1px #e6e5e5;
 }
 
 .contain::after{
   content:"swipe to explore";
-  font-weight: bold;
-  text-align: right;
-  display:block;
-  padding-bottom:1.5rem;
+  display: block;
   margin-top: -1.5rem;
+  padding-bottom: 1.5rem;
+  text-align: right;
+  font-weight: bold;
   font-family: "Inter", sans-serif;
-  color:white;
+  color: white;
 }
 
 .contain *{
-  user-select: none;
+  z-index:-10;
   user-drag: none; 
   user-select: none;
   -moz-user-select: none;
   -webkit-user-drag: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  z-index:-10;
-}
-.next {
-  right: 10px;
-  
 }
 
+.next {
+  right: 10px;
+}
 .prev {
   left: 10px;
 }
-
 
 .prevmobile,
 .nextmobile {
@@ -127,34 +123,34 @@
   background-color: #676767;
   color: #fff;
 }
+
 /* Tablet or Compact Styles */
 @media (max-width: 960px) {
   .tracks {
-    width: 100%;
     align-items: flex-start;
+    width: 100%;
   }
   .track {
-    /* Set height so buttons don't jump around */
-    height:max(69vh, 620px);
     flex-direction: column-reverse;
-    width: 100%;
-    padding: 10px;
     justify-content: center;
+    width: 100%;
+    height: max(69vh, 620px); /* Set height so buttons don't jump around */
+    padding: 10px;
   }
   .image {
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     margin: 0;
   }
   .image img {
-    height: 300px;
-    user-select: none;
     width: 300px;
+    height: 300px;
     margin: 0;
+    user-select: none;
   }
   .text{
     margin: 0;
@@ -162,11 +158,10 @@
   .tracktitle {
     font-size: 6.5vw;
   }
-
   .contain {
-    box-shadow: none;
     width: 100%;
     height: 100%;
+    box-shadow: none;
   }
   .wrapper {
     flex-direction: column;
@@ -183,9 +178,8 @@
   }
   .nextmobile::before{
     content: "HHHHHHHHHHHHHHHHHHHHHHHHH";
-    color:black;
+    color: black;
   }
-  
   .prevmobile,.nextmobile{
     display: flex;
   }

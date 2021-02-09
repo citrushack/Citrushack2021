@@ -1,20 +1,20 @@
 /* Container for entire page */
 .container {
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow-x: hidden;
 }
 /* Container for each section */
 .main {
-  min-height: 50vh;
-  width: var(--contentWidth);
-  margin: auto;
-  margin-bottom:5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: var(--contentWidth);
+  min-height: 50vh;
+  margin: auto;
+  margin-bottom: 5%;
 }
 
 .tall{
@@ -27,17 +27,17 @@
 
 /* Footer CSS */
 .footer {
-  width: 100%;
-  padding: 20px 0 40px 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  color: #fff;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0 40px 0;
   background-color: #00000081;
-  transition: 0.8s ease;
   box-shadow: 0 50vh 0 50vh #00000081;
+  color: #fff;
   cursor: default;
+  transition: 0.8s ease;
 }
 
 .footer:hover {
@@ -61,7 +61,6 @@
 }
 
 /* Link to Team Page CSS */
-
 .teamlink a:hover {
   color: #ff6060;
   cursor: pointer;
@@ -69,14 +68,15 @@
 .teamlink a{
   text-align: center;
 }
+
 /* Social Media CSS */
 .contact a {
   margin-top: 20px;
   margin-left: 10px;
-  margin-right: 10px;
   margin-bottom: 10px;
-  color: #fff;
+  margin-right: 10px;
   font-size: 30px;
+  color: #fff;
 }
 
 .contact a:hover {
@@ -86,8 +86,8 @@
 
 /* Title styles */
 .title a {
-  color: #0070f3;
   text-decoration: none;
+  color: #0070f3;
 }
 
 .title a:hover,
@@ -98,35 +98,37 @@
 
 .title {
   margin: 0;
-  line-height: 1.15;
   margin-bottom: 16px;
-  font-weight: 700;
+  line-height: 1.15;
   font-size: 40px;
+  font-weight: 700;
   color: #1b1b1b;
 }
 
 .title,
 .description {
+  margin-bottom: 5%;
   text-align: left;
-  margin-bottom:5%;
   text-shadow: 0px 0px 10px #ffffff, 0px 0px 10px #ffffff, 0px 0px 10px #ffffff, 0px 0px 10px #ffffff;
 }
+
 /* Description Styles */
 .description {
-  font-size: 1.5rem;
-  color: #1b1b1b;
   margin-top: 5%;
   margin-bottom: 5%;
+  font-size: 1.5rem;
+  color: #1b1b1b;
 }
 
 .code {
-  background: #fafafa;
-  border-radius: 5px;
   padding: 0.75rem;
+  border-radius: 5px;
+  background: #fafafa;
   font-size: 1.1rem;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
+
 /* Cards that are not part of information section */
 .grid {
   display: flex;
@@ -138,16 +140,16 @@
 }
 
 .card {
+  width: 400px;
   margin: 1rem;
   padding: 14px;
-  width: 400px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 100px;
   border: 3px solid #fff;
-  transition: all 0.15s ease;
+  border-radius: 100px;
   background-color: #fff;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.15s ease;
 }
 .card:hover,
 .card:focus,
@@ -177,8 +179,8 @@
 /* Mobile stuff */
 @media (max-width: 768px) {
   .main {
-    margin-top:15%;
-    margin-bottom:5%;
+    margin-top: 15%;
+    margin-bottom: 5%;
   }
   .title {
     font-size: 2.8rem;
@@ -196,8 +198,8 @@
   .card,
   .action {
     width: 100%;
-    padding: 0.25rem;
     margin: 0 0rem 0.5rem 0;
+    padding: 0.25rem;
   }
   .card > h3,
   .clickable > h3 {
