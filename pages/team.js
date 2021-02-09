@@ -165,6 +165,12 @@ export default function Team() {
             title="Rahul Sohi"
             position="Volunteer Lead"
           />
+          <Profile
+            image="/logoRevised.png"
+            link=""
+            title="Audrey Kim"
+            position="Volunteer Lead"
+          />
         </div>
         <div className={Teamstyles.credits}>
           <div className={Teamstyles.col}>
