@@ -1,6 +1,6 @@
 .main{
-    width: var(--contentWidth);
-    margin:auto;
-    margin-bottom: min(12vh, 100px);
-    overflow: visible;
+  overflow: visible;
+  width: var(--contentWidth);
+  margin:auto;
+  margin-bottom: min(12vh, 100px);
 }

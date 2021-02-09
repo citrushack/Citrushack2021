@@ -1,22 +1,22 @@
-/*CSS for Hero section*/
+/* CSS for Hero section */
 .heroimage{
+  overflow-x: hidden;
   width: 100vw;
   background-image: url(../public/backgrounds/cherryblossomwebp.png);
   background-size: contain;
-  background-repeat: no-repeat;
   background-position: left -200px bottom -50px;
-  overflow-x: hidden;
+  background-repeat: no-repeat;
   /* Overlay white onto the image */
 }
 
 .content {
-  min-height: 100vh;
-  width:80vw;
-  margin:auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
+  width: 80vw;
+  min-height: 100vh;
+  margin: auto;
   text-align: right;
 }
 .content h1, .content p {
@@ -24,23 +24,22 @@
 }
 
 .secondary{ 
-  background-color: #f8f8f8;
   border: 3px solid #a0a0a0; 
+  background-color: #f8f8f8;
 }
 
 .title {
-  font-size: 81px;
   margin: 0;
+  text-align: center;
+  font-size: 81px;
   font-weight: 900;
-  text-align:center;
   color: #191b1f;
-  
 }
 
 .caption{
-  font-weight: bold;
-  color:#191b1f;
   font-size: 40px;
+  font-weight: bold;
+  color: #191b1f;
 }
 
 .action {
@@ -55,26 +54,28 @@
   background-color: #f87575 !important;
 }
 .buttonGrid{
-  width: var(--contentWidth);
   justify-content: flex-end;
+  width: var(--contentWidth);
   margin-right: -1rem;
 }
+
+/* Mobile Styles */
 @media (max-width: 868px) {
   .heroimage{
     background-size: contain;
     background-position: center bottom;
   }
   .content{
-    width: var(--contentWidth);
-    padding: 0;
-    margin: auto;
-    text-align: center;
     align-items: center;
+    width: var(--contentWidth);
     height: 80vh;
+    margin: auto;
+    padding: 0;
+    text-align: center;
   }
   .title{
-    font-size: 50px;  
     line-height: 1;
+    font-size: 50px;  
   }
   .caption{
     font-size: 30px;
