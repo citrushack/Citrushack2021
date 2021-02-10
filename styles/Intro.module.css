@@ -21,7 +21,7 @@
   margin-left: 2rem;
 }
 .background{
-  background-image: url("../public/backgrounds/gravel_crop.png");
+  background-image: var(--bg-intro);
   background-size: contain;
   background-position: right center;
   background-repeat: no-repeat;
@@ -29,13 +29,13 @@
 .infocard {
   margin-bottom: 1rem;
   padding: 1rem 5rem;
-  background-image: url("../public/backgrounds/brushstroke.png");
+  background-image: var(--bg-infocard);
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
   text-align: center;
   font-size: 30px;
-  color: #fff;
+  color: var(--color-text-infocard);
   transition: all 0.2s ease;
 }
 

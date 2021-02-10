@@ -2,6 +2,7 @@ import { Provider } from "react-redux";
 import "what-input";
 import { AuthProvider } from "react-auth-kit";
 import "../styles/globals.css";
+import "../styles/themes.css";
 import Head from "next/head";
 
 import store from "../store";

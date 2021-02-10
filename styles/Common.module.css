@@ -33,17 +33,17 @@
   align-items: center;
   width: 100%;
   padding: 20px 0 40px 0;
-  background-color: #00000081;
-  box-shadow: 0 50vh 0 50vh #00000081;
-  color: #fff;
+  background-color: var(--color-footer-primary);
+  box-shadow: 0 50vh 0 50vh var(--color-footer-primary);
+  color: var(--color-link-primary);
   cursor: default;
   transition: 0.8s ease;
 }
 
 .footer:hover {
-  background-color: #212121;
+  background-color: var(--color-footer-secondary);
   background-position: bottom;
-  box-shadow: 0 50vh 0 50vh #212121;
+  box-shadow: 0 50vh 0 50vh var(--color-footer-secondary);
 }
 /*
 .footer img {
@@ -62,7 +62,7 @@
 
 /* Link to Team Page CSS */
 .teamlink a:hover {
-  color: #ff6060;
+  color: var(--color-link-secondary);
   cursor: pointer;
 }
 .teamlink a{
@@ -76,18 +76,18 @@
   margin-bottom: 10px;
   margin-right: 10px;
   font-size: 30px;
-  color: #fff;
+  color: var(--color-link-primary);
 }
 
 .contact a:hover {
-  color: #ff6060;
+  color: var(--color-link-secondary);
   cursor: pointer;
 }
 
 /* Title styles */
 .title a {
   text-decoration: none;
-  color: #0070f3;
+  color: var(--color-title-a-primary);
 }
 
 .title a:hover,
@@ -102,14 +102,14 @@
   line-height: 1.15;
   font-size: 40px;
   font-weight: 700;
-  color: #1b1b1b;
+  color: var(--color-text-primary);
 }
 
 .title,
 .description {
   margin-bottom: 5%;
   text-align: left;
-  text-shadow: 0px 0px 10px #ffffff, 0px 0px 10px #ffffff, 0px 0px 10px #ffffff, 0px 0px 10px #ffffff;
+  text-shadow: 0px 0px 10px var(--shadow-text-primary), 0px 0px 10px var(--shadow-text-primary), 0px 0px 10px var(--shadow-text-primary), 0px 0px 10px var(--shadow-text-primary);
 }
 
 /* Description Styles */
@@ -117,13 +117,13 @@
   margin-top: 5%;
   margin-bottom: 5%;
   font-size: 1.5rem;
-  color: #1b1b1b;
+  color: var(--color-text-primary);
 }
 
 .code {
   padding: 0.75rem;
   border-radius: 5px;
-  background: #fafafa;
+  background: var(--color-code-primary);
   font-size: 1.1rem;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
@@ -143,10 +143,10 @@
   width: 400px;
   margin: 1rem;
   padding: 14px;
-  border: 3px solid #fff;
+  border: 3px solid var(--color-card-primary);
   border-radius: 100px;
-  background-color: #fff;
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  background-color: var(--color-card-primary);
+  box-shadow: 0px 3px 15px var(--shadow-card-primary);
   text-align: center;
   text-decoration: none;
   transition: all 0.15s ease;
@@ -154,7 +154,7 @@
 .card:hover,
 .card:focus,
 .card:active {
-  box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 25px var(--shadow-card-primary);
   transform: translateY(-3px);
 }
 

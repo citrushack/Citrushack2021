@@ -2,7 +2,7 @@
 .heroimage{
   overflow-x: hidden;
   width: 100vw;
-  background-image: url(../public/backgrounds/cherryblossomwebp.png);
+  background-image: var(--bg-hero);
   background-size: contain;
   background-position: left -200px bottom -50px;
   background-repeat: no-repeat;
@@ -20,12 +20,12 @@
   text-align: right;
 }
 .content h1, .content p {
-  text-shadow: 0px 0px 20px #ffffff, 0px 0px 20px #ffffff, 0px 0px 20px #ffffff;;
+  text-shadow: 0px 0px 20px var(--shadow-text-primary), 0px 0px 20px var(--shadow-text-primary), 0px 0px 20px var(--shadow-text-primary);
 }
 
 .secondary{ 
-  border: 3px solid #a0a0a0; 
-  background-color: #f8f8f8;
+  border: 3px solid var(--button-learnmore-secondary); 
+  background-color: var(--button-learnmore-primary);
 }
 
 .title {
@@ -33,25 +33,25 @@
   text-align: center;
   font-size: 81px;
   font-weight: 900;
-  color: #191b1f;
+  color: var(--color-text-hero);
 }
 
 .caption{
   font-size: 40px;
   font-weight: bold;
-  color: #191b1f;
+  color: var(--color-text-hero);
 }
 
 .action {
-  border: 3px solid #1b1b1b !important;
-  background-color: #ff6060 !important;
-  color: #fff;
+  border: 3px solid var(--button-signup-secondary) !important;
+  background-color: var(--button-signup-primary) !important;
+  color: var(--button-signup-text);
 }
 
 .action:hover,
 .action:focus,
 .action:active {
-  background-color: #f87575 !important;
+  background-color: var(--button-signup-hover) !important;
 }
 .buttonGrid{
   justify-content: flex-end;
