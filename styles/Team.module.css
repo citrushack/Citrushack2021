@@ -52,14 +52,14 @@
 }
 
 .picture > img {
-  border: 3px solid #fff;
+  border: 3px solid var(--border-picture-primary);
   border-radius: 50%;
   transition: all 0.2s ease;
 }
 
 .picture > img:hover {
-  border: 3px solid #ffa500;
-  box-shadow: 0px 3px 20px rgba(0,0,0,0.2);
+  border: 3px solid var(--border-picture-secondary);
+  box-shadow: 0px 3px 20px var(--shadow-picture-primary);
   transform: translateY(-5px);
 }
 

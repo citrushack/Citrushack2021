@@ -57,10 +57,10 @@
   flex: none;
   padding: 10px;
   border-radius: 50%;
-  background-color: #676767;
+  background-color: var(--bg-arrow);
   font-size: 40px;
   font-weight: bold;
-  color: #fff;
+  color: var(--color-text-tracks);
   user-select: none;
   cursor: pointer;
 }
@@ -70,7 +70,7 @@
 
 .overrideColor{
   text-shadow: none;
-  color: white;
+  color: var(--color-text-tracks);
 }
 
 .contain {
@@ -78,8 +78,8 @@
   margin: 0 2rem;
   padding: 0 2rem;
   border-radius: 20px;
-  background-color: #1b1b1b;
-  box-shadow: 0px 0px 20px 1px #e6e5e5;
+  background-color: var(--bg-contain);
+  box-shadow: 0px 0px 20px 1px var(--shadow-contain);
 }
 
 .contain::after{
@@ -90,7 +90,7 @@
   text-align: right;
   font-weight: bold;
   font-family: "Inter", sans-serif;
-  color: white;
+  color: var(--color-text-tracks);
 }
 
 .contain *{
@@ -112,16 +112,16 @@
 
 .prevmobile,
 .nextmobile {
+  z-index: 2;
   display: none;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: var(--bg-arrow);
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--color-text-tracks);
   user-select: none;
   cursor: pointer;
-  font-weight: bold;
-  font-size: 40px;
- padding: 10px;
-  border-radius: 50%;
-  z-index: 2;
-  background-color: #676767;
-  color: #fff;
 }
 
 /* Tablet or Compact Styles */
@@ -178,7 +178,7 @@
   }
   .nextmobile::before{
     content: "HHHHHHHHHHHHHHHHHHHHHHHHH";
-    color: black;
+    color: var(--color-mobile);
   }
   .prevmobile,.nextmobile{
     display: flex;

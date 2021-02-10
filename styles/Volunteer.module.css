@@ -5,12 +5,12 @@
   margin: auto;
 }
 .color1 {
-  border: 3px solid #debd7e;
-  background-color: #ffdd9e;
+  border: 3px solid var(--button-mentors-secondary);
+  background-color: var(--button-mentors-primary);
 }
 .color2 {
-  border: 3px solid #8fbd82;
-  background-color: hsl(108deg 46% 79%);
+  border: 3px solid var(--button-volunteers-secondary);
+  background-color: var(--button-volunteers-primary);
 }
 
 /* Mobile Styles */

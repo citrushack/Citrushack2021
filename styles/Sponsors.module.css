@@ -36,16 +36,16 @@
   line-height: 0.75;
   font-size: 40px;
   font-weight: 700;
-  color: #1b1b1b;
+  color: var(--color-text-primary);
 }
 .description{
   font-size: 1.5rem;
-  color: #1b1b1b;
+  color: var(--color-text-primary);
 }
 .action{
   margin-bottom: -.5rem;
-  border: 3px solid #ffbddc;
-  background-color: #ffd5e5;
+  border: 3px solid var(--button-sponsor-secondary);
+  background-color: var(--button-sponsor-primary);
 }
 /* Tablet or Compact Styles */
 @media (max-width: 1168){
