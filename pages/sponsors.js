@@ -25,17 +25,32 @@ export default function Sponsors() {
           </a>
         </div>
         <div>
-        <motion.a
-
-            href="https://www.losangeles.spaceforce.mil/"
-          >
-            <motion.img             whileHover={{
-              scale: 1.1,
-            }}
-            transition={hoverTrans} src="/sponsors/usaf.png" className={`${ss.usaf}`} alt="usaf logo"></motion.img>
+          <motion.a href="https://www.losangeles.spaceforce.mil/">
+            <motion.img
+              whileHover={{
+                scale: 1.1,
+              }}
+              transition={hoverTrans}
+              src="/sponsors/usaf.png"
+              className={`${ss.usaf}`}
+              alt="usaf logo"
+            ></motion.img>
           </motion.a>
         </div>
         <div className={`${ss.logoflex}`}>
+        <motion.a
+            whileHover={{
+              scale: 1.1,
+            }}
+            transition={hoverTrans}
+            href="https://www.amazon.com/"
+          >
+            <img
+              src="/sponsors/amazon.png"
+              className={`${ss.digitalocean}`}
+              alt="amazon logo"
+            ></img>
+          </motion.a>
           <motion.a
             whileHover={{
               scale: 1.1,
@@ -140,7 +155,7 @@ export default function Sponsors() {
               alt="wolfram logo"
             ></img>
           </motion.a>
-      </div>
+        </div>
       </div>
     </main>
   );
