@@ -38,7 +38,7 @@ export default function Sponsors() {
           </motion.a>
         </div>
         <div className={`${ss.logoflex}`}>
-        <motion.a
+          <motion.a
             whileHover={{
               scale: 1.1,
             }}
