@@ -24,7 +24,7 @@ export default function Sponsors() {
             </h3>
           </a>
         </div>
-        <div>
+        <div className={`${ss.logoflex}`}>
           <motion.a href="https://www.losangeles.spaceforce.mil/">
             <motion.img
               whileHover={{
@@ -36,8 +36,6 @@ export default function Sponsors() {
               alt="usaf logo"
             ></motion.img>
           </motion.a>
-        </div>
-        <div className={`${ss.logoflex}`}>
           <motion.a
             whileHover={{
               scale: 1.1,
@@ -51,6 +49,8 @@ export default function Sponsors() {
               alt="amazon logo"
             ></img>
           </motion.a>
+        </div>
+        <div className={`${ss.logoflex}`}>
           <motion.a
             whileHover={{
               scale: 1.1,
