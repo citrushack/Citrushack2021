@@ -82,6 +82,32 @@ export default function Sponsors() {
               scale: 1.1,
             }}
             transition={hoverTrans}
+            href="http://twillio.com/"
+          >
+            <img
+              src="/sponsors/twillio.png"
+              className={`${ss.twillio}`}
+              alt="twillio logo"
+            ></img>
+          </motion.a>
+          <motion.a
+            whileHover={{
+              scale: 1.1,
+            }}
+            transition={hoverTrans}
+            href="https://1517fund.com/"
+          >
+            <img
+              src="/sponsors/1517.png"
+              className={`${ss.fifteenseventeen}`}
+              alt="1517 logo"
+            ></img>
+          </motion.a>   
+          <motion.a
+            whileHover={{
+              scale: 1.1,
+            }}
+            transition={hoverTrans}
             href="https://techpartnerships.ucr.edu/launchpad-ucr"
           >
             <img

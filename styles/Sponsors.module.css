@@ -19,7 +19,7 @@
   margin: auto;
 }
 
-.acm, .linode, .xyz, .wolfram, .ieee, .echoAR, .digitalocean, .launchpad  {
+.acm, .linode, .xyz, .wolfram, .ieee, .echoAR, .digitalocean, .launchpad, .twillio, .fifteenseventeen  {
   width: min(400px, 80vw);
   height: auto;
 }
