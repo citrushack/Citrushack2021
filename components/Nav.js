@@ -107,9 +107,9 @@ export default function Nav() {
               <NavigationLinks title="Sponsors" href="Sponsors" />
             )}
 
-            <nextLink href="/live">
+            {/* <nextLink href="/live">
               <a>Live</a>
-            </nextLink>
+            </nextLink> */}
 
             {/* Only reason why this isn't part of a class is of the CSS classes being different. DO NOT CHANGE */}
             {!isAuthenticated() && (
