@@ -1,11 +1,13 @@
 import Navstyles from "../styles/Nav.module.css";
 import { Link, animateScroll as scroll } from "react-scroll";
+import { Link as nextLink } from "next/link";
 import styled from "@emotion/styled";
 import { useIsAuthenticated, useSignIn } from "react-auth-kit";
 import logo from "../public/logoRevised.png";
 import { useRouter } from "next/router";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import {useState,useEffect} from 'react';
+import { useState, useEffect } from "react";
+import next from "next";
 
 const StickyNav = styled.nav(
   (props) => `
@@ -49,13 +51,13 @@ export default function Nav() {
   const isMobile = useMediaQuery("(max-width:768px)");
   const [isHome, setIsHome] = useState(0);
 
-  useEffect(()=>{
-    setIsHome(router.pathname=='/');
-  },[router.pathname])
+  useEffect(() => {
+    setIsHome(router.pathname == "/");
+  }, [router.pathname]);
 
   return (
     <>
-    {/* Uncomment when approved for MLH */}
+      {/* Uncomment when approved for MLH */}
       {/* {isHome && (
         <a
           id="mlh-trust-badge"
@@ -81,13 +83,34 @@ export default function Nav() {
             </Link>
           </div>
           <div className={Navstyles.links}>
-            {!isMobile && isHome && <NavigationLinks title="Home" href="Home" />}
-            {!isMobile && !isHome && <a className="link" href="/">Home</a>}
-            {!isMobile && isHome && <NavigationLinks title="About" href="About" />}
-            {!isMobile && isHome && <NavigationLinks title="Tracks" href="Tracks" />}
-            {!isMobile && isHome && <NavigationLinks title="FAQ" href="Questions" />}
-            {!isMobile && isHome && <NavigationLinks title="Help" href="Help" />}
-            {!isMobile && isHome && <NavigationLinks title="Sponsors" href="Sponsors" />}
+            {!isMobile && isHome && (
+              <NavigationLinks title="Home" href="Home" />
+            )}
+            {!isMobile && !isHome && (
+              <a className="link" href="/">
+                Home
+              </a>
+            )}
+            {!isMobile && isHome && (
+              <NavigationLinks title="About" href="About" />
+            )}
+            {!isMobile && isHome && (
+              <NavigationLinks title="Tracks" href="Tracks" />
+            )}
+            {!isMobile && isHome && (
+              <NavigationLinks title="FAQ" href="Questions" />
+            )}
+            {!isMobile && isHome && (
+              <NavigationLinks title="Help" href="Help" />
+            )}
+            {!isMobile && isHome && (
+              <NavigationLinks title="Sponsors" href="Sponsors" />
+            )}
+
+            <nextLink href="/live">
+              <a>Live</a>
+            </nextLink>
+
             {/* Only reason why this isn't part of a class is of the CSS classes being different. DO NOT CHANGE */}
             {!isAuthenticated() && (
               <div className={Navstyles.navlistlink}>
@@ -106,11 +129,11 @@ export default function Nav() {
                   onClick={(e) => {
                     e.preventDefault;
                     signIn({
-                      token: '',
+                      token: "",
                       expiresIn: 0,
-                      tokenType: '',
-                      authState: '',
-                    })
+                      tokenType: "",
+                      authState: "",
+                    });
                   }}
                   className="signup"
                 >
