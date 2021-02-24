@@ -51,12 +51,12 @@ export default function Container({ children, main }) {
         <meta property="og:url" content="https://citrushack.com/"/>
         <meta property="og:title" content="Citrus Hack"/>
         <meta property="og:description" content="Citrus Hack is where hundreds of students from all over the world come together and form teams, aiming to build a project from scratch in just 36 hours."/>
-        <meta property="og:image" content=""/>
+        <meta property="og:image" content="/thumb.png"/>
         <meta property="twitter:card" content="summary_large_image"/>
         <meta property="twitter:url" content="https://citrushack.com/"/>
         <meta property="twitter:title" content="Citrus Hack"/>
         <meta property="twitter:description" content="Citrus Hack is where hundreds of students from all over the world come together and form teams, aiming to build a project from scratch in just 36 hours."/>
-        <meta property="twitter:image" content=""/>
+        <meta property="twitter:image" content="/thumb.png"/>
       </Head>
       <Nav />
       {children}
