@@ -571,7 +571,7 @@ export default function Apply() {
                 </Grid>
 
                 <Grid item xs={9}>
-                  <Typography>I authorize you to share my application/registration information with Major League Hocking for event administration, ranking, and MLH administration in-line with the MLH Privacy Policy. I further agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy.</Typography>
+                  <Typography>I authorize you to share my application/registration information with Major League Hocking for event administration, ranking, and MLH administration in-line with the <Link href="https://mlh.io/privacy" onClick={(e) => {e.preventDefault()}}>MLH Privacy Policy</Link>. I further agree to the terms of both the <Link href="https://raw.githubusercontent.com/MLH/mlh-policies/master/prize-terms-and-conditions/contest-terms.md" onClick={(e) => {e.preventDefault()}}>MLH Contest Terms and Conditions</Link> and the <Link href="https://mlh.io/privacy" onClick={(e) => {e.preventDefault()}}>MLH Privacy Policy</Link>.</Typography>
                 </Grid>
                 <Grid item xs={3}>
                   <Select name="pooop" required={true} label="Click to agree">
