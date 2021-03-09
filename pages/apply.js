@@ -558,6 +558,34 @@ export default function Apply() {
                     {item.field}
                   </Grid>
                 ))}
+                <Grid item xs={9}>
+                  <Typography>I have read and agree to the <Link href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" onClick={(e) => {e.preventDefault()}}>MLH Code of Conduct</Link>.  </Typography>
+                </Grid>
+                <Grid item xs={3}>
+                  <Select name="poop" required={true} label="Click to agree">
+                    <MenuItem value={true}>Yes</MenuItem>
+                  </Select>
+                </Grid>
+
+                <Grid item xs={9}>
+                  <Typography>I authorize you to share my application/registration information with Major League Hocking for event administration, ranking, and MLH administration in-line with the MLH Privacy Policy. I further agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy.</Typography>
+                </Grid>
+                <Grid item xs={3}>
+                  <Select name="pooop" required={true} label="Click to agree">
+                    <MenuItem value={true}>Yes</MenuItem>
+                  </Select>
+                </Grid>
+
+                <Grid item xs={9}>
+                  <Typography>I authorize MLH to send me pre-and post-event informational emails, which contain free credit and opportunities from their partners</Typography>
+                </Grid>
+                <Grid item xs={3}>
+                <Select name="pop" required={true} label="Choose one">
+                    <MenuItem value={true}>Yes</MenuItem>
+                    <MenuItem value={false}>No</MenuItem>
+                  </Select>
+                </Grid>
+
                 <Grid
                   container
                   direction="row"
@@ -577,12 +605,6 @@ export default function Apply() {
                       </Alert>
                     )}
 
-                    <Typography>
-                      By clicking submit, you certify that you have read and agree to the <Link href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" onClick={(e) => {e.preventDefault()}}>
-                      MLH Code of Conduct</Link>. 
-                      <br/>
-                      You also authorize us to share your application/registration information for event administration, ranking, MLH administration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the MLH Privacy Policy. You further agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy.
-                    </Typography>
                     <Button
                       variant="contained"
                       color="primary"
