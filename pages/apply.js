@@ -388,6 +388,9 @@ const validate = (values) => {
   if (!values.phone) errors.phone = "Required";
   if (!values.tshirt) errors.tshirt = "Required";
   if (!values.major) errors.major = "Required";
+  if (!values.pop) errors.pop = "Required";
+  if (!values.poop) errors.poop = "Required";
+  if (!values.pooop) errors.pooop = "Required";
   if (!values.gender) errors.gender = "Required";
   return errors;
 };
