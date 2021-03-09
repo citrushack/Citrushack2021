@@ -562,7 +562,7 @@ export default function Apply() {
                   </Grid>
                 ))}
                 <Grid item xs={9}>
-                  <Typography>I have read and agree to the <Link href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" onClick={(e) => {e.preventDefault()}}>MLH Code of Conduct</Link>.  </Typography>
+                  <Typography>I have read and agree to the <Link href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct</Link>.  </Typography>
                 </Grid>
                 <Grid item xs={3}>
                   <Select name="poop" required={true} label="Click to agree">
@@ -571,7 +571,7 @@ export default function Apply() {
                 </Grid>
 
                 <Grid item xs={9}>
-                  <Typography>I authorize you to share my application/registration information with Major League Hocking for event administration, ranking, and MLH administration in-line with the <Link href="https://mlh.io/privacy" onClick={(e) => {e.preventDefault()}}>MLH Privacy Policy</Link>. I further agree to the terms of both the <Link href="https://raw.githubusercontent.com/MLH/mlh-policies/master/prize-terms-and-conditions/contest-terms.md" onClick={(e) => {e.preventDefault()}}>MLH Contest Terms and Conditions</Link> and the <Link href="https://mlh.io/privacy" onClick={(e) => {e.preventDefault()}}>MLH Privacy Policy</Link>.</Typography>
+                  <Typography>I authorize you to share my application/registration information with Major League Hocking for event administration, ranking, and MLH administration in-line with the <Link href="https://mlh.io/privacy">MLH Privacy Policy</Link>. I further agree to the terms of both the <Link href="https://raw.githubusercontent.com/MLH/mlh-policies/master/prize-terms-and-conditions/contest-terms.md" >MLH Contest Terms and Conditions</Link> and the <Link href="https://mlh.io/privacy">MLH Privacy Policy</Link>.</Typography>
                 </Grid>
                 <Grid item xs={3}>
                   <Select name="pooop" required={true} label="Click to agree">
