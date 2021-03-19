@@ -31,7 +31,7 @@ export default function Sponsors() {
                 scale: 1.1,
               }}
               transition={hoverTrans}
-              src="/sponsors/usaf.png"
+              src="/sponsors/usaf.webp"
               className={`${ss.usaf}`}
               alt="usaf logo"
             ></motion.img>
@@ -41,10 +41,23 @@ export default function Sponsors() {
               scale: 1.1,
             }}
             transition={hoverTrans}
+              href="https://www.gcapucr.com/"
+          >
+            <img
+              src="/sponsors/gcap.webp"
+              className={`${ss.digitalocean}`}
+              alt="gcap logo"
+            ></img>
+          </motion.a>
+          <motion.a
+            whileHover={{
+              scale: 1.1,
+            }}
+            transition={hoverTrans}
             href="https://www.amazon.com/"
           >
             <img
-              src="/sponsors/amazon.png"
+              src="/sponsors/amazon.webp"
               className={`${ss.digitalocean}`}
               alt="amazon logo"
             ></img>
@@ -59,7 +72,7 @@ export default function Sponsors() {
             href="https://www.digitalocean.com/"
           >
             <img
-              src="/sponsors/digitalocean.png"
+              src="/sponsors/digitalocean.webp"
               className={`${ss.digitalocean}`}
               alt="digitalocean logo"
             ></img>
@@ -72,7 +85,7 @@ export default function Sponsors() {
             href="https://balsamiq.com/"
           >
             <img
-              src="/sponsors/balsamiq.png"
+              src="/sponsors/balsamiq.webp"
               className={`${ss.balsamiq}`}
               alt="balsamiq logo"
             ></img>
@@ -85,7 +98,7 @@ export default function Sponsors() {
             href="http://twillio.com/"
           >
             <img
-              src="/sponsors/twillio.png"
+              src="/sponsors/twillio.webp"
               className={`${ss.twillio}`}
               alt="twillio logo"
             ></img>
@@ -98,11 +111,11 @@ export default function Sponsors() {
             href="https://1517fund.com/"
           >
             <img
-              src="/sponsors/1517.png"
+              src="/sponsors/1517.webp"
               className={`${ss.fifteenseventeen}`}
               alt="1517 logo"
             ></img>
-          </motion.a>   
+          </motion.a>
           <motion.a
             whileHover={{
               scale: 1.1,
@@ -111,7 +124,7 @@ export default function Sponsors() {
             href="https://techpartnerships.ucr.edu/launchpad-ucr"
           >
             <img
-              src="/sponsors/launchpad.png"
+              src="/sponsors/launchpad.webp"
               className={`${ss.launchpad}`}
               alt="launchpad logo"
             ></img>
@@ -124,7 +137,7 @@ export default function Sponsors() {
             href="https://acmucr.org/"
           >
             <img
-              src="/sponsors/acm_ucr.png"
+              src="/sponsors/acm_ucr.webp"
               className={`${ss.acm}`}
               alt="acm logo"
             ></img>
@@ -137,7 +150,7 @@ export default function Sponsors() {
             href="https://linode.com/"
           >
             <img
-              src="/sponsors/linode.png"
+              src="/sponsors/linode.webp"
               className={`${ss.linode}`}
               alt="linode logo"
             ></img>
@@ -150,7 +163,7 @@ export default function Sponsors() {
             href="https://ieee.ee.ucr.edu/"
           >
             <img
-              src="/sponsors/IEEE.png"
+              src="/sponsors/IEEE.webp"
               className={`${ss.ieee}`}
               alt="ieee logo"
             ></img>
@@ -164,7 +177,7 @@ export default function Sponsors() {
           >
             <img
               className={`${ss.sketch}`}
-              src="/sponsors/sketch.png"
+              src="/sponsors/sketch.webp"
               alt="sketch logo"
             ></img>
           </motion.a>
@@ -176,7 +189,7 @@ export default function Sponsors() {
             href="https://www.wolfram.com/"
           >
             <img
-              src="/sponsors/wolfram.png"
+              src="/sponsors/wolfram.webp"
               className={`${ss.wolfram}`}
               alt="wolfram logo"
             ></img>
