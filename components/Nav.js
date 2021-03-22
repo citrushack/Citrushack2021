@@ -1,6 +1,6 @@
 import Navstyles from "../styles/Nav.module.css";
-import { Link, animateScroll as scroll } from "react-scroll";
-import { Link as nextLink } from "next/link";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import Link from "next/link";
 import styled from "@emotion/styled";
 import { useIsAuthenticated, useSignIn } from "react-auth-kit";
 import logo from "../public/logoRevised.png";
@@ -30,7 +30,7 @@ const StickyNav = styled.nav(
 const NavigationLinks = ({ title, href }) => (
   <>
     <div className={Navstyles.navlistlink}>
-      <Link
+      <ScrollLink
         to={href}
         spy={true}
         smooth={true}
@@ -39,7 +39,7 @@ const NavigationLinks = ({ title, href }) => (
         className="link"
       >
         {title}
-      </Link>
+      </ScrollLink>
     </div>
   </>
 );
@@ -73,13 +73,13 @@ export default function Nav() {
       <StickyNav isMobile isHome={isHome}>
         <div className={Navstyles.navlistcontainer}>
           <div>
-            <Link to="/">
+            <ScrollLink to="/">
               <img
                 className={Navstyles.logos}
                 src={logo}
                 alt="Citrushack 2021 Logo"
               />
-            </Link>
+            </ScrollLink>
           </div>
           <div className={Navstyles.links}>
             {!isMobile && isHome && (
@@ -106,9 +106,10 @@ export default function Nav() {
               <NavigationLinks title="Sponsors" href="Sponsors" />
             )}
 
-            {/* <nextLink href="/live">
-              <a>Live</a>
-            </nextLink> */}
+            {/* Comment out for now. Uncomment on D-Day */}
+            {!isMobile && isHome && (
+              <Link href="/live"><a>Live</a></Link>
+            )}
 
             {/* Only reason why this isn't part of a class is of the CSS classes being different. DO NOT CHANGE */}
             {!isAuthenticated() && (
