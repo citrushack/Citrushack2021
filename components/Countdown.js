@@ -1,7 +1,24 @@
-import React, { useState, useEffect } from "react";
-export default function Countdown(){
-    
-return (
-    <h2>00:00</h2>
-)
+import React from "react";
+import Countdown from "react-countdown";
+
+// Random component
+const Completionist = () => <h2>Hacking has ended!</h2>;
+
+// Renderer callback with condition
+const renderer = ({ days, hours, minutes, seconds, completed }) => {
+  if (completed) {
+    // Render a completed state
+    return <Completionist />;
+  } else {
+    // Render a countdown
+    return (
+      <h1>
+        {days}d : {hours}hr : {minutes}min : {seconds}s left!
+      </h1>
+    );
+  }
+};
+
+export default function CountdownTimer() {
+  return <Countdown date={"2021-04-11T24:00:00"} renderer={renderer} />;
 }
