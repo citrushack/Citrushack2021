@@ -1,103 +1,104 @@
-.main{
-    margin: 6rem auto;
-    max-width: 96rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* CSS for Team */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 96rem;
+  margin: 6rem auto;
 }
-.grid{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 2rem 0 6rem;
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem 0 6rem;
 }
-.title{
-    font-size: 60px;
-    text-align: center;
+.title {
+  text-align: center;
+  font-size: 60px;
 }
-.teams{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.profile{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1rem;
+.teams {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.picture{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s ease;
-}
-.picture h3{
-    line-height: 1.2;
-    margin: 1rem 0;
-    transition: all 0.2s ease;
-    padding: 0.5rem 0.7rem;
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
 }
 
-.picture p{
-    line-height: 1;
-    margin: 0;
-    padding: 0;
+.picture {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+.picture h3 {
+  margin: 1rem 0;
+  padding: 0.5rem 0.7rem;
+  line-height: 1.2;
+  transition: all 0.2s ease;
 }
 
-.picture > img{
-    border-radius: 50%;
-    border: 3px solid #fff;
-    transition: all 0.2s ease;
+.picture p {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
 }
 
-.picture > img:hover{
-    border: 3px solid #ffa500;
-    box-shadow: 0px 3px 20px rgba(0,0,0,0.2);
-    transform: translateY(-5px);
+.picture > img {
+  border: 3px solid var(--border-picture-primary);
+  border-radius: 50%;
+  transition: all 0.2s ease;
 }
 
-.credits{
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 4em;
-    justify-content: center;
+.picture > img:hover {
+  border: 3px solid var(--border-picture-secondary);
+  box-shadow: 0px 3px 20px var(--shadow-picture-primary);
+  transform: translateY(-5px);
 }
-.col{
-    display: flex;
-    flex-direction: column;
-    margin:0 20px;
+
+.credits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 4em;
 }
-.credits ul, .credits ul li{
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.col {
+  display: flex;
+  flex-direction: column;
+  margin:0 20px;
+}
+.credits ul, .credits ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 /* Mobile styles */
 @media (max-width: 768px) {
-    .main{
-        max-width: 100%;
-        padding: 0 10px;
-        margin: 2rem 0;
-    }
-    .title{
-        font-size: 40px;
-    }
-    .picture h3{
-        line-height: 0.75;
-        margin: 0.5rem 0;
-        font-size: 16px;
-    }
-    .picture > img {
-        height: 100px;
-        width: 100px;
-    }
-    .col{
-        margin: 0;
-    }
+  .main{
+    max-width: 100%;
+    margin: 2rem 0;
+    padding: 0 10px;
+  }
+  .title{
+    font-size: 40px;
+  }
+  .picture h3{
+    margin: 0.5rem 0;
+    line-height: 0.75;
+    font-size: 16px;
+  }
+  .picture > img {
+    width: 100px;
+    height: 100px;
+  }
+  .col{
+    margin: 0;
+  }
 }

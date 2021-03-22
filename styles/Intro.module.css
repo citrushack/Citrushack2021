@@ -1,12 +1,12 @@
 /* Introduction CSS */
 .introduction {
+  overflow-x: hidden;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-around;
+  align-items: center;
   width: var(--contentWidth);
   margin: 10rem auto;
-  overflow-x: hidden;
 }
 /* Intro Content Column */
 .text {
@@ -21,23 +21,25 @@
   margin-left: 2rem;
 }
 .background{
-  background-image: url("../public/backgrounds/gravel_crop.png");
+  background-image: var(--bg-intro);
   background-size: contain;
-  background-repeat: no-repeat;
   background-position: right center;
+  background-repeat: no-repeat;
 }
 .infocard {
-  padding: 1rem 5rem;
-  font-size: 30px;
-  text-align: center;
-  color: #fff;
   margin-bottom: 1rem;
-  background-image: url("../public/backgrounds/brushstroke.png");
-  background-repeat: no-repeat;
+  padding: 1rem 5rem;
+  background-image: var(--bg-infocard);
   background-size: 100% 100%;
   background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  font-size: 30px;
+  color: var(--color-text-infocard);
   transition: all 0.2s ease;
 }
+
+/* Mobile Styles */
 @media (max-width: 768px) {
   .background{
     background-image: none;
@@ -48,8 +50,8 @@
   .introduction {
     flex-direction: column;
     width: 100%;
-    padding: 0;
     margin: 0;
+    padding: 0;
   }
   .stats {
     margin: 25px 0;

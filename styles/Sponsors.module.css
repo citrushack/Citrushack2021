@@ -1,4 +1,4 @@
-/*CSS for Sponsors*/
+/* CSS for Sponsors */
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -9,17 +9,17 @@
   text-align: center;
 }
 .logoflex{
-  flex: none;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  flex: none;
   flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
   align-content: space-around;
   max-width: 1200px;
   margin: auto;
 }
 
-.acm, .linode, .xyz, .wolfram, .ieee, .echoAR, .digitalocean, .launchpad  {
+.acm, .linode, .xyz, .wolfram, .ieee, .echoAR, .digitalocean, .launchpad, .twillio, .fifteenseventeen  {
   width: min(400px, 80vw);
   height: auto;
 }
@@ -32,20 +32,20 @@
 
 .title{
   margin: 0;
-  line-height: 0.75;
   margin-bottom: 16px;
-  font-weight: 700;
+  line-height: 0.75;
   font-size: 40px;
-  color: #1b1b1b;
+  font-weight: 700;
+  color: var(--color-text-primary);
 }
 .description{
   font-size: 1.5rem;
-  color: #1b1b1b;
+  color: var(--color-text-primary);
 }
 .action{
-  background-color: #ffd5e5;
-  border: 3px solid #ffbddc;
   margin-bottom: -.5rem;
+  border: 3px solid var(--button-sponsor-secondary);
+  background-color: var(--button-sponsor-primary);
 }
 /* Tablet or Compact Styles */
 @media (max-width: 1168){

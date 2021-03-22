@@ -1,0 +1,64 @@
+:root {
+  /* === General theme colors ===*/
+  --color-text-primary: #1b1b1b;
+  --shadow-text-primary: #ffffff;
+  --color-code-primary: #fafafa;
+  --color-title-a-primary: #0070f3;
+  --bg-primary: #fbfbfb;
+
+  /* === Card theme colors ===*/
+  --color-card-primary: #ffffff;
+  --shadow-card-primary: rgba(0, 0, 0, 0.2);
+
+  /* === Accordion theme colors + background === */
+  --color-accordion-panel: rgba(255, 255, 255, 0.8);
+  --color-accordion-button: rgba(251, 251, 251, 0.882);
+  --border-accordion-button: lightgray;
+
+  /* === Button theme colors === */
+  /* general + hero section */
+  --button-signup-primary: #ff6060;
+  --button-signup-secondary: #1b1b1b;
+  --button-signup-hover: #f87575;
+  --button-signup-text: #ffffff;
+  --button-learnmore-primary: #f8f8f8;
+  --button-learnmore-secondary: #a0a0a0;
+  /* volunteers section */
+  --button-mentors-primary: #ffdd9e;
+  --button-mentors-secondary: #debd7e;
+  --button-volunteers-primary: hsl(108deg 46% 79%);
+  --button-volunteers-secondary: #8fbd82;
+  /* sponsors section */
+  --button-sponsor-primary: #ffd5e5;
+  --button-sponsor-secondary: #ffbddc;
+
+  /* === Hero page theme colors === */
+  --color-text-hero: #191b1f;
+
+  /* === Team page theme colors === */
+  --border-picture-primary: #ffffff;
+  --border-picture-secondary: #ffa500;
+  --shadow-picture-primary: rgba(0, 0, 0, 0.2);
+
+  /* === Intro page theme colors === */
+  --color-text-infocard: #ffffff;
+
+  /* === Tracks theme colors === */
+  --color-text-tracks: #ffffff;
+  --bg-arrow: #676767;
+  --bg-contain: #1b1b1b;
+  --shadow-contain: #e6e5e5;
+  --color-mobile: black;
+
+  /* === Footer theme colors === */
+  --color-footer-primary: #00000081;
+  --color-footer-secondary: #212121;
+  --color-link-primary: #ffffff;
+  --color-link-secondary: #ff6060;
+
+  /* === Background images === */
+  --bg-accordion-panel: url("../public/backgrounds/arches.png");
+  --bg-hero: url(../public/backgrounds/cherryblossomwebp.png);
+  --bg-intro: url("../public/backgrounds/gravel_crop.png");
+  --bg-infocard: url("../public/backgrounds/brushstroke.png");
+}

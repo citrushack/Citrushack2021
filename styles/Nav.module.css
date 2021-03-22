@@ -1,15 +1,16 @@
+/* CSS for Navbar */
 .navlistcontainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: auto;
   width: var(--contentWidth);
+  margin: auto;
 }
 .navlistlink {
   list-style: none;
-  cursor: pointer;
   font-weight: 750;
+  cursor: pointer;
 }
 .links {
   display: flex;
