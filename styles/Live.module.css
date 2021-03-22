@@ -1,1 +1,10 @@
-
+.judgeWrapper{
+    display: flex;
+}
+.judge{
+    display:flex;
+    margin: 0 10px;
+}
+.judge caption{
+    margin-left: 10px;
+}

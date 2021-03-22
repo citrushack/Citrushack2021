@@ -8,10 +8,17 @@ import styles from "../styles/Common.module.css";
 
 const Judge = ({ picture, username, title }) => {
   return (
-    <div className="Livestyles.judge">
-      <Image src={picture} alt="Judge profile picture" width={100} height={100}/>
-      <h3>{username}</h3>
-      <p>{title}</p>
+    <div className={Livestyles.judge}>
+      <Image
+        src={picture}
+        alt="Judge profile picture"
+        width={100}
+        height={100}
+      />
+      <caption>
+        <h3>{username}</h3>
+        <p>{title}</p>
+      </caption>
     </div>
   );
 };
@@ -22,7 +29,59 @@ export default function Live() {
       <div className={styles.container}>
         <CountdownTimer />
         <h2>Judges</h2>
-        <Judge picture="/logoRevised.png" username="Scotty" title="Mascot" />
+        <div className={Livestyles.judgeWrapper}>
+          <div>
+            <Judge
+              picture="/logoRevised.png"
+              username="Scotty"
+              title="Mascot"
+            />
+            <Judge
+              picture="/logoRevised.png"
+              username="Scotty"
+              title="Mascot"
+            />
+            <Judge
+              picture="/logoRevised.png"
+              username="Scotty"
+              title="Mascot"
+            />
+          </div>
+          <div>
+            <Judge
+              picture="/logoRevised.png"
+              username="Scotty"
+              title="Mascot"
+            />
+            <Judge
+              picture="/logoRevised.png"
+              username="Scotty"
+              title="Mascot"
+            />
+            <Judge
+              picture="/logoRevised.png"
+              username="Scotty"
+              title="Mascot"
+            />
+          </div>
+          <div>
+            <Judge
+              picture="/logoRevised.png"
+              username="Scotty"
+              title="Mascot"
+            />
+            <Judge
+              picture="/logoRevised.png"
+              username="Scotty"
+              title="Mascot"
+            />
+            <Judge
+              picture="/logoRevised.png"
+              username="Scotty"
+              title="Mascot"
+            />
+          </div>
+        </div>
         <h2>Schedule</h2>
         <h2>Resources</h2>
         <h2>Sponsors</h2>
