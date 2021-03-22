@@ -108,7 +108,11 @@ export default function Nav() {
 
             {/* Comment out for now. Uncomment on D-Day */}
             {!isMobile && isHome && (
-              <Link href="/live"><a>Live</a></Link>
+              <div className={Navstyles.navlistlink}>
+                <Link href="/live">
+                  <a>Live</a>
+                </Link>
+              </div>
             )}
 
             {/* Only reason why this isn't part of a class is of the CSS classes being different. DO NOT CHANGE */}
