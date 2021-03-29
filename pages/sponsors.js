@@ -108,7 +108,7 @@ export default function Sponsors() {
               scale: 1.1,
             }}
             transition={hoverTrans}
-            href="https://cloud.google.com/?utm_source=google&utm_medium=cpc&utm_campaign=na-US-all-en-dr-bkws-all-all-trial-e-dr-1009892&utm_content=text-ad-none-any-DEV_c-CRE_491349594127-ADGP_Desk%20%7C%20BKWS%20-%20EXA%20%7C%20Txt%20~%20Storage%20~%20Cloud%20Storage_Cloud-KWID_43700060017921803-kwd-6458750523&utm_term=KW_google%20cloud-ST_google%20cloud&gclid=Cj0KCQjw9YWDBhDyARIsADt6sGbILFqTPGTdwA4SZUxtnYAwkXmJIKxvIQqsucp2S2Kwa13Hd8PBtbEaAsbXEALw_wcB&gclsrc=aw.ds"
+            href="https://edu.google.com/programs/students/training-benefits/?modal_active=none"
           >
             <img
               src="/sponsors/GOOGLE_3.png"
