@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Container from "../components/Container";
 import CountdownTimer from "../components/Countdown";
+import Sponsors from "./sponsors";
 
 import Livestyles from "../styles/Live.module.css";
 import styles from "../styles/Common.module.css";
@@ -28,7 +29,7 @@ export default function Live() {
     <Container main>
       <div className={styles.container}>
         <CountdownTimer />
-        <h2>Judges</h2>
+        <h2 className={styles.title}>Judges</h2>
         <div className={Livestyles.judgeWrapper}>
           <div>
             <Judge
@@ -82,9 +83,9 @@ export default function Live() {
             />
           </div>
         </div>
-        <h2>Schedule</h2>
-        <h2>Resources</h2>
-        <h2>Sponsors</h2>
+        <h2 className={styles.title}>Schedule</h2>
+        <h2 className={styles.title}>Resources</h2>
+        <Sponsors />
       </div>
     </Container>
   );

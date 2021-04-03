@@ -1,3 +1,7 @@
+.timer{
+    font-size: 63px;
+}
+
 .judgeWrapper{
     display: flex;
 }
@@ -7,4 +11,10 @@
 }
 .judge caption{
     margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .timer{
+        font-size: 32px;
+    }
 }
