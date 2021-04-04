@@ -96,28 +96,28 @@ export default function Account() {
     dispatch(refreshStatus());
   }, []);
 
-  // useEffect(() => {
-  //   if (user) {
-  //     if (!user.appComplete) {
-  //       router.push("/apply");
-  //     }
-  //   } else {
-  //     router.push("/");
-  //   }
-  // }, [user]);
+  useEffect(() => {
+    if (user) {
+      if (!user.appComplete) {
+        router.push("/apply");
+      }
+    } else {
+      router.push("/");
+    }
+  }, [user]);
 
-  // if (!user) {
-  //   return (
-  //     <Container main>
-  //       <main
-  //       className={`${styles.main} ${accountStyles.container}`}
-  //       id="accountContainer"
-  //       >
-  //        <h1>Loading...</h1>
-  //       </main>
-  //     </Container>
-  //   );
-  // }
+  if (!user) {
+    return (
+      <Container main>
+        <main
+        className={`${styles.main} ${accountStyles.container}`}
+        id="accountContainer"
+        >
+         <h1>Loading...</h1>
+        </main>
+      </Container>
+    );
+  }
 
   const onSubmit = (values) => {
     dispatch(joinGroup(values));
