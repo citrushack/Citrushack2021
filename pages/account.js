@@ -40,16 +40,24 @@ function getStatus(appstatus) {
   if (appstatus === false)
     return <span style={{ color: "rgb(255, 143, 143)" }}>Denied </span>;
   if (appstatus === true)
-    return (
+    return (<>
       <span
         style={{
-          color: "rgb(150 , 255, 150)",
-          textShadow:
-            "-1px -1px 0 #000, 1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000",
+          textDecoration: 'underline rgb(150 , 255, 150)',
+          'text-decoration-thickness': '2.5px',
+          letterSpacing: '.2px',
         }}
       >
-        Accepted{" "}
+        Accepted!{" "}<br></br>
       </span>
+            <div>
+            Make sure to RSVP <a         style={{
+          textDecoration: 'underline rgb(150 , 255, 150)',
+          'text-decoration-thickness': '2.5px',
+          letterSpacing: '.2px',
+        }} href="https://docs.google.com/forms/d/e/1FAIpQLSd1_cvby66HsC_czULzuw-TawrbGPsrBFqQChKBG4hsAf5vog/viewform">
+                    here!
+                  </a></div></>
     );
 }
 const validate = (values) => {
@@ -68,7 +76,7 @@ export default function Account() {
 
   const groupInfo = useSelector(selectGroup);
   // const groupInfo = {
-  //   payload: null
+    // payload: null
   // };
 
 
@@ -77,7 +85,7 @@ export default function Account() {
 
   const statusPayload = useSelector(selectStatusInfo);
   // const statusPayload = {
-  //   payload: {status:false}};
+  // payload: {status:true}};
 
   const groupExists = !!groupInfo.payload;
   const router = useRouter();
@@ -88,28 +96,28 @@ export default function Account() {
     dispatch(refreshStatus());
   }, []);
 
-  useEffect(() => {
-    if (user) {
-      if (!user.appComplete) {
-        router.push("/apply");
-      }
-    } else {
-      router.push("/");
-    }
-  }, [user]);
+  // useEffect(() => {
+  //   if (user) {
+  //     if (!user.appComplete) {
+  //       router.push("/apply");
+  //     }
+  //   } else {
+  //     router.push("/");
+  //   }
+  // }, [user]);
 
-  if (!user) {
-    return (
-      <Container main>
-        <main
-        className={`${styles.main} ${accountStyles.container}`}
-        id="accountContainer"
-        >
-         <h1>Loading...</h1>
-        </main>
-      </Container>
-    );
-  }
+  // if (!user) {
+  //   return (
+  //     <Container main>
+  //       <main
+  //       className={`${styles.main} ${accountStyles.container}`}
+  //       id="accountContainer"
+  //       >
+  //        <h1>Loading...</h1>
+  //       </main>
+  //     </Container>
+  //   );
+  // }
 
   const onSubmit = (values) => {
     dispatch(joinGroup(values));
