@@ -1,20 +1,35 @@
-.timer{
-    font-size: 63px;
+.timer {
+  font-size: 63px;
+}
+.title {
+  font-size: 40px;
+  font-weight: 700;
+}
+.judgeWrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 0;
 }
 
-.judgeWrapper{
-    display: flex;
+.judge {
+  display: flex;
+  margin: 0 10px;
+  align-items: center;
 }
-.judge{
-    display:flex;
-    margin: 0 10px;
+.judgePicture img {
+  border-radius: 50%;
+  width: 75px;
+  height: auto;
 }
-.judge caption{
-    margin-left: 10px;
+
+.judge caption {
+  margin-left: 10px;
+  text-align: left;
 }
 
 @media (max-width: 768px) {
-    .timer{
-        font-size: 32px;
-    }
+  .timer {
+    font-size: 32px;
+  }
 }
