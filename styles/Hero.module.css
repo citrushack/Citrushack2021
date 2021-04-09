@@ -43,8 +43,8 @@
 }
 
 .action {
-  border: 3px solid var(--button-signup-secondary) !important;
-  background-color: var(--button-signup-primary) !important;
+  border: 3px solid var(--button-signup-primary) !important;
+  background-color: var(--button-signup-secondary) !important;
   color: var(--button-signup-text);
 }
 

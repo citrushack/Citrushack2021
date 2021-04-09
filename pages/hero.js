@@ -1,10 +1,12 @@
 import styles from "../styles/Common.module.css";
 import Herostyles from "../styles/Hero.module.css";
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
+import Link from "next/link"
 import Particles from "react-tsparticles";
 import dynamic from "next/dynamic";
 import React, { useState, useEffect } from "react";
 import { FaChevronDown } from "react-icons/fa";
+import { FaChevronRight } from "react-icons/fa";
 
 const SignUpButton = dynamic(
   () =>
@@ -27,9 +29,9 @@ export default function Hero() {
               value: "",
             },
             position: {
-              "position": "-50% 50%",
-              "repeat": "no-repeat",
-              "size": "cover"    
+              position: "-50% 50%",
+              repeat: "no-repeat",
+              size: "cover",
             },
           },
           fpsLimit: 30,
@@ -42,7 +44,7 @@ export default function Hero() {
             events: {
               resize: true,
             },
-          },    
+          },
           particles: {
             color: {
               value: ["#ffc0cb", "#fc9aab", "#f78195"],
@@ -50,23 +52,23 @@ export default function Hero() {
             collisions: {
               enable: false,
             },
-            position:{
+            position: {
               x: -100,
               y: 100,
             },
-            "move": {
-              "enable": true,
-              "speed": .55,
-              "direction": "bottom-right",
-              "random": true,
-              "straight": true,
-              "out_mode": "out",
-              "bounce": false,
-                gravity: {
-                 acceleration    :   9.8,
-                 enable  :       true,
-                 maxSpeed : .5
-               },
+            move: {
+              enable: true,
+              speed: 0.55,
+              direction: "bottom-right",
+              random: true,
+              straight: true,
+              out_mode: "out",
+              bounce: false,
+              gravity: {
+                acceleration: 9.8,
+                enable: true,
+                maxSpeed: 0.5,
+              },
             },
             number: {
               density: {
@@ -75,52 +77,58 @@ export default function Hero() {
               },
               value: 30,
             },
-            "rotate": {
-              "random": {
-                "enable": true
+            rotate: {
+              random: {
+                enable: true,
               },
-              "animation": {
-                "enable": true,
-                "speed": 10
+              animation: {
+                enable: true,
+                speed: 10,
               },
-              "direction": "random"
-            },        
-            "opacity": {
-              "random": {
-                "enable": true,
+              direction: "random",
+            },
+            opacity: {
+              random: {
+                enable: true,
                 minimumValue: 0.2,
                 maximumValue: 0.25,
               },
-            },  
+            },
             shape: {
               type: "image",
               image: {
                 src: "/backgrounds/leaf.png",
                 width: 200,
-                height: 200
-              }
+                height: 200,
+              },
             },
             size: {
               random: true,
               value: 25,
             },
-            
           },
           detectRetina: true,
         }}
       />
       <div className={Herostyles.content}>
         <div className={Herostyles.text}>
-        <h1 className={Herostyles.title}>Citrus Hack</h1>
-        <h1>April 9-11, 2021</h1>
-        <p className={Herostyles.caption}>
-          Create your zen.
-          <br /> 自分の禅を作れ。
-        </p>
+          <h1 className={Herostyles.title}>Citrus Hack</h1>
+          <h1>April 9-11, 2021</h1>
+          <p className={Herostyles.caption}>
+            Create your zen.
+            <br /> 自分の禅を作れ。
+          </p>
         </div>
         <div className={`${styles.grid} ${Herostyles.buttonGrid}`}>
-          <SignUpButton/>
-          <Link
+          <div className={`${styles.card} ${Herostyles.action}`}>
+            <Link href="/live">
+              <h3 className={Herostyles.h3}>
+                Live
+                <FaChevronRight className={styles.icon} />
+              </h3>
+            </Link>
+          </div>
+          <ScrollLink
             to="About"
             spy={true}
             smooth={true}
@@ -131,7 +139,7 @@ export default function Hero() {
             <h3 className={Herostyles.h3}>
               LEARN MORE <FaChevronDown className={styles.icon} />
             </h3>
-          </Link>
+          </ScrollLink>
         </div>
       </div>
     </main>
