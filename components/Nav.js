@@ -106,7 +106,7 @@ export default function Nav() {
               <NavigationLinks title="Sponsors" href="Sponsors" />
             )}
 
-            {/* Comment out for now. Uncomment on D-Day */}
+            {/* Uncomment when live site is online */}
             {/* {!isMobile && isHome && (
               <div className={Navstyles.navlistlink}>
                 <Link href="/live">
