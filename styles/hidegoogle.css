@@ -1,0 +1,8 @@
+#doc-title .name {
+    display: none!important;
+}
+
+.switcherOuter{
+  display:none!important;
+  height:0px!important;
+}

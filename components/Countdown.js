@@ -18,7 +18,7 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
     return (
       <>
         <h1 className={Livestyles.timer}>
-          Citrus Hack 2021 <br />
+          <span className={Livestyles.title}>Citrus Hack 2021</span> <br />
           {days}d : {hours}hr : {minutes}min : {seconds}s left!
         </h1>
       </>

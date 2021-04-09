@@ -7,7 +7,14 @@ html {
     font-family: "Inter var", sans-serif;
   }
 }
+#doc-title .name {
+  display: none!important;
+}
 
+.switcherOuter{
+display:none!important;
+height:0px!important;
+}
 /* Place Vars Here */
 :root{
   --contentWidth: min(80vw, 1280px);

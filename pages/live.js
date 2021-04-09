@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Container from "../components/Container";
 import CountdownTimer from "../components/Countdown";
 import Sponsors from "./sponsors";
-
 import Livestyles from "../styles/Live.module.css";
 import styles from "../styles/Common.module.css";
 
@@ -165,7 +164,16 @@ export default function Live() {
           frameborder="0"
           marginheight="0"
           marginwidth="0"
+          name="iframe1"
         ></iframe>
+        <a
+          className={`${Livestyles.mobileLink} ${Livestyles.resource}`}
+          href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQKLXBJ7Aogv3r3wWA_oL5fwE2puEkTK-ZFZpmfMjJx2n62LkgyYfHlZ2LNez7cjw/pubhtml?gid=1015411112&amp;single=true&amp;widget=true&amp;headers=false"
+          target="_blank"
+        >
+          Click to view >
+        </a>
+        
         <div className={Livestyles.border3}></div>
         <h2 className={Livestyles.title}>Resources</h2>
         <a
@@ -173,7 +181,7 @@ export default function Live() {
           href="https://github.com/citrushack/CitrusHackResources"
           target="_blank"
         >
-          Citrus Hack Resources
+          Citrus Hack Resources >
         </a>
         <div className={Livestyles.border4}></div>
         <Sponsors />
