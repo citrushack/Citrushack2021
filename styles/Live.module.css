@@ -1,0 +1,90 @@
+.timer {
+  font-size: 63px;
+  text-align: center;
+  line-height: 2;
+}
+.title {
+  font-size: 40px;
+  font-weight: 700;
+}
+.judgeWrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.judge {
+  display: flex;
+  margin: 0 10px;
+  align-items: center;
+}
+.judgePicture img {
+  border-radius: 50%;
+  width: 75px;
+  height: auto;
+}
+
+.judge caption {
+  margin-left: 10px;
+  text-align: left;
+}
+.schedule {
+  min-height: 100vh;
+}
+.resource {
+  font-size: 25px;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #000;
+  border-bottom: 2px solid transparent;
+  transition: all 200ms ease-in-out;
+}
+.resource svg{
+  font-size: 10px;
+}
+.resource:hover {
+  color: #ff6060;
+  border-bottom: 2px solid #ff6060;
+}
+.border1{
+  width: 1200px;
+  height: 200px;
+  background-image: url("../public/backgrounds/Branch1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.border2{
+  width: 1200px;
+  height: 200px;
+  background-image: url("../public/backgrounds/Branch2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.border3{
+  width: 1200px;
+  height: 200px;
+  background-image: url("../public/backgrounds/Branch3.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.border4{
+  width: 1200px;
+  height: 200px;
+  background-image: url("../public/backgrounds/Branch4.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+@media (max-width: 768px) {
+  .timer {
+    font-size: 32px;
+  }
+  .schedule {
+    max-width: 50%;
+    padding: 0 20px;
+  }
+}

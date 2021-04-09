@@ -104,6 +104,8 @@ h1 {
   background-color: var(--button-signup-primary);
   color: var(--button-signup-text);
   transition: all 0.15s ease;
+  /* Uncomment when live site is online */
+  /* margin-left: 25px; */
 }
 .signup:hover,
 .signup:focus,
