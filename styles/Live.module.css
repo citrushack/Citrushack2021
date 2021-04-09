@@ -1,10 +1,11 @@
 .timer {
-  font-size: 63px;
+  font-size: 4vw;
   text-align: center;
   line-height: 1.5;
+  margin-top: min(10%, 100px);
 }
 .title {
-  font-size: 40px;
+  font-size: 5vw;
   font-weight: 700;
   display: block;
   line-height: 41px;
@@ -14,7 +15,7 @@
   align-items: flex-start;
   flex-wrap: wrap;
   margin: 0;
-  margin-top: 5%;
+  margin-top: min(5%, 24px);
   padding: 24px;
   border: 3px solid rgb(32, 32, 32);
   border-radius: 10px;
@@ -40,7 +41,7 @@
 .schedule {
   border: 3px solid rgb(32, 32, 32);
   border-radius: 10px;
-  margin: 5% 0;
+  margin: min(5%, 24px) 0;
   min-height: 100vh;
 }
 .resource {
