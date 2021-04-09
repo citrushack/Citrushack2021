@@ -155,9 +155,27 @@ export default function Live() {
             />
           </div>
         </div>
+        <div className={Livestyles.border2}></div>
         <h2 className={Livestyles.title}>Schedule</h2>
-        <iframe className={Livestyles.schedule} src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQKLXBJ7Aogv3r3wWA_oL5fwE2puEkTK-ZFZpmfMjJx2n62LkgyYfHlZ2LNez7cjw/pubhtml?gid=1015411112&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+        <iframe
+          className={Livestyles.schedule}
+          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQKLXBJ7Aogv3r3wWA_oL5fwE2puEkTK-ZFZpmfMjJx2n62LkgyYfHlZ2LNez7cjw/pubhtml?gid=1015411112&amp;single=true&amp;widget=true&amp;headers=false"
+          width="1250"
+          scrolling="no"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+        ></iframe>
+        <div className={Livestyles.border3}></div>
         <h2 className={Livestyles.title}>Resources</h2>
+        <a
+          className={Livestyles.resource}
+          href="https://github.com/citrushack/CitrusHackResources"
+          target="_blank"
+        >
+          Citrus Hack Resources
+        </a>
+        <div className={Livestyles.border4}></div>
         <Sponsors />
       </div>
     </Container>
