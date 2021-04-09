@@ -156,6 +156,13 @@ export default function Live() {
         </div>
         <div className={Livestyles.border2}></div>
         <h2 className={Livestyles.title}>Schedule</h2>
+        <a
+          className={`${Livestyles.resource}`}
+          href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQKLXBJ7Aogv3r3wWA_oL5fwE2puEkTK-ZFZpmfMjJx2n62LkgyYfHlZ2LNez7cjw/pubhtml?gid=1015411112&amp;single=true&amp;widget=true&amp;headers=false"
+          target="_blank"
+        >
+          Open in new page >
+        </a>
         <iframe
           className={Livestyles.schedule}
           src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQKLXBJ7Aogv3r3wWA_oL5fwE2puEkTK-ZFZpmfMjJx2n62LkgyYfHlZ2LNez7cjw/pubhtml?gid=1015411112&amp;single=true&amp;widget=true&amp;headers=false"
@@ -166,14 +173,6 @@ export default function Live() {
           marginwidth="0"
           name="iframe1"
         ></iframe>
-        <a
-          className={`${Livestyles.mobileLink} ${Livestyles.resource}`}
-          href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQKLXBJ7Aogv3r3wWA_oL5fwE2puEkTK-ZFZpmfMjJx2n62LkgyYfHlZ2LNez7cjw/pubhtml?gid=1015411112&amp;single=true&amp;widget=true&amp;headers=false"
-          target="_blank"
-        >
-          Click to view >
-        </a>
-        
         <div className={Livestyles.border3}></div>
         <h2 className={Livestyles.title}>Resources</h2>
         <a
