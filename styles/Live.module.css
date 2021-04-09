@@ -1,11 +1,11 @@
 .timer {
-  font-size: 4vw;
+  font-size: min(4vw, 50px);
   text-align: center;
   line-height: 1.5;
-  margin-top: min(10%, 100px);
+  margin-top: min(10%, 24px);
 }
 .title {
-  font-size: 5vw;
+  font-size: min(5vw, 60px);
   font-weight: 700;
   display: block;
   line-height: 41px;
