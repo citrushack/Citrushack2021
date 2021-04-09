@@ -168,6 +168,7 @@ export default function Live() {
           src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQKLXBJ7Aogv3r3wWA_oL5fwE2puEkTK-ZFZpmfMjJx2n62LkgyYfHlZ2LNez7cjw/pubhtml?gid=1015411112&amp;single=true&amp;widget=true&amp;headers=false"
           width="1250"
           scrolling="no"
+          loading="eager"
           frameBorder="0"
           marginHeight="0"
           marginWidth="0"
