@@ -117,7 +117,7 @@ export default function Live() {
             />
           </div>
           <div>
-          <Judge
+            <Judge
               picture="/judges/syris.jpg"
               username="Syris Norelli"
               title="Autopilot Software Engineer @ Tesla"
@@ -156,6 +156,7 @@ export default function Live() {
           </div>
         </div>
         <h2 className={Livestyles.title}>Schedule</h2>
+        <iframe className={Livestyles.schedule} src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQKLXBJ7Aogv3r3wWA_oL5fwE2puEkTK-ZFZpmfMjJx2n62LkgyYfHlZ2LNez7cjw/pubhtml?gid=1015411112&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
         <h2 className={Livestyles.title}>Resources</h2>
         <Sponsors />
       </div>

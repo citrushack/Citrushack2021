@@ -27,9 +27,16 @@
   margin-left: 10px;
   text-align: left;
 }
-
+.schedule{
+  min-width: 1250px;
+  min-height: 100vh;
+}
 @media (max-width: 768px) {
   .timer {
     font-size: 32px;
+  }
+  .schedule{
+    max-width: 50%;
+    padding: 0 20px;
   }
 }
