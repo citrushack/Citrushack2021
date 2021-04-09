@@ -1,7 +1,7 @@
 import styles from "../styles/Common.module.css";
 import Herostyles from "../styles/Hero.module.css";
 import { Link as ScrollLink } from "react-scroll";
-import Link from "next/link"
+import Link from "next/link";
 import Particles from "react-tsparticles";
 import dynamic from "next/dynamic";
 import React, { useState, useEffect } from "react";
@@ -120,14 +120,14 @@ export default function Hero() {
           </p>
         </div>
         <div className={`${styles.grid} ${Herostyles.buttonGrid}`}>
-          <div className={`${styles.card} ${Herostyles.action}`}>
-            <Link href="/live">
+          <Link href="/live">
+            <div className={`${styles.card} ${Herostyles.action}`}>
               <h3 className={Herostyles.h3}>
                 Live
                 <FaChevronRight className={styles.icon} />
               </h3>
-            </Link>
-          </div>
+            </div>
+          </Link>
           <ScrollLink
             to="About"
             spy={true}

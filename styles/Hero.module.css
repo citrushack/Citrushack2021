@@ -46,6 +46,7 @@
   border: 3px solid var(--button-signup-primary) !important;
   background-color: var(--button-signup-secondary) !important;
   color: var(--button-signup-text);
+  cursor: pointer;
 }
 
 .action:hover,
