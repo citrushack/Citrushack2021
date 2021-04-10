@@ -57,6 +57,14 @@ function getStatus(appstatus) {
           letterSpacing: '.2px',
         }} href="https://docs.google.com/forms/d/e/1FAIpQLSd1_cvby66HsC_czULzuw-TawrbGPsrBFqQChKBG4hsAf5vog/viewform">
                     here!
+                  </a></div>
+                  <div>
+            And join our discord <a         style={{
+          textDecoration: 'underline rgb(150 , 255, 150)',
+          'text-decoration-thickness': '2.5px',
+          letterSpacing: '.2px',
+        }} href="https://discord.com/invite/mh4aTbVf8Z">
+                    here!
                   </a></div></>
     );
 }
