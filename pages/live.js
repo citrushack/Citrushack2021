@@ -72,9 +72,9 @@ export default function Live() {
               title="UCR Alumnus"
             />
             <Judge
-              picture="/judges/shin.jpg"
-              username="John Shin"
-              title="Software Engineer @ Raytheon"
+              picture="/judges/puloma.jpeg"
+              username="Puloma Katiyar"
+              title="ACM@UCR President 2021-2022"
             />
           </div>
           <div>
