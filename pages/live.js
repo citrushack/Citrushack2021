@@ -63,8 +63,7 @@ export default function Live() {
             <Judge
               picture="/judges/pham.jpg"
               username="John Pham"
-              title="Sr. Software Engineer 
-              @ Smartsheet"
+              title="Founding Engineer @ Highlight"
             />
             <Judge
               picture="/judges/acharya.jpg"
