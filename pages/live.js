@@ -71,7 +71,7 @@ export default function Live() {
               title="UCR Alumnus"
             />
             <Judge
-              picture="/judges/puloma.jpeg"
+              picture="/judges/puloma.jpg"
               username="Puloma Katiyar"
               title="ACM@UCR President 2021-2022"
             />
